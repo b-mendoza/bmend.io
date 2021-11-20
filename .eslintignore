@@ -1,8 +1,8 @@
 # dependencies
 /node_modules
 
-# externals
-/vendors
+# testing
+/coverage
 
 # next.js
 /.next/
@@ -11,11 +11,8 @@
 # production
 /build
 
-# testing
-/coverage
+# vercel
+.vercel
 
 # typescript
 *.tsbuildinfo
-
-# vercel
-.vercel
