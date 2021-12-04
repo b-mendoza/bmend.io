@@ -1,6 +1,11 @@
 {
+  "author": {
+    "email": "bmendoza.dev@hotmail.com",
+    "name": "Bryan Mendoza"
+  },
   "name": "bmend.io",
   "private": true,
+  "version": "0.0.0",
   "scripts": {
     "build": "next build",
     "dev": "next dev",
