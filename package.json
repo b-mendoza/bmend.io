@@ -4,8 +4,10 @@
   "scripts": {
     "build": "next build",
     "dev": "next dev",
+    "format:write": "prettier -c --config ./.prettierrc \"./**/*.{ts,tsx,css}\" -w",
     "lint": "next lint",
-    "start": "next start"
+    "start": "next start",
+    "type-check": "tsc --project ./tsconfig.json --pretty"
   },
   "dependencies": {
     "@fontsource/inter": "4.5.1",
