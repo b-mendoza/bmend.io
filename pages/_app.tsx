@@ -1,8 +1,13 @@
-import '../styles/globals.css'
-import type { AppProps } from 'next/app'
+import 'normalize.css';
 
-function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+import type { AppProps } from 'next/app';
+
+import { CustomPageProps as CPP } from '@/typings/shared';
+
+interface NextApp extends AppProps<CPP> {
+  pageProps: CPP;
 }
 
-export default MyApp
+export default function NextApp(props: NextApp) {
+  return <props.Component {...props.pageProps} />;
+}
