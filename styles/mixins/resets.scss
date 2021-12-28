@@ -1,0 +1,21 @@
+@use '@/styles/vars.scss';
+
+@mixin paddingReset {
+  padding: 2rem;
+
+  @media (min-width: vars.$smallBreakpoint) {
+    padding: 3rem;
+  }
+}
+
+@mixin fontSizeReset {
+  font-size: 1.4rem;
+
+  @media (min-width: vars.$smallBreakpoint) {
+    font-size: 1.6rem;
+  }
+
+  @media (min-width: vars.$mediumBreakpoint) {
+    font-size: 1.8rem;
+  }
+}
