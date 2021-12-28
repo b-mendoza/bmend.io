@@ -20,11 +20,13 @@
     "normalize.css": "8.0.1",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "sass": "1.45.1"
+    "sass": "1.45.1",
+    "uuid": "8.3.2"
   },
   "devDependencies": {
     "@types/node": "17.0.5",
     "@types/react": "17.0.38",
+    "@types/uuid": "8.3.3",
     "@typescript-eslint/eslint-plugin": "5.8.1",
     "@typescript-eslint/parser": "5.8.1",
     "eslint": "8.5.0",
