@@ -1,0 +1,48 @@
+@use '@/styles/mixins/resets.scss';
+
+html {
+  box-sizing: border-box;
+
+  font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  @include resets.fontSizeReset;
+}
+
+@for $headingLevel from 1 to 6 {
+  h#{$headingLevel} {
+    margin: 0;
+    margin-bottom: 1.5rem;
+  }
+}
+
+a {
+  color: inherit;
+
+  display: inline-block;
+
+  text-decoration: none;
+}
+
+a:focus,
+a:hover {
+  background-color: white;
+
+  color: black;
+}
+
+ul,
+ol {
+  list-style: none;
+
+  margin: 0;
+
+  padding: 0;
+}
