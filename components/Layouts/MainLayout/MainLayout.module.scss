@@ -1,0 +1,11 @@
+@use '@/styles/mixins/resets.scss';
+
+.content,
+.footer,
+.header {
+  @include resets.paddingReset;
+}
+
+.header {
+  background-color: black;
+}
