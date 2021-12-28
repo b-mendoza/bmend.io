@@ -1,13 +1,20 @@
 import 'normalize.css';
+import '@/styles/globals.scss';
 
 import type { AppProps } from 'next/app';
 
+import { MemoizedMainLayout } from '@/components/Layouts/MainLayout';
+
 import { CustomPageProps as CPP } from '@/typings/shared';
 
-interface NextApp extends AppProps<CPP> {
+interface __AppProps extends AppProps<CPP> {
   pageProps: CPP;
 }
 
-export default function NextApp(props: NextApp) {
-  return <props.Component {...props.pageProps} />;
+export default function _App(props: __AppProps) {
+  return (
+    <MemoizedMainLayout>
+      <props.Component {...props.pageProps} />
+    </MemoizedMainLayout>
+  );
 }
