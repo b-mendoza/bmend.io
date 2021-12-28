@@ -25,7 +25,7 @@ function MainMenu() {
             <Link href={menuItem.href}>
               <a>
                 {menuItem.isBrand ? (
-                  <h3 className={styles.menuTitle}>{menuItem.content}</h3>
+                  <h3 className={styles.brand}>{menuItem.content}</h3>
                 ) : (
                   menuItem.content
                 )}
