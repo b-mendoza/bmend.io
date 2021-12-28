@@ -1,7 +1,6 @@
 @use '@/styles/mixins/resets.scss';
 
 .content,
-.footer,
 .header {
   @include resets.paddingReset;
 }

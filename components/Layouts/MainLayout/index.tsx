@@ -1,5 +1,6 @@
 import { memo } from 'react';
 
+import { MemoizedFooter } from '@/components/Footer';
 import { MemoizedMainMenu } from '@/components/Menus/MainMenu';
 
 import styles from './MainLayout.module.scss';
@@ -17,7 +18,7 @@ function MainLayout(props: MainLayoutProps) {
 
       <main className={styles.content}>{props.children}</main>
 
-      <footer className={styles.footer}>This is the Footer</footer>
+      <MemoizedFooter />
     </>
   );
 }
