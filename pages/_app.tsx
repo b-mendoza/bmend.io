@@ -4,6 +4,7 @@ import '@/styles/globals.scss';
 import type { AppProps } from 'next/app';
 
 import { MemoizedMainLayout } from '@/components/Layouts/MainLayout';
+import { DefaultSEO } from '@/components/SEO/DefaultSEO';
 
 import { CustomPageProps as CPP } from '@/typings/shared';
 
@@ -13,8 +14,12 @@ interface __AppProps extends AppProps<CPP> {
 
 export default function _App(props: __AppProps) {
   return (
-    <MemoizedMainLayout>
-      <props.Component {...props.pageProps} />
-    </MemoizedMainLayout>
+    <>
+      <DefaultSEO />
+
+      <MemoizedMainLayout>
+        <props.Component {...props.pageProps} />
+      </MemoizedMainLayout>
+    </>
   );
 }
