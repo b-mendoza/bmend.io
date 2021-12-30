@@ -9,7 +9,7 @@
   "scripts": {
     "build": "next build",
     "dev": "next dev",
-    "format:write": "prettier -c --config ./.prettierrc \"./**/*.{js,ts,tsx,scss,md,json}\" -w",
+    "format:write": "prettier -c --config ./.prettierrc \"./**/*.{js,json,md,scss,ts,tsx}\" -w",
     "lint": "next lint",
     "start": "next start",
     "type-check": "tsc --project ./tsconfig.json --pretty"
