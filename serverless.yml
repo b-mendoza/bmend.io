@@ -1,0 +1,4 @@
+bMendozaIO:
+  component: '@sls-next/serverless-component@latest'
+  inputs:
+    domain: 'bmendoza.io'
