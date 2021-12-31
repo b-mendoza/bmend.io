@@ -13,7 +13,7 @@ interface MenuItem {
 
 const menuItemList: MenuItem[] = [{ content: 'Home', href: '/', id: uuid4() }];
 
-function Footer() {
+function Footer(): JSX.Element {
   return (
     <footer className={styles.container}>
       <LinkTo href="/">

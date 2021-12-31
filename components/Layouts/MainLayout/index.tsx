@@ -9,7 +9,7 @@ interface MainLayoutProps {
   children: React.ReactNode;
 }
 
-function MainLayout(props: MainLayoutProps) {
+function MainLayout(props: MainLayoutProps): JSX.Element {
   return (
     <>
       <header className={styles.header}>

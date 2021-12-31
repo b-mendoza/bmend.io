@@ -6,10 +6,10 @@ import { LinkTo } from '@/components/Customs/LinkTo';
 import styles from './MainMenu.module.scss';
 
 interface MenuItem {
+  content: string;
   href: string;
   id: string;
   isBrand: boolean;
-  content: string;
 }
 
 const menuItemList: MenuItem[] = [
@@ -17,7 +17,7 @@ const menuItemList: MenuItem[] = [
   { href: '/', id: uuid4(), isBrand: false, content: 'Home' },
 ];
 
-function MainMenu() {
+function MainMenu(): JSX.Element {
   return (
     <nav className={styles.wrapper}>
       <ul className={styles.menu}>

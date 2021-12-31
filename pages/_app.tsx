@@ -12,7 +12,7 @@ interface __AppProps extends AppProps<CPP> {
   pageProps: CPP;
 }
 
-export default function _App(props: __AppProps) {
+export default function _App(props: __AppProps): JSX.Element {
   return (
     <>
       <DefaultSEO />
