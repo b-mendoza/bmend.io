@@ -4,5 +4,5 @@
     "noEmit": true
   },
   "extends": "./tsconfig.json",
-  "include": [".eslintrc.js", "next.config.js"]
+  "include": [".eslintrc.js", ".lintstagedrc.js", "next.config.js"]
 }
