@@ -1,6 +1,7 @@
-import Link from 'next/link';
 import { memo } from 'react';
 import { v4 as uuid4 } from 'uuid';
+
+import { LinkTo } from '@/components/Customs/LinkTo';
 
 import styles from './MainMenu.module.scss';
 
@@ -22,15 +23,13 @@ function MainMenu() {
       <ul className={styles.menu}>
         {menuItemList.map((menuItem) => (
           <li key={menuItem.id}>
-            <Link href={menuItem.href}>
-              <a>
-                {menuItem.isBrand ? (
-                  <h3 className={styles.brand}>{menuItem.content}</h3>
-                ) : (
-                  menuItem.content
-                )}
-              </a>
-            </Link>
+            <LinkTo href={menuItem.href}>
+              {menuItem.isBrand ? (
+                <h3 className={styles.brand}>{menuItem.content}</h3>
+              ) : (
+                menuItem.content
+              )}
+            </LinkTo>
           </li>
         ))}
       </ul>

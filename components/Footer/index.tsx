@@ -1,6 +1,7 @@
-import Link from 'next/link';
 import { memo } from 'react';
 import { v4 as uuid4 } from 'uuid';
+
+import { LinkTo } from '@/components/Customs/LinkTo';
 
 import styles from './Footer.module.scss';
 
@@ -15,11 +16,9 @@ const menuItemList: MenuItem[] = [{ content: 'Home', href: '/', id: uuid4() }];
 function Footer() {
   return (
     <footer className={styles.container}>
-      <Link href="/">
-        <a>
-          <h4 className={styles.brand}>bMend_</h4>
-        </a>
-      </Link>
+      <LinkTo href="/">
+        <h4 className={styles.brand}>bMend_</h4>
+      </LinkTo>
 
       <p className={styles.tagLine}>Made with ❤️ by bMend_</p>
 
@@ -27,9 +26,7 @@ function Footer() {
         <ul>
           {menuItemList.map((menuItem) => (
             <li key={menuItem.id}>
-              <Link href={menuItem.href}>
-                <a>{menuItem.content}</a>
-              </Link>
+              <LinkTo href={menuItem.href}>{menuItem.content}</LinkTo>
             </li>
           ))}
         </ul>
