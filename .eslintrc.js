@@ -4,6 +4,8 @@ module.exports = {
     'next/core-web-vitals',
     'plugin:@typescript-eslint/recommended',
     'plugin:@typescript-eslint/recommended-requiring-type-checking',
+    'standard-with-typescript',
+    'plugin:jsx-a11y/strict',
     'prettier',
   ],
   parser: '@typescript-eslint/parser',
