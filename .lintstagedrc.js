@@ -1,13 +1,17 @@
 // @ts-check
 
-module.exports = {
-  /** @param {string[]} filenames */
+const path = require('path');
 
-  '**/*.(j|t)s?(x)': (filenames) =>
-    `next lint --fix --file ${filenames
-      .map((file) => file.split(process.cwd())[1])
-      .join(' --file ')}`,
+/** @param {string[]} filenames */
+
+const buildESLintCommand = (filenames) =>
+  `next lint --fix --file ${filenames
+    .map((filename) => path.relative(process.cwd(), filename))
+    .join(' --file ')}`;
+
+module.exports = {
+  '**/*.(j|t)s?(x)': [buildESLintCommand],
 
   '**/*.ts?(x)': 'tsc --project ./tsconfig.json --pretty',
-  '**': 'prettier -c --config ./.prettierrc -w',
+  '*': 'prettier -c --config ./.prettierrc -w',
 };
