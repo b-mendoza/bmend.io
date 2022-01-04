@@ -1,31 +1,21 @@
 import type { LinkProps } from 'next/link';
 import Link from 'next/link';
 
-type FilteredAnchorHTMLAttributesProps = Omit<
-  React.AnchorHTMLAttributes<HTMLAnchorElement>,
-  'href'
->;
+type FilteredLinkProps = Omit<LinkProps, 'passHref'>;
 
-interface LinkToProps extends LinkProps, FilteredAnchorHTMLAttributesProps {
-  download?: unknown;
-}
+type LinkToProps = FilteredLinkProps & {
+  children: React.ReactNode;
+  className?: string;
+};
 
 export function LinkTo(props: LinkToProps): JSX.Element {
-  const {
-    as,
-    children,
-    href,
-    locale,
-    prefetch,
-    replace,
-    scroll,
-    shallow,
-    ...anchorProps
-  } = props;
+  const { children, className, ...linkProps } = props;
 
   return (
-    <Link {...{ as, href, locale, prefetch, replace, scroll, shallow }}>
-      <a {...anchorProps}>{children}</a>
+    <Link {...linkProps} passHref>
+      <a className={className} href="thisWillBeReplacedBy`passHref`">
+        {children}
+      </a>
     </Link>
   );
 }
