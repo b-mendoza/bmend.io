@@ -12,6 +12,5 @@ const buildESLintCommand = (filenames) =>
 module.exports = {
   '**/*.(j|t)s?(x)': [buildESLintCommand],
 
-  '**/*.ts?(x)': 'tsc --project ./tsconfig.json --pretty',
   '*': 'prettier -c --config ./.prettierrc -w',
 };
