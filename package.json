@@ -10,7 +10,8 @@
     "build": "next build",
     "dev": "next dev",
     "prepare": "husky install",
-    "start": "next start"
+    "start": "next start",
+    "type-check": "tsc --project ./tsconfig.json --pretty"
   },
   "dependencies": {
     "@fontsource/inter": "4.5.1",
