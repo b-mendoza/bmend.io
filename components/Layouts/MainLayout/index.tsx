@@ -1,7 +1,7 @@
 import { memo } from 'react';
 
-import { MemoizedFooter } from '@/components/Footer';
-import { MemoizedMainMenu } from '@/components/Menus/MainMenu';
+import { MemoizedFooter } from 'components/Footer';
+import { MemoizedMainMenu } from 'components/Menus/MainMenu';
 
 import styles from './MainLayout.module.scss';
 

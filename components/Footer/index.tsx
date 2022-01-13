@@ -1,7 +1,7 @@
 import { memo } from 'react';
 import { v4 as uuid4 } from 'uuid';
 
-import { LinkTo } from '@/components/Customs/LinkTo';
+import { LinkTo } from 'components/Customs/LinkTo';
 
 import styles from './Footer.module.scss';
 
