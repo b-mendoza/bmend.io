@@ -12,6 +12,8 @@ jobs:
       - run:
           command: sudo npm i -g npm@latest
       - run:
+          command: npm i
+      - run:
           command: ./.circleci/secrets.sh
       - run:
           command: npx serverless@latest
