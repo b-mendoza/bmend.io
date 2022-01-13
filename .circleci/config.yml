@@ -15,7 +15,7 @@ jobs:
       - run:
           command: ./.circleci/secrets.sh
       - run:
-          command: npx serverless@latest
+          command: npx serverless@latest --debug
 
 workflows:
   build-and-deploy:
