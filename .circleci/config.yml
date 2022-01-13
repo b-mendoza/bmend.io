@@ -11,8 +11,7 @@ jobs:
       - checkout
       - run:
           command: sudo npm i -g npm@latest
-      - run:
-          command: npm i
+      - node/install-packages
       - run:
           command: ./.circleci/secrets.sh
       - run:
