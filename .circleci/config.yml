@@ -1,0 +1,27 @@
+version: 2.1
+
+orbs:
+  node: circleci/node@4.7
+
+jobs:
+  build-and-deploy:
+    docker:
+      - image: cimg/node:lts
+    steps:
+      - checkout
+      - run:
+          command: sudo npm i -g npm@latest
+      - run:
+          command: ./.circleci/secrets.sh
+      - run:
+          command: npx serverless@latest
+
+workflows:
+  build-and-deploy:
+    jobs:
+      - build-and-deploy:
+          context: bMendozaIO
+          filters:
+            branches:
+              only:
+                - main
