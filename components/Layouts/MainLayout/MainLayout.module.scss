@@ -1,8 +1,8 @@
-@use '@/styles/mixins/resets.scss';
+@use '../../../styles/mixins';
 
 .content,
 .header {
-  @include resets.paddingReset;
+  @include mixins.paddingReset;
 }
 
 .header {

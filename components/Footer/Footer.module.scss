@@ -1,7 +1,7 @@
-@use '@/styles/mixins/resets.scss';
+@use '../../styles/mixins';
 
 .container {
-  @include resets.paddingReset;
+  @include mixins.paddingReset;
 
   background-color: black;
 
