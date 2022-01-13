@@ -7,7 +7,7 @@ export default function IndexPage(): JSX.Element {
         <title>bMend_ | Home</title>
       </Head>
 
-      <h1>Testing Dynamic Changes</h1>
+      <h1>Hello, William!</h1>
     </>
   );
 }
