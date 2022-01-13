@@ -4,4 +4,3 @@ bMendozaIO:
     cloudfront:
       distributionId: EWD55Y5M66OTV
     domain: 'bmendoza.io'
-    removeOldLambdaVersions: true
