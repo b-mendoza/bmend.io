@@ -1,6 +1,8 @@
 bMendozaIO:
   component: '@sls-next/serverless-component@latest'
   inputs:
-    bucketName: bMendozaIO
+    # bucketName: bMendozaIO
+    # cloudfront:
+    # distributionId: E1DO1V4W0QXASK
     domain: 'bmendoza.io'
     removeOldLambdaVersions: true
