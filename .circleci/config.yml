@@ -2,7 +2,7 @@ version: 2.1
 orbs:
   node: circleci/node@5.0.0
 jobs:
-  setup_-:
+  setup_-and__deploy:
     docker:
       - image: cimg/node:lts
     steps:
@@ -12,39 +12,18 @@ jobs:
           name: NPM Installation
       - node/install-packages
       - run:
-          command: ./.circleci/secrets.sh
-          name: Adding Secrets to Environment
-  lint__-:
-    docker:
-      - image: cimg/node:lts
-    steps:
-      - checkout
-      - run:
           command: npm run ci-check
           name: CI Check
-  deploy_:
-    docker:
-      - image: cimg/node:lts
-    steps:
-      - checkout
+      - run:
+          command: ./.circleci/secrets.sh
+          name: Secrets Management
       - run:
           command: npx serverless@latest --debug
           name: Serverless Deployment
 workflows:
-  setup:
+  seTup__AnD_-deploYm3nt:
     jobs:
-      - setup_-:
-          context: bMendozaIO
-          filters:
-            branches:
-              only:
-                - main
-      - lint__-:
-          filters:
-            branches:
-              only:
-                - main
-      - deploy_:
+      - setup_-and__deploy:
           context: bMendozaIO
           filters:
             branches:
