@@ -4,3 +4,5 @@ bMendozaIO:
     cloudfront:
       distributionId: EWD55Y5M66OTV
     domain: 'bmendoza.io'
+    domainMinimumProtocolVersion: 'TLSv1.2_2021'
+    removeOldLambdaVersions: true
