@@ -9,17 +9,17 @@ jobs:
       - checkout
       - run:
           command: sudo npm i -g npm@latest
-          name: NPM Installation
+          name: NPM installation
       - node/install-packages
       - run:
           command: npm run ci-check
-          name: CI Check
+          name: CI check
       - run:
           command: ./.circleci/secrets.sh
-          name: Secrets Management
+          name: Secrets management
       - run:
           command: npx serverless@latest --debug
-          name: Serverless Deployment
+          name: Serverless deployment
 workflows:
   seTup__AnD_-deploYm3nt:
     jobs:
