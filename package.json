@@ -8,7 +8,9 @@
   "version": "0.0.0",
   "scripts": {
     "build": "next build",
+    "ci-check": "npm run lint && npm run type-check",
     "dev": "next dev",
+    "lint": "next lint",
     "prepare": "husky install",
     "start": "next start",
     "type-check": "tsc --project ./tsconfig.json --pretty"
