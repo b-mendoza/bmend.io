@@ -2,8 +2,8 @@
 
 ## TODOs
 
-- Add authentication
-- Check when `eslint-config-standard` has support to the `latest` of `eslint`, because the current [PR](https://github.com/standard/eslint-config-standard/pull/193) hasn't been merged yet so we are not able to use `eslint-config-standard-with-typescript` with the `latest` of `eslint`, heres the link to the current [PR](https://github.com/standard/eslint-config-standard-with-typescript/issues/728) to add suppor to the `latest` of `eslint` to `eslint-config-standard-with-typescript`
+- Add `Authentication`
+- Add support to the `latest` of `eslint` to `eslint-config-standard-with-typescript` - [PR](https://github.com/standard/eslint-config-standard-with-typescript/issues/728)
 
 ## Ideas
 
