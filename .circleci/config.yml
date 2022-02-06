@@ -9,7 +9,7 @@ jobs:
       - checkout
       - run:
           command: sudo npm i -g npm@latest
-          name: Packages Installation
+          name: NPM Installation
       - node/install-packages
       - run:
           command: npm run ci-check
