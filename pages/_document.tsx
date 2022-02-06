@@ -4,7 +4,9 @@ class _Document extends Document {
   render(): JSX.Element {
     return (
       <Html lang="en">
-        <Head />
+        <Head>
+          <link rel="shortcut icon" href="/favicon.svg" type="image/x-icon" />
+        </Head>
 
         <body>
           <Main />
