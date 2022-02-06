@@ -7,7 +7,14 @@ export default function IndexPage(): JSX.Element {
         <title>bMend_ | Home</title>
       </Head>
 
-      <h1>Hello, William!</h1>
+      <h1>
+        I&apos;m Bryan Mendoza
+        <small>Sr. Front End Developer</small>
+      </h1>
+
+      <section>
+        <h2>Contact Me</h2>
+      </section>
     </>
   );
 }
