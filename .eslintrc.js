@@ -1,11 +1,15 @@
 module.exports = {
-  env: { browser: true, es2021: true, node: true },
+  env: {
+    browser: true,
+    es2021: true,
+    node: true,
+  },
   extends: [
+    'standard-with-typescript',
     'next/core-web-vitals',
+    'plugin:jsx-a11y/strict',
     'plugin:@typescript-eslint/recommended',
     'plugin:@typescript-eslint/recommended-requiring-type-checking',
-    'standard-with-typescript',
-    'plugin:jsx-a11y/strict',
     'prettier',
   ],
   parser: '@typescript-eslint/parser',
