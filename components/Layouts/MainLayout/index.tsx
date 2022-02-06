@@ -1,26 +1,26 @@
 import { memo } from 'react';
 
-import { MemoizedFooter } from 'components/Footer';
-import { MemoizedMainMenu } from 'components/Menus/MainMenu';
+import { Footer } from 'components/Footer';
+import { MainMenu } from 'components/Menus/MainMenu';
 
-import styles from './MainLayout.module.scss';
+import { StyledHeader, StyledContent } from './styled';
 
 interface MainLayoutProps {
   children: React.ReactNode;
 }
 
-function MainLayout(props: MainLayoutProps): JSX.Element {
+function MemoizedMainLayout(props: MainLayoutProps): JSX.Element {
   return (
     <>
-      <header className={styles.header}>
-        <MemoizedMainMenu />
-      </header>
+      <StyledHeader>
+        <MainMenu />
+      </StyledHeader>
 
-      <main className={styles.content}>{props.children}</main>
+      <StyledContent>{props.children}</StyledContent>
 
-      <MemoizedFooter />
+      <Footer />
     </>
   );
 }
 
-export const MemoizedMainLayout = memo(MainLayout);
+export const MainLayout = memo(MemoizedMainLayout);
