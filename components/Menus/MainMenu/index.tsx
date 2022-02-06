@@ -3,7 +3,7 @@ import { v4 as uuid4 } from 'uuid';
 
 import { LinkTo } from 'components/Customs/LinkTo';
 
-import styles from './MainMenu.module.scss';
+import { StyledMenu } from './styled';
 
 interface MenuItem {
   content: string;
@@ -17,24 +17,24 @@ const menuItemList: MenuItem[] = [
   { href: '/', id: uuid4(), isBrand: false, content: 'Home' },
 ];
 
-function MainMenu(): JSX.Element {
+function MemoMainMenu(): JSX.Element {
   return (
-    <nav className={styles.wrapper}>
-      <ul className={styles.menu}>
+    <nav>
+      <StyledMenu>
         {menuItemList.map((menuItem) => (
           <li key={menuItem.id}>
             <LinkTo href={menuItem.href}>
               {menuItem.isBrand ? (
-                <h3 className={styles.brand}>{menuItem.content}</h3>
+                <h3>{menuItem.content}</h3>
               ) : (
                 menuItem.content
               )}
             </LinkTo>
           </li>
         ))}
-      </ul>
+      </StyledMenu>
     </nav>
   );
 }
 
-export const MemoizedMainMenu = memo(MainMenu);
+export const MainMenu = memo(MemoMainMenu);
