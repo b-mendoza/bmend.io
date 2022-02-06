@@ -1,28 +1,19 @@
 import type { LinkProps } from 'next/link';
 import Link from 'next/link';
-import { useMemo } from 'react';
 
-type LinkToProps = Omit<LinkProps, 'passHref'> &
-  Omit<React.AnchorHTMLAttributes<HTMLAnchorElement>, 'download' | 'href'>;
+type LinkToProps = LinkProps & {
+  children: React.ReactNode;
+  className?: string;
+};
 
-export function LinkTo({
-  as,
-  children,
-  href,
-  locale,
-  prefetch,
-  replace,
-  scroll,
-  shallow,
-  ...anchorProps
-}: LinkToProps): JSX.Element {
-  const linkProps = useMemo(() => {
-    return { as, href, locale, prefetch, replace, scroll, shallow };
-  }, [as, href, locale, prefetch, replace, scroll, shallow]);
+export function LinkTo(props: LinkToProps): JSX.Element {
+  const { children, className, ...linkProps } = props;
 
   return (
-    <Link {...linkProps}>
-      <a {...anchorProps}>{children}</a>
+    <Link {...linkProps} passHref>
+      <a className={className} href="thisWillBeReplaced">
+        {children}
+      </a>
     </Link>
   );
 }
