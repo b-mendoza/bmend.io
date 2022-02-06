@@ -2,8 +2,7 @@ import { memo } from 'react';
 import { v4 as uuid4 } from 'uuid';
 
 import { LinkTo } from 'components/Customs/LinkTo';
-
-import styles from './Footer.module.scss';
+import { StyledFooter, StyledWrapper } from './styled';
 
 interface MenuItem {
   content: string;
@@ -13,26 +12,26 @@ interface MenuItem {
 
 const menuItemList: MenuItem[] = [{ content: 'Home', href: '/', id: uuid4() }];
 
-function Footer(): JSX.Element {
+function MemoizedFooter(): JSX.Element {
   return (
-    <footer className={styles.container}>
-      <LinkTo href="/">
-        <h4 className={styles.brand}>bMend_</h4>
-      </LinkTo>
-
-      <p className={styles.tagLine}>Made with ❤️ by bMend_</p>
-
-      <nav>
-        <ul>
-          {menuItemList.map((menuItem) => (
-            <li key={menuItem.id}>
-              <LinkTo href={menuItem.href}>{menuItem.content}</LinkTo>
-            </li>
-          ))}
-        </ul>
-      </nav>
-    </footer>
+    <StyledFooter>
+      <StyledWrapper>
+        <LinkTo href="/">
+          <h4>bMend_</h4>
+        </LinkTo>
+        <p>Made with ❤️ by bMend_</p>
+        <nav>
+          <ul>
+            {menuItemList.map((menuItem) => (
+              <li key={menuItem.id}>
+                <LinkTo href={menuItem.href}>{menuItem.content}</LinkTo>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </StyledWrapper>
+    </StyledFooter>
   );
 }
 
-export const MemoizedFooter = memo(Footer);
+export const Footer = memo(MemoizedFooter);
