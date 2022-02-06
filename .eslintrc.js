@@ -19,14 +19,15 @@ module.exports = {
     sourceType: 'module',
     tsconfigRootDir: __dirname,
   },
-  plugins: ['@typescript-eslint'],
+  plugins: ['@typescript-eslint', '@emotion'],
   root: true,
   rules: {
-    'no-unused-vars': 'off',
+    '@emotion/jsx-import': 'error',
     '@typescript-eslint/no-unused-vars': [
       'error',
       { argsIgnorePattern: '^_', varsIgnorePattern: '^_' },
     ],
+    'no-unused-vars': 'off',
   },
   settings: {
     react: { version: 'detect' },
