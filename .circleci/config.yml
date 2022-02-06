@@ -18,7 +18,7 @@ jobs:
           command: ./.circleci/secrets.sh
           name: Secrets Management
       - run:
-          command: npx @sls-next/serverless-patched@latest --debug
+          command: npx serverless@latest --debug
           name: Serverless Deployment
 workflows:
   seTup__AnD_-deploYm3nt:
