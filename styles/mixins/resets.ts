@@ -1,11 +1,11 @@
 import { css } from '@emotion/react';
 
-import { Breakpoint } from 'types/constants';
+import { Breakpoints } from 'types/constants';
 
 export const paddingReset = css`
   padding: var(--globalPadding);
 
-  @media (min-width: ${Breakpoint.SM}) {
+  @media (min-width: ${Breakpoints.SM}) {
     --globalPadding: 2em;
   }
 `;
@@ -13,11 +13,11 @@ export const paddingReset = css`
 export const fontSizeReset = css`
   font-size: var(--globalFontSize);
 
-  @media (min-width: ${Breakpoint.SM}) {
+  @media (min-width: ${Breakpoints.SM}) {
     --globalFontSize: 1.6rem;
   }
 
-  @media (min-width: ${Breakpoint.MD}) {
+  @media (min-width: ${Breakpoints.MD}) {
     --globalFontSize: 1.8rem;
   }
 `;
@@ -27,7 +27,7 @@ export const widthReset = css`
 
   max-width: 120rem;
 
-  @media (min-width: ${Breakpoint.XXL}) {
+  @media (min-width: ${Breakpoints.XXL}) {
     max-width: 150rem;
   }
 `;
