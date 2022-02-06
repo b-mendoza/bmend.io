@@ -1,10 +1,10 @@
+import 'normalize.css';
+
 import '@fontsource/fira-code/600.css';
 import '@fontsource/fira-code/variable.css';
 
 import '@fontsource/open-sans/400.css';
 import '@fontsource/open-sans/variable.css';
-
-import 'normalize.css';
 
 import type { AppProps } from 'next/app';
 
