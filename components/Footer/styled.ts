@@ -10,6 +10,7 @@ export const StyledFooter = styled.footer`
 
 export const StyledWrapper = styled.div`
   ${paddingReset};
+
   ${widthReset};
 
   align-items: center;

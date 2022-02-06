@@ -8,5 +8,6 @@ export const StyledHeader = styled.header`
 
 export const StyledContent = styled.main`
   ${paddingReset};
+
   ${widthReset};
 `;

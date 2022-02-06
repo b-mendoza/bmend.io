@@ -4,6 +4,7 @@ import { paddingReset, widthReset } from 'styles/mixins/resets';
 
 export const StyledMenu = styled.ul`
   ${paddingReset};
+
   ${widthReset};
 
   align-items: center;
