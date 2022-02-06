@@ -29,8 +29,12 @@ export const globalStyles = (
       }
 
       body {
-        ${fontSizeReset}
-        ${injectOpenSansFont}
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-font-smoothing: antialiased;
+
+        ${injectOpenSansFont};
+
+        ${fontSizeReset};
       }
 
       h1,
@@ -39,7 +43,7 @@ export const globalStyles = (
       h4,
       h5,
       h6 {
-        ${injectFiraCodeFont}
+        ${injectFiraCodeFont};
 
         font-weight: 600;
 
