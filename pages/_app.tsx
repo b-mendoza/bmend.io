@@ -1,25 +1,28 @@
+import '@fontsource/fira-code/600.css';
+import '@fontsource/fira-code/variable.css';
+
+import '@fontsource/open-sans/400.css';
+import '@fontsource/open-sans/variable.css';
+
 import 'normalize.css';
-import '../styles/globals.scss';
 
 import type { AppProps } from 'next/app';
 
-import { MemoizedMainLayout } from 'components/Layouts/MainLayout';
+import { MainLayout } from 'components/Layouts/MainLayout';
 import { DefaultHead } from 'components/SEO/DefaultHead';
 
-import { CustomPageProps as CPP } from 'typings/shared';
+import { globalStyles } from 'styles/globals';
 
-interface __AppProps extends AppProps<CPP> {
-  pageProps: CPP;
-}
-
-export default function _App(props: __AppProps): JSX.Element {
+export default function _App(props: AppProps): JSX.Element {
   return (
     <>
+      {globalStyles}
+
       <DefaultHead />
 
-      <MemoizedMainLayout>
+      <MainLayout>
         <props.Component {...props.pageProps} />
-      </MemoizedMainLayout>
+      </MainLayout>
     </>
   );
 }
