@@ -1,4 +1,3 @@
-import { memo } from 'react';
 import { v4 as uuid4 } from 'uuid';
 
 import { LinkTo } from 'components/Customs/LinkTo';
@@ -17,7 +16,7 @@ const menuItemList: MenuItem[] = [
   { href: '/', id: uuid4(), isBrand: false, content: 'Home' },
 ];
 
-function MemoMainMenu(): JSX.Element {
+export function MainMenu(): JSX.Element {
   return (
     <nav>
       <StyledMenu>
@@ -36,5 +35,3 @@ function MemoMainMenu(): JSX.Element {
     </nav>
   );
 }
-
-export const MainMenu = memo(MemoMainMenu);

@@ -1,5 +1,3 @@
-import { memo } from 'react';
-
 import { Footer } from 'components/Footer';
 import { MainMenu } from 'components/Menus/MainMenu';
 
@@ -9,18 +7,18 @@ interface MainLayoutProps {
   children: React.ReactNode;
 }
 
-function MemoizedMainLayout(props: MainLayoutProps): JSX.Element {
+export function MainLayout(props: MainLayoutProps): JSX.Element {
+  const { children } = props;
+
   return (
     <>
       <StyledHeader>
         <MainMenu />
       </StyledHeader>
 
-      <StyledContent>{props.children}</StyledContent>
+      <StyledContent>{children}</StyledContent>
 
       <Footer />
     </>
   );
 }
-
-export const MainLayout = memo(MemoizedMainLayout);

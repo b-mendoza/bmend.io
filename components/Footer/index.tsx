@@ -1,4 +1,3 @@
-import { memo } from 'react';
 import { v4 as uuid4 } from 'uuid';
 
 import { LinkTo } from 'components/Customs/LinkTo';
@@ -12,7 +11,7 @@ interface MenuItem {
 
 const menuItemList: MenuItem[] = [{ content: 'Home', href: '/', id: uuid4() }];
 
-function MemoizedFooter(): JSX.Element {
+export function Footer(): JSX.Element {
   return (
     <StyledFooter>
       <StyledWrapper>
@@ -33,5 +32,3 @@ function MemoizedFooter(): JSX.Element {
     </StyledFooter>
   );
 }
-
-export const Footer = memo(MemoizedFooter);
