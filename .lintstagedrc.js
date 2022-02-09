@@ -10,7 +10,6 @@ const buildESLintCommand = (filenames) =>
     .join(' --file ')}`;
 
 module.exports = {
-  '**/*.(j|t)s?(x)': [buildESLintCommand],
-
   '*': 'prettier -c --config ./.prettierrc -w',
+  '**/*.(j|t)s?(x)': [buildESLintCommand],
 };
