@@ -29,12 +29,12 @@ export const globalStyles = (
       }
 
       body {
-        -moz-osx-font-smoothing: grayscale;
-        -webkit-font-smoothing: antialiased;
+        ${fontSizeReset};
 
         ${injectOpenSansFont};
 
-        ${fontSizeReset};
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-font-smoothing: antialiased;
       }
 
       h1,
