@@ -8,8 +8,7 @@ export default function IndexPage(): JSX.Element {
       </Head>
 
       <h1>
-        I&apos;m Bryan Mendoza
-        <small>Sr. Front End Developer</small>
+        I&apos;m Bryan Mendoza <small>Sr. Front End Developer</small>
       </h1>
 
       <section>
