@@ -29,6 +29,7 @@ module.exports = {
       'error',
       { argsIgnorePattern: '^_', varsIgnorePattern: '^_' },
     ],
+    '@typescript-eslint/triple-slash-reference': 'off',
     'no-unused-vars': 'off',
   },
   settings: {
