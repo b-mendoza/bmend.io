@@ -5,5 +5,5 @@
     "types": ["@types/node"]
   },
   "extends": "./tsconfig.json",
-  "include": [".eslintrc.js", ".lintstagedrc.js", "next.config.js"]
+  "include": [".eslintrc.js", ".lintstagedrc.js", "next.config.mjs"]
 }
