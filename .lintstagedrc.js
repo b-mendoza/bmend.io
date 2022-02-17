@@ -1,3 +1,14 @@
+// @ts-check
+
+const path = require('path');
+
+/** @param {string[]} filenames */
+
+const buildEslintCommand = (filenames) =>
+  `next lint --fix --file ${filenames
+    .map((filename) => path.relative(process.cwd(), filename))
+    .join(' --file ')}`;
+
 module.exports = {
-  '**/*': ['eslint --fix', 'prettier -c --config ./.prettierrc -w'],
+  '**/*': ['prettier -c --config ./.prettierrc -w', buildEslintCommand],
 };
