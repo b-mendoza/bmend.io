@@ -1,18 +1,7 @@
-# dependencies
-/node_modules
-
-# testing
-/coverage
-
-# next.js
-/.next/
-/out/
-
-# production
-/build
-
-# vercel
-.vercel
-
-# typescript
+.env
 *.tsbuildinfo
+/.cache
+/build
+/public/build
+node_modules
+pnpm-lock.yaml
