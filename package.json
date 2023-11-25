@@ -6,8 +6,14 @@
   "scripts": {
     "build": "vite build && vite build --ssr",
     "dev": "vite dev",
-    "start": "remix-serve ./build/index.js",
-    "typecheck": "tsc"
+    "fix": "pnpm run --sequential \"/fix:.*/\"",
+    "fix:eslint": "eslint --cache --cache-location ./node_modules/.cache/eslint --fix .",
+    "fix:prettier": "prettier --ignore-unknown --cache --write .",
+    "lint": "pnpm run --sequential \"/lint:.*/\"",
+    "lint:eslint": "eslint --cache-location ./node_modules/.cache/eslint .",
+    "lint:prettier": "prettier --ignore-unknown --cache --check .",
+    "lint:types": "tsc --pretty",
+    "start": "remix-serve ./build/index.js"
   },
   "dependencies": {
     "@remix-run/node": "2.3.1",
