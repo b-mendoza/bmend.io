@@ -6,8 +6,8 @@ import { createRoutesFromFolders } from '@remix-run/v1-route-convention';
 export default defineConfig({
   plugins: [
     remix({
-      routes: (defineRoutes) => {
-        return Promise.resolve(createRoutesFromFolders(defineRoutes));
+      async routes(defineRoutes) {
+        return createRoutesFromFolders(defineRoutes);
       },
     }),
     tsconfigPaths(),
