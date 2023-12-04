@@ -1,5 +1,5 @@
 import { cssBundleHref } from '@remix-run/css-bundle';
-import type { LinkDescriptor, LinksFunction } from '@remix-run/node';
+import type { LinkDescriptor, LinksFunction } from '@vercel/remix';
 import {
   Links,
   LiveReload,
@@ -42,7 +42,7 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body>
+      <body className="min-h-screen">
         <Outlet />
         <ScrollRestoration />
         <Scripts />

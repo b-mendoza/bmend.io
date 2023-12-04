@@ -1,2 +1,2 @@
 import type {} from '@remix-run/dev';
-import type {} from '@remix-run/node';
+import type {} from '@vercel/remix';
