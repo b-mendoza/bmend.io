@@ -1,4 +1,5 @@
-import type { LinksFunction } from '@remix-run/node';
+import { cssBundleHref } from '@remix-run/css-bundle';
+import type { LinkDescriptor, LinksFunction } from '@remix-run/node';
 import {
   Links,
   LiveReload,
@@ -8,10 +9,29 @@ import {
   ScrollRestoration,
 } from '@remix-run/react';
 import tailwindStyles from '~/styles/tailwind.css';
+import geistFont from '~/assets/fonts/GeistVariableVF.woff2';
 
-export const links: LinksFunction = () => [
-  { rel: 'stylesheet', href: tailwindStyles },
-];
+export const links: LinksFunction = () => {
+  const baseLinks = [
+    {
+      rel: 'preload',
+      href: geistFont,
+      as: 'font',
+      crossOrigin: 'anonymous',
+      type: 'font/woff2',
+    },
+    { rel: 'stylesheet', href: tailwindStyles },
+  ] satisfies LinkDescriptor[];
+
+  if (typeof cssBundleHref === 'string') {
+    return baseLinks.concat({
+      rel: 'stylesheet',
+      href: cssBundleHref,
+    });
+  }
+
+  return baseLinks;
+};
 
 export default function App() {
   return (
