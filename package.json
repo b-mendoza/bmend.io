@@ -7,10 +7,10 @@
     "build": "vite build && vite build --ssr",
     "dev": "vite dev",
     "fix": "pnpm run --sequential \"/fix:.*/\"",
-    "fix:eslint": "eslint --cache --cache-location ./node_modules/.cache/eslint --fix .",
+    "fix:eslint": "eslint --fix .",
     "fix:prettier": "prettier --ignore-unknown --cache --write .",
     "lint": "pnpm run --sequential \"/lint:.*/\"",
-    "lint:eslint": "eslint --cache-location ./node_modules/.cache/eslint .",
+    "lint:eslint": "eslint .",
     "lint:prettier": "prettier --ignore-unknown --cache --check .",
     "lint:types": "tsc --pretty",
     "start": "remix-serve ./build/index.js"
