@@ -1,7 +1,9 @@
 {
   "compilerOptions": {
+    "allowJs": true,
+    "checkJs": true,
     "types": ["@types/node"]
   },
   "extends": "./tsconfig.json",
-  "include": ["prettier.config.js", ".eslintrc.cjs"]
+  "include": [".eslintrc.cjs", "prettier.config.js", "remix.config.js"]
 }
