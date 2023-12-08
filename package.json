@@ -25,13 +25,14 @@
     "@remix-run/serve": "2.3.1",
     "@unpic/react": "0.1.4",
     "@vercel/remix": "2.3.1",
+    "embla-carousel-react": "8.0.0-rc15",
     "isbot": "3.7.1",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },
   "devDependencies": {
     "@remix-run/dev": "2.3.1",
-    "@types/node": "20.10.3",
+    "@types/node": "20.10.4",
     "@types/react": "18.2.42",
     "@types/react-dom": "18.2.17",
     "@typescript-eslint/eslint-plugin": "6.13.2",
