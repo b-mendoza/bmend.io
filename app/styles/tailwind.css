@@ -9,4 +9,22 @@
     font-weight: 100 900;
     src: url(../assets/fonts/GeistVariableVF.woff2) format('woff2-variations');
   }
+
+  html {
+    --background: 47 85% 5%;
+    --block-background-1: 0 0% 100%;
+    --block-background-2: 41 21% 15%;
+    --block-border: 39 9% 32%;
+    --button-hover-background: 0 0% 100%;
+    --button-hover-text: 0 0% 13%;
+    --nav-link-background-hover: 0 0% 100%;
+    --nav-link-background: 0 0% 100%;
+    --nav-link-text-hover: 0 0% 100%;
+    --section-background-bottom: 42 30% 11%;
+    --section-background-top: 41 46% 8%;
+    --section-border: 0 0% 100%;
+    --texts: 0 0% 100%;
+    --violet-glow: 244 81% 55%;
+    --white: 0 0% 100%;
+  }
 }
