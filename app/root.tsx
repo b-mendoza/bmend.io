@@ -25,7 +25,7 @@ export const links: LinksFunction = () => {
   return baseLinks;
 };
 
-export default function App() {
+export default function HomeLayoutRoute() {
   return (
     <html lang="en">
       <head>
@@ -34,7 +34,7 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body className="min-h-screen">
+      <body className="min-h-screen bg-background p-4">
         <Outlet />
         <ScrollRestoration />
         <Scripts />
