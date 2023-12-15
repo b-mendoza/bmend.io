@@ -4,6 +4,8 @@
 
 @layer base {
   html {
+    font-size: 62.5%;
+
     --background: 47 85% 5%;
     --block-background-1: 0 0% 100%;
     --block-background-2: 41 21% 15%;
@@ -19,5 +21,9 @@
     --texts: 0 0% 100%;
     --violet-glow: 244 81% 55%;
     --white: 0 0% 100%;
+  }
+
+  body {
+    font-size: 1.6rem;
   }
 }
