@@ -1,4 +1,3 @@
-import defaultThemeOpts from 'tailwindcss/defaultTheme';
 import type { Config } from 'tailwindcss';
 
 const ALPHA_VALUE = '<alpha-value>';
@@ -27,9 +26,6 @@ export default {
         texts: `hsl(var(--texts) / ${ALPHA_VALUE})`,
         'violet-glow': `hsl(var(--violet-glow) / ${ALPHA_VALUE})`,
         white: `hsl(var(--white) / ${ALPHA_VALUE})`,
-      },
-      fontFamily: {
-        sans: ['Geist', ...defaultThemeOpts.fontFamily.sans],
       },
     },
   },

@@ -3,13 +3,6 @@
 @tailwind utilities;
 
 @layer base {
-  @font-face {
-    font-display: swap;
-    font-family: Geist;
-    font-weight: 100 900;
-    src: url(../assets/fonts/GeistVariableVF.woff2) format('woff2-variations');
-  }
-
   html {
     --background: 47 85% 5%;
     --block-background-1: 0 0% 100%;

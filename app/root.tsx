@@ -9,17 +9,9 @@ import {
   ScrollRestoration,
 } from '@remix-run/react';
 import tailwindStyles from '~/styles/tailwind.css';
-import geistFont from '~/assets/fonts/GeistVariableVF.woff2';
 
 export const links: LinksFunction = () => {
   const baseLinks = [
-    {
-      rel: 'preload',
-      href: geistFont,
-      as: 'font',
-      crossOrigin: 'anonymous',
-      type: 'font/woff2',
-    },
     { rel: 'stylesheet', href: tailwindStyles },
   ] satisfies LinkDescriptor[];
 
