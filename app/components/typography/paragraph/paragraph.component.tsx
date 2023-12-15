@@ -2,10 +2,10 @@ import { cn } from '~/utils/cn';
 
 type Size = 'sm' | 'md' | 'lg';
 
-const SIZE_CLASS_NAMES: Record<Size, string> = {
-  lg: 'text-lg',
-  md: 'text-md',
+const PARAGRAPH_SIZES: Record<Size, string> = {
   sm: 'text-sm',
+  md: 'text-md',
+  lg: 'text-lg',
 };
 
 export type ParagraphProps = Readonly<
@@ -22,6 +22,6 @@ export const Paragraph = (props: ParagraphProps) => {
   const { className, size = 'md', ...restOfProps } = props;
 
   return (
-    <p className={cn(SIZE_CLASS_NAMES[size], className)} {...restOfProps} />
+    <p className={cn(PARAGRAPH_SIZES[size], className)} {...restOfProps} />
   );
 };
