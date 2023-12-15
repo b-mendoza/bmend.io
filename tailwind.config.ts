@@ -27,6 +27,11 @@ export default {
         'violet-glow': `hsl(var(--violet-glow) / ${ALPHA_VALUE})`,
         white: `hsl(var(--white) / ${ALPHA_VALUE})`,
       },
+      fontSize: {
+        sm: '1.4rem',
+        md: '1.6rem',
+        lg: '1.8rem',
+      },
     },
   },
   plugins: [],
