@@ -4,20 +4,20 @@ import { Paragraph } from '~/components/typography/paragraph';
 import { getTags } from './get-tags.server';
 import { useLoaderData } from '@remix-run/react';
 import { Subtitle } from '~/components/typography/subtitle';
-import { getExperience } from './get-experience.server';
+import { getJobExperience } from './get-job-experience.server';
 import { SectionWrapper } from '~/components/ui/section-wrapper';
 import { TagMapper } from '~/components/tag-mapper';
 import { ExperienceCard } from '~/components/experience-card';
+import { WhiteButton } from '~/components/white-button';
+import { Link } from '~/components/link';
+import { getSocialLinks } from './get-social-links.server';
 
-export const loader = () => {
-  const tags = getTags();
-  const jobExperienceList = getExperience();
-
-  return json({
-    jobExperienceList,
-    tags,
+export const loader = () =>
+  json({
+    jobExperience: getJobExperience(),
+    socialLinks: getSocialLinks(),
+    tags: getTags(),
   });
-};
 
 export default function HomeIndexRoute() {
   const loaderData = useLoaderData<typeof loader>();
@@ -47,7 +47,7 @@ export default function HomeIndexRoute() {
       <SectionWrapper className="flex flex-col gap-[3.6rem]">
         <Subtitle>Experience</Subtitle>
 
-        {loaderData.jobExperienceList.map((jobExperience) => (
+        {loaderData.jobExperience.map((jobExperience) => (
           <ExperienceCard
             companyName={jobExperience.companyName}
             description={jobExperience.description}
@@ -58,7 +58,33 @@ export default function HomeIndexRoute() {
         ))}
       </SectionWrapper>
 
-      <SectionWrapper></SectionWrapper>
+      <SectionWrapper className="border-white/20 bg-gradient-to-br from-[hsl(243_100%_68%)] to-[hsl(243_76%_51%)] px-0">
+        <Paragraph className="mb-6 text-center text-white/80">
+          John Cameron
+        </Paragraph>
+
+        <div className="mx-8 mb-12">
+          <Heading
+            className="mb-12 text-center font-medium"
+            size="lg"
+            variant="h2"
+          >
+            Let&apos;s talk about your project
+          </Heading>
+
+          <WhiteButton className="w-full">Book a call</WhiteButton>
+        </div>
+
+        <ul className="flex flex-wrap items-center justify-center gap-12 border-t-[0.1rem] border-t-texts/[0.15] px-8 pt-12">
+          {loaderData.socialLinks.map((socialLink) => (
+            <li key={socialLink.id}>
+              <Link isExternal href={socialLink.to}>
+                {socialLink.name}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </SectionWrapper>
     </div>
   );
 }
