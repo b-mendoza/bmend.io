@@ -1,4 +1,4 @@
-import { json } from '@remix-run/node';
+import { json } from '@remix-run/cloudflare';
 import { Heading } from '~/components/typography/headings';
 import { Paragraph } from '~/components/typography/paragraph';
 import { getTags } from './get-tags.server';
@@ -12,12 +12,13 @@ import { WhiteButton } from '~/components/white-button';
 import { Link } from '~/components/link';
 import { getSocialLinks } from './get-social-links.server';
 
-export const loader = () =>
-  json({
+export const loader = () => {
+  return json({
     jobExperience: getJobExperience(),
     socialLinks: getSocialLinks(),
     tags: getTags(),
   });
+};
 
 export default function HomeIndexRoute() {
   const loaderData = useLoaderData<typeof loader>();
