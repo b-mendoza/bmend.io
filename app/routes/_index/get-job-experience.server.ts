@@ -1,6 +1,6 @@
 import crypto from 'crypto';
 
-export const getExperience = () => {
+export const getJobExperience = () => {
   return [
     {
       id: crypto.randomUUID(),
