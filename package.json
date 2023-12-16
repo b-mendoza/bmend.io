@@ -1,5 +1,5 @@
 {
-  "name": "intro-to-nextjs__remix",
+  "name": "bmendoza.io",
   "private": true,
   "sideEffects": false,
   "type": "module",
@@ -7,7 +7,8 @@
     "build": "remix build",
     "clean:hard": "rimraf --verbose build node_modules pnpm-lock.yaml public/build tsconfig.tsbuildinfo",
     "clean:soft": "rimraf --verbose build node_modules/.cache public/build tsconfig.tsbuildinfo",
-    "dev": "remix dev --manual",
+    "deploy": "wrangler deploy",
+    "dev": "remix dev --manual -c \"pnpm run start\"",
     "fix": "concurrently --kill-others-on-fail --prefix-colors \"auto\" \"pnpm:fix:*\"",
     "fix:eslint": "eslint --cache --cache-location ./node_modules/.cache/eslint --fix .",
     "fix:prettier": "prettier --ignore-unknown --cache --write .",
@@ -15,16 +16,15 @@
     "lint:eslint": "eslint --cache --cache-location ./node_modules/.cache/eslint .",
     "lint:prettier": "prettier --ignore-unknown --cache --check .",
     "lint:types": "tsc --pretty",
-    "start": "remix-serve ./build/index.js"
+    "start": "wrangler dev ./build/index.js"
   },
   "dependencies": {
+    "@cloudflare/kv-asset-handler": "0.3.0",
     "@heroicons/react": "2.0.18",
+    "@remix-run/cloudflare": "2.4.0",
     "@remix-run/css-bundle": "2.4.0",
-    "@remix-run/node": "2.4.0",
     "@remix-run/react": "2.4.0",
-    "@remix-run/serve": "2.4.0",
     "@unpic/react": "0.1.5",
-    "@vercel/remix": "2.4.0",
     "clsx": "2.0.0",
     "embla-carousel-react": "8.0.0-rc15",
     "isbot": "3.7.1",
@@ -36,6 +36,7 @@
     "zod": "3.22.4"
   },
   "devDependencies": {
+    "@cloudflare/workers-types": "4.20231121.0",
     "@remix-run/dev": "2.4.0",
     "@types/node": "20.10.4",
     "@types/react": "18.2.45",
@@ -60,7 +61,8 @@
     "prettier-plugin-tailwindcss": "0.5.9",
     "rimraf": "5.0.5",
     "tailwindcss": "3.3.6",
-    "typescript": "5.3.3"
+    "typescript": "5.3.3",
+    "wrangler": "3.21.0"
   },
   "engines": {
     "node": ">=20.0.0 <21.0.0"
