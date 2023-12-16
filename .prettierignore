@@ -1,6 +1,6 @@
 .env
 *.tsbuildinfo
-/.cache
+/.wrangler
 /build
 /public/build
 node_modules
