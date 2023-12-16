@@ -38,6 +38,7 @@
   "devDependencies": {
     "@cloudflare/workers-types": "4.20231121.0",
     "@remix-run/dev": "2.4.0",
+    "@total-typescript/ts-reset": "0.5.1",
     "@types/node": "20.10.4",
     "@types/react": "18.2.45",
     "@types/react-dom": "18.2.18",
