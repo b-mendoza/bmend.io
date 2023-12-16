@@ -3,8 +3,11 @@ import type { AppLoadContext } from '@remix-run/cloudflare';
 import { createRequestHandler, logDevReady } from '@remix-run/cloudflare';
 import * as build from '@remix-run/dev/server-build';
 import __STATIC_CONTENT_MANIFEST from '__STATIC_CONTENT_MANIFEST';
+import type { Options } from '@cloudflare/kv-asset-handler';
 
-const MANIFEST = JSON.parse(__STATIC_CONTENT_MANIFEST);
+const MANIFEST = JSON.parse(
+  __STATIC_CONTENT_MANIFEST,
+) as Options['ASSET_MANIFEST'];
 
 const handleRemixRequest = createRequestHandler(build, process.env.NODE_ENV);
 
@@ -30,7 +33,7 @@ export default {
         {
           request,
           waitUntil: ctx.waitUntil.bind(ctx),
-        } as FetchEvent,
+        } satisfies Pick<FetchEvent, 'request' | 'waitUntil'>,
         {
           ASSET_NAMESPACE: env.__STATIC_CONTENT,
           ASSET_MANIFEST: MANIFEST,
