@@ -43,10 +43,6 @@ module.exports = {
       'type',
     ],
     '@typescript-eslint/explicit-function-return-type': SeverityTypes.OFF,
-    // '@typescript-eslint/no-namespace': [
-    //   SeverityTypes.ERROR,
-    //   { allowDeclarations: true },
-    // ],
     'jsx-a11y/anchor-has-content': [
       SeverityTypes.ERROR,
       {
@@ -69,4 +65,12 @@ module.exports = {
       { name: 'NavLink', linkAttribute: 'to' },
     ],
   },
+  overrides: [
+    {
+      files: ['**/*.d.ts'],
+      rules: {
+        '@typescript-eslint/triple-slash-reference': SeverityTypes.OFF,
+      },
+    },
+  ],
 };
