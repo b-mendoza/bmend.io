@@ -19,7 +19,7 @@
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "strict": true,
-    "target": "ES6",
+    "target": "ES2019",
     "verbatimModuleSyntax": true
   },
   "include": ["remix.env.d.ts", "**/*.ts", "**/*.tsx"]
