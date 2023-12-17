@@ -1,6 +1,9 @@
-.env
+.dev.vars
 *.tsbuildinfo
 /.wrangler
-/build
+/functions/\[\[path\]\].js
+/functions/\[\[path\]\].js.map
+/functions/metafile.*
+/functions/version.txt
 /public/build
 node_modules
