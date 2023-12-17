@@ -7,7 +7,6 @@
     "build": "remix build",
     "clean:hard": "rimraf --verbose build node_modules pnpm-lock.yaml public/build tsconfig.tsbuildinfo",
     "clean:soft": "rimraf --verbose build node_modules/.cache public/build tsconfig.tsbuildinfo",
-    "deploy": "wrangler deploy",
     "dev": "remix dev --manual -c \"pnpm run start\"",
     "fix": "concurrently --kill-others-on-fail --prefix-colors \"auto\" \"pnpm:fix:*\"",
     "fix:eslint": "eslint --cache --cache-location ./node_modules/.cache/eslint --fix .",
@@ -16,22 +15,21 @@
     "lint:eslint": "eslint --cache --cache-location ./node_modules/.cache/eslint .",
     "lint:prettier": "prettier --ignore-unknown --cache --check .",
     "lint:types": "tsc --pretty",
-    "start": "wrangler dev ./build/index.js"
+    "start": "wrangler pages dev --compatibility-date=2023-12-16 ./public"
   },
   "dependencies": {
-    "@cloudflare/kv-asset-handler": "0.3.0",
     "@heroicons/react": "2.0.18",
     "@remix-run/cloudflare": "2.4.0",
+    "@remix-run/cloudflare-pages": "2.4.0",
     "@remix-run/css-bundle": "2.4.0",
     "@remix-run/react": "2.4.0",
     "@unpic/react": "0.1.5",
+    "cloudinary": "1.41.0",
     "clsx": "2.0.0",
     "embla-carousel-react": "8.0.0-rc15",
     "isbot": "3.7.1",
-    "plaiceholder": "3.0.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "sharp": "0.33.0",
     "tailwind-merge": "2.1.0",
     "zod": "3.22.4"
   },
