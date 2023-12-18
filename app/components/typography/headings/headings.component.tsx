@@ -1,5 +1,5 @@
-import { createElement } from 'react';
 import { cn } from '~/utils/cn';
+import { createElement } from 'react';
 
 type Variant = keyof Pick<React.ReactHTML, 'h1' | 'h2' | 'h3'>;
 

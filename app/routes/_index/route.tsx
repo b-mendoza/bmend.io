@@ -1,17 +1,17 @@
 import { json } from '@remix-run/cloudflare';
+import { useLoaderData } from '@remix-run/react';
+import { Image } from '@unpic/react';
+import { ExperienceCard } from '~/components/experience-card';
+import { Link } from '~/components/link';
+import { TagMapper } from '~/components/tag-mapper';
 import { Heading } from '~/components/typography/headings';
 import { Paragraph } from '~/components/typography/paragraph';
-import { getTags } from './get-tags.server';
-import { useLoaderData } from '@remix-run/react';
 import { Subtitle } from '~/components/typography/subtitle';
-import { getJobExperience } from './get-job-experience.server';
 import { SectionWrapper } from '~/components/ui/section-wrapper';
-import { TagMapper } from '~/components/tag-mapper';
-import { ExperienceCard } from '~/components/experience-card';
 import { WhiteButton } from '~/components/white-button';
-import { Link } from '~/components/link';
+import { getJobExperience } from './get-job-experience.server';
 import { getSocialLinks } from './get-social-links.server';
-import { Image } from '@unpic/react';
+import { getTags } from './get-tags.server';
 
 export const loader = () => {
   return json({

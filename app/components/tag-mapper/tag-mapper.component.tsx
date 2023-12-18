@@ -1,5 +1,5 @@
-import { cn } from '~/utils/cn';
 import { Tag } from '~/components/tag';
+import { cn } from '~/utils/cn';
 
 type TagMapperProps<T> = Readonly<{
   getTagId: (tag: T) => string;

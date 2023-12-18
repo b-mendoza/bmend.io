@@ -34,6 +34,7 @@
   },
   "devDependencies": {
     "@cloudflare/workers-types": "4.20231121.0",
+    "@ianvs/prettier-plugin-sort-imports": "4.1.1",
     "@remix-run/dev": "2.4.0",
     "@total-typescript/ts-reset": "0.5.1",
     "@types/node": "20.10.5",

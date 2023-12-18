@@ -1,5 +1,5 @@
-import { cn } from '~/utils/cn';
 import { Paragraph } from '~/components/typography/paragraph';
+import { cn } from '~/utils/cn';
 
 export type ButtonProps = React.JSX.IntrinsicElements['button'];
 
