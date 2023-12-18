@@ -1,6 +1,6 @@
 import type { OutgoingHttpHeaders } from 'http';
 import { json } from '@remix-run/cloudflare';
-import type { HeadersFunction } from '@remix-run/cloudflare';
+import type { HeadersFunction, MetaFunction } from '@remix-run/cloudflare';
 import { useLoaderData } from '@remix-run/react';
 import { Image } from '@unpic/react';
 import { ExperienceCard } from '~/components/experience-card';
@@ -15,6 +15,10 @@ import { getDaysInSeconds } from './get-days-in-seconds.server';
 import { getJobExperience } from './get-job-experience.server';
 import { getSocialLinks } from './get-social-links.server';
 import { getTags } from './get-tags.server';
+
+export const meta: MetaFunction = () => {
+  return [{ title: 'Bryan M. | Portfolio' }];
+};
 
 export const headers: HeadersFunction = ({ loaderHeaders }) => {
   const loaderCacheControlPolicy = loaderHeaders.get('cache-control');
