@@ -1,10 +1,12 @@
-.dev.vars
-*.tsbuildinfo
+# Artifacts
 /.wrangler
-/functions/\[\[path\]\].js
-/functions/\[\[path\]\].js.map
-/functions/metafile.*
-/functions/version.txt
+/functions
 /public/build
+
+# Dependencies
 node_modules
 pnpm-lock.yaml
+
+# dotfiles
+.dev.vars
+*.tsbuildinfo
