@@ -47,6 +47,13 @@ module.exports = {
       { fixStyle: 'separate-type-imports' },
     ],
     '@typescript-eslint/explicit-function-return-type': SeverityTypes.OFF,
+    'jsx-a11y/alt-text': [
+      SeverityTypes.ERROR,
+      {
+        elements: ['img'],
+        img: ['Image'],
+      },
+    ],
     'jsx-a11y/anchor-has-content': [
       SeverityTypes.ERROR,
       {
