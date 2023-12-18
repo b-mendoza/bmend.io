@@ -25,6 +25,7 @@
     "@remix-run/react": "2.4.0",
     "@unpic/react": "0.1.5",
     "clsx": "2.0.0",
+    "dayjs": "1.11.10",
     "embla-carousel-react": "8.0.0-rc15",
     "isbot": "3.7.1",
     "react": "18.2.0",
