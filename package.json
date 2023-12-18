@@ -5,8 +5,8 @@
   "type": "module",
   "scripts": {
     "build": "remix build",
-    "clean:hard": "rimraf --verbose build node_modules pnpm-lock.yaml public/build tsconfig.tsbuildinfo",
-    "clean:soft": "rimraf --verbose build node_modules/.cache public/build tsconfig.tsbuildinfo",
+    "clean:hard": "rimraf --verbose .wrangler functions node_modules pnpm-lock.yaml public/build tsconfig.tsbuildinfo",
+    "clean:soft": "rimraf --verbose .wrangler functions node_modules/.cache public/build tsconfig.tsbuildinfo",
     "dev": "remix dev --manual -c \"pnpm run start\"",
     "fix": "concurrently --kill-others-on-fail --prefix-colors \"auto\" \"pnpm:fix:*\"",
     "fix:eslint": "eslint --cache --cache-location ./node_modules/.cache/eslint --fix .",
