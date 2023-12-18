@@ -14,9 +14,6 @@ dependencies:
   '@remix-run/cloudflare-pages':
     specifier: 2.4.0
     version: 2.4.0(@cloudflare/workers-types@4.20231121.0)(typescript@5.3.3)
-  '@remix-run/css-bundle':
-    specifier: 2.4.0
-    version: 2.4.0
   '@remix-run/react':
     specifier: 2.4.0
     version: 2.4.0(react-dom@18.2.0)(react@18.2.0)(typescript@5.3.3)
@@ -1453,11 +1450,6 @@ packages:
       '@cloudflare/workers-types': 4.20231121.0
       '@remix-run/server-runtime': 2.4.0(typescript@5.3.3)
       typescript: 5.3.3
-    dev: false
-
-  /@remix-run/css-bundle@2.4.0:
-    resolution: {integrity: sha512-kFFJ5Iek1lNjoiajiqirLGcxTvPdmbIezvKZbJwSO173pZRHr1MlTnLactrYhFmEHNBE6LMN54QXDynl93S+aQ==}
-    engines: {node: '>=18.0.0'}
     dev: false
 
   /@remix-run/dev@2.4.0(@types/node@20.10.5)(typescript@5.3.3):

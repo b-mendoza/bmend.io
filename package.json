@@ -21,7 +21,6 @@
     "@heroicons/react": "2.0.18",
     "@remix-run/cloudflare": "2.4.0",
     "@remix-run/cloudflare-pages": "2.4.0",
-    "@remix-run/css-bundle": "2.4.0",
     "@remix-run/react": "2.4.0",
     "@unpic/react": "0.1.5",
     "clsx": "2.0.0",
