@@ -11,6 +11,7 @@ import { ExperienceCard } from '~/components/experience-card';
 import { WhiteButton } from '~/components/white-button';
 import { Link } from '~/components/link';
 import { getSocialLinks } from './get-social-links.server';
+import { Image } from '@unpic/react';
 
 export const loader = () => {
   return json({
@@ -28,7 +29,7 @@ export default function HomeIndexRoute() {
       <SectionWrapper>
         <Subtitle className="mb-12">About</Subtitle>
 
-        <Heading variant="h1" size="sm" className="mb-8 font-medium">
+        <Heading className="mb-8 font-medium" size="sm" variant="h1">
           User Experience Architect & Design Innovator
         </Heading>
 
@@ -60,6 +61,16 @@ export default function HomeIndexRoute() {
       </SectionWrapper>
 
       <SectionWrapper className="border-white/20 bg-gradient-to-br from-[hsl(243_100%_68%)] to-[hsl(243_76%_51%)] px-0">
+        <Image
+          background="https://res.cloudinary.com/dgqif0kkr/image/upload/c_fit,h_115,w_115/q_1/e_blur:2000/f_webp/bmendoza-io/sm8a1hhpi7wjua4upya1.jpg"
+          cdn="cloudinary"
+          className="mx-auto mb-10 rounded-full"
+          height={115}
+          layout="fixed"
+          src="https://res.cloudinary.com/dgqif0kkr/image/upload/q_auto:best/c_fit,h_115,w_115/f_webp/bmendoza-io/sm8a1hhpi7wjua4upya1.jpg"
+          width={115}
+        />
+
         <Paragraph className="mb-6 text-center text-white/80">
           John Cameron
         </Paragraph>
