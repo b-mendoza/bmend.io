@@ -1,5 +1,6 @@
 import type { OutgoingHttpHeaders } from 'http';
 import { json } from '@remix-run/cloudflare';
+import type { HeadersFunction } from '@remix-run/cloudflare';
 import { useLoaderData } from '@remix-run/react';
 import { Image } from '@unpic/react';
 import { ExperienceCard } from '~/components/experience-card';
@@ -15,21 +16,28 @@ import { getJobExperience } from './get-job-experience.server';
 import { getSocialLinks } from './get-social-links.server';
 import { getTags } from './get-tags.server';
 
+export const headers: HeadersFunction = ({ loaderHeaders }) => {
+  const loaderCacheControlPolicy = loaderHeaders.get('cache-control');
+
+  if (typeof loaderCacheControlPolicy === 'string') {
+    return {
+      'cache-control': loaderCacheControlPolicy,
+    };
+  }
+
+  return {
+    'cache-control': `max-age=${getDaysInSeconds(
+      1,
+    )}, stale-while-revalidate=${getDaysInSeconds(7)}`,
+  } satisfies OutgoingHttpHeaders;
+};
+
 export const loader = () => {
-  return json(
-    {
-      jobExperience: getJobExperience(),
-      socialLinks: getSocialLinks(),
-      tags: getTags(),
-    },
-    {
-      headers: {
-        'cache-control': `max-age=${getDaysInSeconds(
-          1,
-        )}, stale-while-revalidate=${getDaysInSeconds(7)}`,
-      } satisfies OutgoingHttpHeaders,
-    },
-  );
+  return json({
+    jobExperience: getJobExperience(),
+    socialLinks: getSocialLinks(),
+    tags: getTags(),
+  });
 };
 
 export default function HomeIndexRoute() {
