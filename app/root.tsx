@@ -1,5 +1,4 @@
-import type { LinkDescriptor, LinksFunction } from '@remix-run/cloudflare';
-import { cssBundleHref } from '@remix-run/css-bundle';
+import type { LinksFunction } from '@remix-run/cloudflare';
 import {
   Links,
   LiveReload,
@@ -11,18 +10,17 @@ import {
 import tailwindStyles from '~/styles/tailwind.css';
 
 export const links: LinksFunction = () => {
-  const baseLinks = [
-    { rel: 'stylesheet', href: tailwindStyles },
-  ] satisfies LinkDescriptor[];
-
-  if (typeof cssBundleHref === 'string') {
-    return baseLinks.concat({
+  return [
+    {
+      rel: 'preload',
+      as: 'style',
+      href: tailwindStyles,
+    },
+    {
       rel: 'stylesheet',
-      href: cssBundleHref,
-    });
-  }
-
-  return baseLinks;
+      href: tailwindStyles,
+    },
+  ];
 };
 
 export default function HomeLayoutRoute() {
