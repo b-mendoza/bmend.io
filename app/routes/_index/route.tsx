@@ -62,6 +62,7 @@ export default function HomeIndexRoute() {
 
       <SectionWrapper className="border-white/20 bg-gradient-to-br from-[hsl(243_100%_68%)] to-[hsl(243_76%_51%)] px-0">
         <Image
+          alt="a close up of a dog on a leash with its mouth open and tongue out and tongue hanging out"
           background="https://res.cloudinary.com/dgqif0kkr/image/upload/c_fit,h_115,w_115/q_1/e_blur:2000/f_webp/bmendoza-io/sm8a1hhpi7wjua4upya1.jpg"
           cdn="cloudinary"
           className="mx-auto mb-10 rounded-full"
