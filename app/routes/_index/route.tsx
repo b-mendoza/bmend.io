@@ -1,3 +1,4 @@
+import type { OutgoingHttpHeaders } from 'http';
 import { json } from '@remix-run/cloudflare';
 import { useLoaderData } from '@remix-run/react';
 import { Image } from '@unpic/react';
@@ -9,16 +10,26 @@ import { Paragraph } from '~/components/typography/paragraph';
 import { Subtitle } from '~/components/typography/subtitle';
 import { SectionWrapper } from '~/components/ui/section-wrapper';
 import { WhiteButton } from '~/components/white-button';
+import { getDaysInSeconds } from './get-days-in-seconds.server';
 import { getJobExperience } from './get-job-experience.server';
 import { getSocialLinks } from './get-social-links.server';
 import { getTags } from './get-tags.server';
 
 export const loader = () => {
-  return json({
-    jobExperience: getJobExperience(),
-    socialLinks: getSocialLinks(),
-    tags: getTags(),
-  });
+  return json(
+    {
+      jobExperience: getJobExperience(),
+      socialLinks: getSocialLinks(),
+      tags: getTags(),
+    },
+    {
+      headers: {
+        'cache-control': `max-age=${getDaysInSeconds(
+          1,
+        )}, stale-while-revalidate=${getDaysInSeconds(7)}`,
+      } satisfies OutgoingHttpHeaders,
+    },
+  );
 };
 
 export default function HomeIndexRoute() {
