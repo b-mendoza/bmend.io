@@ -42,6 +42,10 @@ module.exports = {
       SeverityTypes.ERROR,
       'type',
     ],
+    '@typescript-eslint/consistent-type-imports': [
+      SeverityTypes.ERROR,
+      { fixStyle: 'separate-type-imports' },
+    ],
     '@typescript-eslint/explicit-function-return-type': SeverityTypes.OFF,
     'jsx-a11y/anchor-has-content': [
       SeverityTypes.ERROR,
