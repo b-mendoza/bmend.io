@@ -1,5 +1,4 @@
 import type { Config } from 'tailwindcss';
-import defaultThemeOpts from 'tailwindcss/defaultTheme';
 
 const ALPHA_VALUE = '<alpha-value>';
 
@@ -29,7 +28,21 @@ export default {
         white: `hsl(var(--white) / ${ALPHA_VALUE})`,
       },
       fontFamily: {
-        sans: ['Geist', ...defaultThemeOpts.fontFamily.sans],
+        sans: [
+          'Geist',
+          'ui-sans-serif',
+          'system-ui',
+          '-apple-system',
+          'BlinkMacSystemFont',
+          'Inter',
+          'Segoe UI',
+          'Roboto',
+          'sans-serif',
+          'Apple Color Emoji',
+          'Segoe UI Emoji',
+          'Segoe UI Symbol',
+          'Noto Color Emoji',
+        ],
       },
       fontSize: {
         sm: '1.4rem',
