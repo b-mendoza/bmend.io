@@ -76,7 +76,7 @@ const Header = () => {
         pressed={isMenuOpen}
         onPressedChange={handleMenuIconPress}
       >
-        <Icon name={isMenuOpen ? 'x-mark' : 'bars-3'} height={30} width={30} />
+        <Icon name={isMenuOpen ? 'x' : 'menu-2'} height={30} width={30} />
       </RootToggle>
     </SectionWrapper>
   );
@@ -115,6 +115,7 @@ export default function IndexHomeRoute() {
         <TagMapper
           getTagId={(tag) => tag.id}
           getTagName={(tag) => tag.text}
+          getIconName={(tag) => tag.icon}
           tags={loaderData.tags}
         />
       </SectionWrapper>
