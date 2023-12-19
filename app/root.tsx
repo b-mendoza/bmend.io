@@ -174,7 +174,7 @@ export default function HomeLayoutRoute() {
               Senior Software Engineer
             </Heading>
 
-            <Paragraph className="mb-16">
+            <Paragraph className="mb-16 text-balance">
               I am a highly skilled developer with 6 years of experience
               building high-quality applications for small and medium-sized
               businesses. I am passionate about creating exceptional user
@@ -221,7 +221,7 @@ export default function HomeLayoutRoute() {
 
             <div className="mx-8 mb-12">
               <Heading
-                className="mb-12 text-center font-medium"
+                className="mb-12 text-balance text-center font-medium"
                 size="lg"
                 variant="h2"
               >
