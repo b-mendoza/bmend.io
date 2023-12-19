@@ -1,4 +1,6 @@
 import type { OutgoingHttpHeaders } from 'http';
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
+import * as Toggle from '@radix-ui/react-toggle';
 import type {
   HeadersFunction,
   LinksFunction,
@@ -31,6 +33,7 @@ import { getDaysInSeconds } from '~/utils/get-days-in-seconds.server';
 import { getJobExperience } from '~/utils/get-job-experience.server';
 import { getSocialLinks } from '~/utils/get-social-links.server';
 import { getTags } from '~/utils/get-tags.server';
+import { useState } from 'react';
 
 export const links: LinksFunction = () => {
   return [
@@ -99,6 +102,48 @@ export const headers: HeadersFunction = ({ loaderHeaders }) => {
   } satisfies OutgoingHttpHeaders;
 };
 
+const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const BurgerMenu = isMenuOpen ? XMarkIcon : Bars3Icon;
+
+  const handleMenuIconPress = () => {
+    setIsMenuOpen((isMenuOpen) => !isMenuOpen);
+  };
+
+  return (
+    <SectionWrapper className="flex items-center justify-between gap-6 py-6">
+      <Image
+        alt="a close up of a dog on a leash with its mouth open and tongue out and tongue hanging out"
+        background="https://res.cloudinary.com/dgqif0kkr/image/upload/c_fill,h_10,w_10/q_1/e_blur:150/f_webp/bmendoza-io/sm8a1hhpi7wjua4upya1.jpg"
+        cdn="cloudinary"
+        className="rounded-full"
+        height={40}
+        layout="fixed"
+        src="https://res.cloudinary.com/dgqif0kkr/image/upload/c_fill,h_40,w_40/q_auto:best/f_webp/bmendoza-io/sm8a1hhpi7wjua4upya1.jpg"
+        width={40}
+        priority
+      />
+
+      <Heading
+        className="mr-auto text-[2rem] font-medium"
+        size="sm"
+        variant="h2"
+      >
+        Bryan Mendoza
+      </Heading>
+
+      <Toggle.Root
+        aria-label="Open menu"
+        pressed={isMenuOpen}
+        onPressedChange={handleMenuIconPress}
+      >
+        <BurgerMenu height={30} width={30} />
+      </Toggle.Root>
+    </SectionWrapper>
+  );
+};
+
 export const loader = () => {
   return json({
     jobExperience: getJobExperience(),
@@ -120,6 +165,8 @@ export default function HomeLayoutRoute() {
       </head>
       <body className="min-h-screen bg-background p-4 text-white">
         <div className="mx-auto flex max-w-[68rem] flex-col gap-4 text-white">
+          <Header />
+
           <SectionWrapper>
             <Subtitle className="mb-12">About</Subtitle>
 
@@ -143,9 +190,7 @@ export default function HomeLayoutRoute() {
           </SectionWrapper>
 
           <SectionWrapper className="flex flex-col gap-[3.6rem]">
-            <Heading size="sm" variant="h2">
-              Experience
-            </Heading>
+            <Subtitle>Experience</Subtitle>
 
             {loaderData.jobExperience.map((jobExperience) => (
               <ExperienceCard
