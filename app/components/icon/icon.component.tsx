@@ -1,3 +1,4 @@
+import { cn } from '~/utils/cn';
 import href from './icon.svg';
 
 export { href };
@@ -7,39 +8,37 @@ type IconProps = React.JSX.IntrinsicElements['svg'] & {
 };
 
 export const Icon = (props: IconProps) => {
-  const { name, ...restOfProps } = props;
+  const { name, className, ...restOfProps } = props;
 
   return (
-    <svg {...restOfProps}>
+    <svg className={cn('inline self-center', className)} {...restOfProps}>
       <use href={`${href}#${name}`} />
     </svg>
   );
 };
 
 const ICON_NAMES = [
-  'bars-3',
-  'css',
+  'css3',
   'gatsby',
   'git',
   'graphql',
   'html5',
   'javascript',
   'jest',
-  'mysql',
-  'nextjs',
-  'nodejs',
+  'menu-2',
+  'nextdotjs',
+  'nodedotjs',
   'postgresql',
-  'prisma_dark',
+  'prisma',
   'react',
   'redux',
   'remix',
   'sass',
-  'sqlite',
   'storybook',
   'tailwindcss',
-  'testing-library',
+  'testinglibrary',
   'typescript',
-  'x-mark',
+  'x',
 ] as const;
 
 export type IconName = (typeof ICON_NAMES)[number];
