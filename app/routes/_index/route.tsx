@@ -1,11 +1,11 @@
 import type { OutgoingHttpHeaders } from 'http';
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
-import * as Toggle from '@radix-ui/react-toggle';
+import { Root as RootToggle } from '@radix-ui/react-toggle';
 import type { HeadersFunction, MetaFunction } from '@remix-run/cloudflare';
 import { json } from '@remix-run/cloudflare';
 import { useLoaderData } from '@remix-run/react';
 import { Image } from '@unpic/react';
 import { ExperienceCard } from '~/components/experience-card';
+import { Icon } from '~/components/icon';
 import { Link } from '~/components/link';
 import { TagMapper } from '~/components/tag-mapper';
 import { Heading } from '~/components/typography/headings';
@@ -45,8 +45,6 @@ export const headers: HeadersFunction = ({ loaderHeaders }) => {
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const BurgerMenu = isMenuOpen ? XMarkIcon : Bars3Icon;
-
   const handleMenuIconPress = () => {
     setIsMenuOpen((isMenuOpen) => !isMenuOpen);
   };
@@ -73,13 +71,13 @@ const Header = () => {
         Bryan Mendoza
       </Heading>
 
-      <Toggle.Root
+      <RootToggle
         aria-label="Open menu"
         pressed={isMenuOpen}
         onPressedChange={handleMenuIconPress}
       >
-        <BurgerMenu height={30} width={30} />
-      </Toggle.Root>
+        <Icon name={isMenuOpen ? 'x-mark' : 'bars-3'} height={30} width={30} />
+      </RootToggle>
     </SectionWrapper>
   );
 };
