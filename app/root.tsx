@@ -124,13 +124,15 @@ export default function HomeLayoutRoute() {
             <Subtitle className="mb-12">About</Subtitle>
 
             <Heading className="mb-8 font-medium" size="sm" variant="h1">
-              User Experience Architect & Design Innovator
+              Senior Software Engineer
             </Heading>
 
             <Paragraph className="mb-16">
-              In my 8 years of experience, I have completed 50 successful
-              projects. I embrace a holistic approach to design thinking,
-              specializing in precise implementation
+              I am a highly skilled developer with 6 years of experience
+              building high-quality applications for small and medium-sized
+              businesses. I am passionate about creating exceptional user
+              experiences and ensuring accessibility with expertise in modern
+              tools like React, Next.js, and Remix.
             </Paragraph>
 
             <TagMapper
