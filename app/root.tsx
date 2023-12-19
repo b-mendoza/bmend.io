@@ -141,7 +141,9 @@ export default function HomeLayoutRoute() {
           </SectionWrapper>
 
           <SectionWrapper className="flex flex-col gap-[3.6rem]">
-            <Subtitle>Experience</Subtitle>
+            <Heading size="sm" variant="h2">
+              Experience
+            </Heading>
 
             {loaderData.jobExperience.map((jobExperience) => (
               <ExperienceCard
