@@ -119,7 +119,7 @@ export default function HomeLayoutRoute() {
         <Links />
       </head>
       <body className="min-h-screen bg-background p-4 text-white">
-        <div className="flex flex-col gap-4 text-white">
+        <div className="mx-auto flex max-w-[68rem] flex-col gap-4 text-white">
           <SectionWrapper>
             <Subtitle className="mb-12">About</Subtitle>
 
@@ -169,7 +169,7 @@ export default function HomeLayoutRoute() {
             />
 
             <Paragraph className="mb-6 text-center text-white/80">
-              John Cameron
+              Bryan Mendoza
             </Paragraph>
 
             <div className="mx-8 mb-12">
