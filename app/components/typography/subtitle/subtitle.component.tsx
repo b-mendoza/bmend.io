@@ -9,7 +9,7 @@ export const Subtitle = (props: SubtitleProps) => {
 
   return (
     <Paragraph
-      className={cn('font-semibold uppercase text-texts', className)}
+      className={cn('font-semibold uppercase', className)}
       {...restOfProps}
     />
   );
