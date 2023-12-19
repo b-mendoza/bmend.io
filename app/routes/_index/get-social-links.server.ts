@@ -1,4 +1,10 @@
-export const getSocialLinks = () => {
+export type Social = {
+  id: string;
+  name: string;
+  to: string;
+};
+
+export const getSocialLinks = (): Social[] => {
   return [
     {
       id: crypto.randomUUID(),

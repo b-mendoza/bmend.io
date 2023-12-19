@@ -1,4 +1,9 @@
-export const getTags = () => {
+export type Tag = {
+  id: string;
+  text: string;
+};
+
+export const getTags = (): Tag[] => {
   // This might be replaced by a database/CMS call in the future
   return [
     {

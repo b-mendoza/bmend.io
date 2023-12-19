@@ -4,7 +4,15 @@ const joinDates = (dates: [string, string]) => {
   return dates.join(' - ');
 };
 
-export const getJobExperience = () => {
+export type JobExperience = {
+  companyName: string;
+  description: string;
+  id: string;
+  jobTitle: string;
+  timePeriod: string;
+};
+
+export const getJobExperience = (): JobExperience[] => {
   return [
     {
       id: crypto.randomUUID(),

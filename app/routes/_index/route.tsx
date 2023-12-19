@@ -13,11 +13,11 @@ import { Paragraph } from '~/components/typography/paragraph';
 import { Subtitle } from '~/components/typography/subtitle';
 import { SectionWrapper } from '~/components/ui/section-wrapper';
 import { WhiteButton } from '~/components/white-button';
-import { getDaysInSeconds } from '~/utils/get-days-in-seconds.server';
-import { getJobExperience } from '~/utils/get-job-experience.server';
-import { getSocialLinks } from '~/utils/get-social-links.server';
-import { getTags } from '~/utils/get-tags.server';
+import { getDaysInSeconds } from '~/utils/dates.server';
 import { useState } from 'react';
+import { getJobExperience } from './get-job-experience.server';
+import { getSocialLinks } from './get-social-links.server';
+import { getTags } from './get-tags.server';
 
 export const meta: MetaFunction = () => {
   return [
