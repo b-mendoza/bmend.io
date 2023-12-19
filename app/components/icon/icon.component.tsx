@@ -3,7 +3,7 @@ import href from './icon.svg';
 export { href };
 
 type IconProps = React.JSX.IntrinsicElements['svg'] & {
-  readonly name: string;
+  readonly name: IconName;
 };
 
 export const Icon = (props: IconProps) => {
