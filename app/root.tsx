@@ -14,7 +14,9 @@ import {
   useLoaderData,
 } from '@remix-run/react';
 import { Image } from '@unpic/react';
-import geistFont from '~/assets/fonts/GeistVariableVF.woff2';
+import geistMediumFont from '~/assets/fonts/geist-medium.woff2';
+import geistRegularFont from '~/assets/fonts/geist-regular.woff2';
+import geistSemiboldFont from '~/assets/fonts/geist-semibold.woff2';
 import { ExperienceCard } from '~/components/experience-card';
 import { Link } from '~/components/link';
 import { TagMapper } from '~/components/tag-mapper';
@@ -34,7 +36,21 @@ export const links: LinksFunction = () => {
   return [
     {
       rel: 'preload',
-      href: geistFont,
+      href: geistRegularFont,
+      as: 'font',
+      crossOrigin: 'anonymous',
+      type: 'font/woff2',
+    },
+    {
+      rel: 'preload',
+      href: geistMediumFont,
+      as: 'font',
+      crossOrigin: 'anonymous',
+      type: 'font/woff2',
+    },
+    {
+      rel: 'preload',
+      href: geistSemiboldFont,
       as: 'font',
       crossOrigin: 'anonymous',
       type: 'font/woff2',

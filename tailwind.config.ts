@@ -28,21 +28,7 @@ export default {
         white: `hsl(var(--white) / ${ALPHA_VALUE})`,
       },
       fontFamily: {
-        sans: [
-          'Geist',
-          'ui-sans-serif',
-          'system-ui',
-          '-apple-system',
-          'BlinkMacSystemFont',
-          'Inter',
-          'Segoe UI',
-          'Roboto',
-          'sans-serif',
-          'Apple Color Emoji',
-          'Segoe UI Emoji',
-          'Segoe UI Symbol',
-          'Noto Color Emoji',
-        ],
+        sans: ['Geist', 'Arial'],
       },
       fontSize: {
         sm: '1.4rem',
