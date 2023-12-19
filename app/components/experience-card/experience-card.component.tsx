@@ -1,12 +1,8 @@
 import { Heading } from '~/components/typography/headings';
 import { Paragraph } from '~/components/typography/paragraph';
+import type { JobExperience } from '~/routes/_index/get-job-experience.server';
 
-type ExperienceCardProps = Readonly<{
-  companyName: string;
-  description: string;
-  timePeriod: string;
-  jobTitle: string;
-}>;
+type ExperienceCardProps = Readonly<Omit<JobExperience, 'id'>>;
 
 export const ExperienceCard = (props: ExperienceCardProps) => {
   const { companyName, description, timePeriod, jobTitle } = props;
