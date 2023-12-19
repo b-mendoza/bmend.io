@@ -5,9 +5,6 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
-  '@heroicons/react':
-    specifier: 2.1.1
-    version: 2.1.1(react@18.3.0-canary-cb2439624-20231219)
   '@radix-ui/react-toggle':
     specifier: 1.0.3
     version: 1.0.3(@types/react-dom@18.2.18)(@types/react@18.2.45)(react-dom@18.3.0-canary-cb2439624-20231219)(react@18.3.0-canary-cb2439624-20231219)
@@ -1213,14 +1210,6 @@ packages:
     resolution: {integrity: sha512-+KpH+QxZU7O4675t3mnkQKcZZg56u+K/Ct2K+N2AZYNVK8kyeo/bI18tI8aPm3tvNNRyTWfj6s5tnGNlcbQRsA==}
     engines: {node: '>=14'}
     dev: true
-
-  /@heroicons/react@2.1.1(react@18.3.0-canary-cb2439624-20231219):
-    resolution: {integrity: sha512-JyyN9Lo66kirbCMuMMRPtJxtKJoIsXKS569ebHGGRKbl8s4CtUfLnyKJxteA+vIKySocO4s1SkTkGS4xtG/yEA==}
-    peerDependencies:
-      react: '>= 16'
-    dependencies:
-      react: 18.3.0-canary-cb2439624-20231219
-    dev: false
 
   /@humanwhocodes/config-array@0.11.13:
     resolution: {integrity: sha512-JSBDMiDKSzQVngfRjOdFXgFfklaXI4K9nLF49Auh21lmBWRLIK3+xTErTWD4KU54pb6coM6ESE7Awz/FNU3zgQ==}
