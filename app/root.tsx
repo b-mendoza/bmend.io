@@ -7,18 +7,36 @@ import {
   Scripts,
   ScrollRestoration,
 } from '@remix-run/react';
-import tailwindStyles from '~/styles/tailwind.css';
+import geistFont from '~/assets/fonts/GeistVariableVF.woff2';
+import fontStyles from '~/styles/fonts.styles.css';
+import globalStyles from '~/styles/globals.styles.css';
 
 export const links: LinksFunction = () => {
   return [
     {
       rel: 'preload',
+      href: geistFont,
+      as: 'font',
+      crossOrigin: 'anonymous',
+      type: 'font/woff2',
+    },
+    {
       as: 'style',
-      href: tailwindStyles,
+      rel: 'preload',
+      href: fontStyles,
+    },
+    {
+      as: 'style',
+      rel: 'preload',
+      href: globalStyles,
     },
     {
       rel: 'stylesheet',
-      href: tailwindStyles,
+      href: fontStyles,
+    },
+    {
+      rel: 'stylesheet',
+      href: globalStyles,
     },
   ];
 };
