@@ -5,7 +5,7 @@ type Variant = keyof Pick<React.ReactHTML, 'h1' | 'h2' | 'h3'>;
 
 type Size = 'sm' | 'md' | 'lg';
 
-const HEADING_SIZES: Record<Variant, Record<Size, string>> = {
+export const HEADING_SIZES: Record<Variant, Record<Size, string>> = {
   h1: {
     sm: 'text-[3.1rem]',
     md: 'text-[3.8rem]',

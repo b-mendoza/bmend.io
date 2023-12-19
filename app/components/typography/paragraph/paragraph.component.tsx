@@ -2,7 +2,7 @@ import { cn } from '~/utils/cn';
 
 type Size = 'sm' | 'md' | 'lg';
 
-const PARAGRAPH_SIZES: Record<Size, string> = {
+export const PARAGRAPH_SIZES: Record<Size, string> = {
   sm: 'text-sm',
   md: 'text-md',
   lg: 'text-lg',
