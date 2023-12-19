@@ -21,7 +21,7 @@ export const ExperienceCard = (props: ExperienceCardProps) => {
 
       <Paragraph className="mb-8 text-texts/50">{jobTitle}</Paragraph>
 
-      <Paragraph>{description}</Paragraph>
+      <Paragraph className="whitespace-pre-wrap">{description}</Paragraph>
     </article>
   );
 };
