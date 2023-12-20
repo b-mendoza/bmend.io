@@ -16,18 +16,13 @@ export const getTags = () => {
     },
     {
       id: crypto.randomUUID(),
-      text: 'HTML',
+      text: 'HTML5',
       icon: 'html5',
     },
     {
       id: crypto.randomUUID(),
       text: 'CSS',
       icon: 'css3',
-    },
-    {
-      id: crypto.randomUUID(),
-      text: 'SASS',
-      icon: 'sass',
     },
     {
       id: crypto.randomUUID(),
@@ -51,33 +46,18 @@ export const getTags = () => {
     },
     {
       id: crypto.randomUUID(),
-      text: 'Next.js',
-      icon: 'nextdotjs',
-    },
-    {
-      id: crypto.randomUUID(),
-      text: 'Gatsby',
-      icon: 'gatsby',
-    },
-    {
-      id: crypto.randomUUID(),
       text: 'Remix',
       icon: 'remix',
     },
     {
       id: crypto.randomUUID(),
+      text: 'Next.js',
+      icon: 'nextdotjs',
+    },
+    {
+      id: crypto.randomUUID(),
       text: 'GraphQL',
       icon: 'graphql',
-    },
-    {
-      id: crypto.randomUUID(),
-      text: 'Jest',
-      icon: 'jest',
-    },
-    {
-      id: crypto.randomUUID(),
-      text: 'RTL',
-      icon: 'testinglibrary',
     },
     {
       id: crypto.randomUUID(),
@@ -91,18 +71,8 @@ export const getTags = () => {
     },
     {
       id: crypto.randomUUID(),
-      text: 'tailwindcss',
+      text: 'Tailwind CSS',
       icon: 'tailwindcss',
-    },
-    {
-      id: crypto.randomUUID(),
-      text: 'Storybook',
-      icon: 'storybook',
-    },
-    {
-      id: crypto.randomUUID(),
-      text: 'Prisma',
-      icon: 'prisma',
     },
   ] satisfies Tag[];
 };
