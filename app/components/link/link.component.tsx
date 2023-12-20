@@ -33,10 +33,18 @@ export const CustomLink = (props: CustomLinkProps) => {
     );
   }
 
-  const { isExternal: _isExternal, ...restOfRemixLinkProps } = props;
+  const {
+    isExternal: _isExternal,
+    prefetch = 'intent',
+    ...restOfRemixLinkProps
+  } = props;
 
   return (
-    <Link {...restOfRemixLinkProps} className={cn(BASE_CLASS_NAMES, className)}>
+    <Link
+      {...restOfRemixLinkProps}
+      className={cn(BASE_CLASS_NAMES, className)}
+      prefetch={prefetch}
+    >
       {children}
     </Link>
   );
