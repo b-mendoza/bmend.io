@@ -16,7 +16,7 @@ export const getTags = () => {
     },
     {
       id: crypto.randomUUID(),
-      text: 'HTML5',
+      text: 'HTML',
       icon: 'html5',
     },
     {
