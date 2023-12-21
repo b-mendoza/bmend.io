@@ -1,11 +1,11 @@
-import type { OutgoingHttpHeaders } from 'http';
-import { Root as RootToggle } from '@radix-ui/react-toggle';
-import type { HeadersFunction, MetaFunction } from '@remix-run/cloudflare';
+/* import type { OutgoingHttpHeaders } from 'http'; */
+import type {
+  /* HeadersFunction, */ MetaFunction,
+} from '@remix-run/cloudflare';
 import { json } from '@remix-run/cloudflare';
 import { useLoaderData } from '@remix-run/react';
 import { Image } from '@unpic/react';
 import { ExperienceCard } from '~/components/experience-card';
-import { Icon } from '~/components/icon';
 import { Link } from '~/components/link';
 import { TagMapper } from '~/components/tag-mapper';
 import { Heading } from '~/components/typography/headings';
@@ -13,8 +13,8 @@ import { Paragraph } from '~/components/typography/paragraph';
 import { Subtitle } from '~/components/typography/subtitle';
 import { SectionWrapper } from '~/components/ui/section-wrapper';
 import { WhiteButton } from '~/components/white-button';
-import { getDaysInSeconds } from '~/utils/dates.server';
-import { useState } from 'react';
+/* import { getDaysInSeconds } from '~/utils/dates.server'; */
+/* import { useState } from 'react'; */
 import { getJobExperience } from './get-job-experience.server';
 import { getSocialLinks } from './get-social-links.server';
 import { getTags } from './get-tags.server';
@@ -22,11 +22,11 @@ import { getTags } from './get-tags.server';
 export const meta: MetaFunction = () => {
   return [
     { title: 'Bryan M. | Portfolio' },
-    // { name: 'description', content: 'Welcome to Remix!' },
+    /* { name: 'description', content: 'Welcome to Remix!' }, */
   ];
 };
 
-export const headers: HeadersFunction = ({ loaderHeaders }) => {
+/* export const headers: HeadersFunction = ({ loaderHeaders }) => {
   const loaderCacheControlPolicy = loaderHeaders.get('cache-control');
 
   if (typeof loaderCacheControlPolicy === 'string') {
@@ -40,17 +40,17 @@ export const headers: HeadersFunction = ({ loaderHeaders }) => {
       1,
     )}, stale-while-revalidate=${getDaysInSeconds(7)}`,
   } satisfies OutgoingHttpHeaders;
-};
+}; */
 
 const SECTION_BACKGROUND =
   'bg-gradient-to-tr from-section-background-bottom to-section-background-top';
 
 const Header = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  /* const [isMenuOpen, setIsMenuOpen] = useState(false); */
 
-  const handleMenuIconPress = () => {
+  /* const handleMenuIconPress = () => {
     setIsMenuOpen((isMenuOpen) => !isMenuOpen);
-  };
+  }; */
 
   return (
     <SectionWrapper
@@ -76,13 +76,13 @@ const Header = () => {
         Bryan Mendoza
       </Heading>
 
-      <RootToggle
+      {/* <RootToggle
         aria-label="Open menu"
         pressed={isMenuOpen}
         onPressedChange={handleMenuIconPress}
       >
         <Icon name={isMenuOpen ? 'x' : 'menu-2'} height={30} width={30} />
-      </RootToggle>
+      </RootToggle> */}
     </SectionWrapper>
   );
 };

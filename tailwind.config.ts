@@ -10,7 +10,7 @@ export default {
         transparent: 'transparent',
         current: 'currentColor',
 
-        // Custom CSS vars
+        /* Custom CSS vars */
         background: `hsl(var(--background) / ${ALPHA_VALUE})`,
         'block-background-1': `hsl(var(--block-background-1) / ${ALPHA_VALUE})`,
         'block-background-2': `hsl(var(--block-background-2) / ${ALPHA_VALUE})`,

@@ -7,7 +7,7 @@ export type Tag = {
 };
 
 export const getTags = () => {
-  // This might be replaced by a database/CMS call in the future
+  /* This might be replaced by a database/CMS call in the future */
   return [
     {
       id: crypto.randomUUID(),
