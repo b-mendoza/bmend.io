@@ -16,7 +16,7 @@ export const Button = (props: ButtonProps) => {
       type={type}
       {...restOfProps}
     >
-      {children}
+      <span>{children}</span>
     </button>
   );
 };
