@@ -3,9 +3,12 @@ import href from './icon.svg';
 
 export { href };
 
-type IconProps = React.JSX.IntrinsicElements['svg'] & {
-  readonly name: IconName;
-};
+export type IconProps = React.JSX.IntrinsicElements['svg'] &
+  Readonly<{
+    name: IconName;
+  }>;
+
+export type IconSize = Pick<IconProps, 'height' | 'width'>;
 
 export const Icon = (props: IconProps) => {
   const { name, className, ...restOfProps } = props;
