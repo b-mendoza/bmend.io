@@ -10,7 +10,7 @@ export const WhiteButton = (props: WhiteButtonProps) => {
     <Button
       {...restOfProps}
       className={cn(
-        'border-none bg-white text-violet-glow hover:bg-black hover:text-white',
+        'border-none bg-white text-violet-glow hover:bg-black hover:text-white focus-visible:bg-black focus-visible:text-white',
         className,
       )}
     >
