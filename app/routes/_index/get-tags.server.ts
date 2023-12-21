@@ -11,21 +11,6 @@ export const getTags = () => {
   return [
     {
       id: crypto.randomUUID(),
-      text: 'Git',
-      icon: 'git',
-    },
-    {
-      id: crypto.randomUUID(),
-      text: 'HTML',
-      icon: 'html5',
-    },
-    {
-      id: crypto.randomUUID(),
-      text: 'CSS',
-      icon: 'css3',
-    },
-    {
-      id: crypto.randomUUID(),
       text: 'JavaScript',
       icon: 'javascript',
     },
@@ -41,11 +26,6 @@ export const getTags = () => {
     },
     {
       id: crypto.randomUUID(),
-      text: 'Redux',
-      icon: 'redux',
-    },
-    {
-      id: crypto.randomUUID(),
       text: 'Remix',
       icon: 'remix',
     },
@@ -56,8 +36,8 @@ export const getTags = () => {
     },
     {
       id: crypto.randomUUID(),
-      text: 'GraphQL',
-      icon: 'graphql',
+      text: 'Tailwind CSS',
+      icon: 'tailwindcss',
     },
     {
       id: crypto.randomUUID(),
@@ -66,13 +46,13 @@ export const getTags = () => {
     },
     {
       id: crypto.randomUUID(),
-      text: 'PostgreSQL',
-      icon: 'postgresql',
+      text: 'GraphQL',
+      icon: 'graphql',
     },
     {
       id: crypto.randomUUID(),
-      text: 'Tailwind CSS',
-      icon: 'tailwindcss',
+      text: 'PostgreSQL',
+      icon: 'postgresql',
     },
   ] satisfies Tag[];
 };
