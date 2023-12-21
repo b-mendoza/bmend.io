@@ -42,6 +42,9 @@ export const headers: HeadersFunction = ({ loaderHeaders }) => {
   } satisfies OutgoingHttpHeaders;
 };
 
+const SECTION_BACKGROUND =
+  'bg-gradient-to-tr from-section-background-bottom to-section-background-top';
+
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -50,7 +53,9 @@ const Header = () => {
   };
 
   return (
-    <SectionWrapper className="flex items-center justify-between gap-6 py-6">
+    <SectionWrapper
+      className={`flex items-center justify-between gap-6 py-6 ${SECTION_BACKGROUND}`}
+    >
       <Image
         alt="a close up of a dog on a leash with its mouth open and tongue out and tongue hanging out"
         background="https://res.cloudinary.com/dgqif0kkr/image/upload/c_fill,h_10,w_10/q_1/e_blur:150/f_webp/bmendoza-io/sm8a1hhpi7wjua4upya1.jpg"
@@ -97,7 +102,7 @@ export default function IndexHomeRoute() {
     <div className="mx-auto flex max-w-[68rem] flex-col gap-4 text-white">
       <Header />
 
-      <SectionWrapper>
+      <SectionWrapper className={SECTION_BACKGROUND}>
         <Subtitle className="mb-12">About</Subtitle>
 
         <Heading className="mb-8 font-medium" size="sm" variant="h1">
@@ -120,7 +125,9 @@ export default function IndexHomeRoute() {
         />
       </SectionWrapper>
 
-      <SectionWrapper className="flex flex-col gap-[3.6rem]">
+      <SectionWrapper
+        className={`flex flex-col gap-[3.6rem] ${SECTION_BACKGROUND}`}
+      >
         <Subtitle>Experience</Subtitle>
 
         {loaderData.jobExperience.map((jobExperience) => (
@@ -134,7 +141,7 @@ export default function IndexHomeRoute() {
         ))}
       </SectionWrapper>
 
-      <SectionWrapper className="border-white/20 bg-gradient-to-br from-[hsl(243_100%_68%)] to-[hsl(243_76%_51%)] px-0">
+      <SectionWrapper className="border-white/20 bg-gradient-to-bl from-[hsl(243_100%_68%)] to-[hsl(243_76%_51%)] px-0">
         <Image
           alt="a close up of a dog on a leash with its mouth open and tongue out and tongue hanging out"
           background="https://res.cloudinary.com/dgqif0kkr/image/upload/c_fill,h_10,w_10/q_1/e_blur:150/f_webp/bmendoza-io/sm8a1hhpi7wjua4upya1.jpg"
