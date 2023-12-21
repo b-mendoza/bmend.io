@@ -8,7 +8,7 @@ export const SectionWrapper = (props: SectionWrapperProps) => {
   return (
     <section
       className={cn(
-        'rounded-[2rem] border-[0.1rem] border-solid border-section-border/10 bg-section-background-bottom px-8 py-16',
+        'rounded-[2rem] border-[0.1rem] border-solid border-section-border/10 px-8 py-16',
         className,
       )}
       {...restOfProps}
