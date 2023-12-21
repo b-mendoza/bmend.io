@@ -10,7 +10,7 @@ import {
 import geistMediumFont from '~/assets/fonts/geist-medium.woff2';
 import geistRegularFont from '~/assets/fonts/geist-regular.woff2';
 import geistSemiboldFont from '~/assets/fonts/geist-semibold.woff2';
-import { href as iconsSprite } from '~/components/icon';
+import { href as iconsSpriteHref } from '~/components/icon';
 import fontStyles from '~/styles/fonts.styles.css';
 import globalStyles from '~/styles/globals.styles.css';
 
@@ -49,8 +49,9 @@ export const links: LinksFunction = () => {
     },
     {
       rel: 'preload',
-      as: 'image/svg+xml',
-      href: iconsSprite,
+      as: 'image',
+      href: iconsSpriteHref,
+      type: 'image/svg+xml',
     },
     {
       rel: 'stylesheet',
