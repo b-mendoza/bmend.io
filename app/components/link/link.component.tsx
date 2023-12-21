@@ -3,7 +3,7 @@ import type { LinkProps } from '@remix-run/react';
 import { cn } from '~/utils/cn';
 
 const BASE_CLASS_NAMES =
-  'px-6 py-[0.4rem] text-white hover:rounded-[2rem] hover:bg-white/10';
+  'px-6 py-[0.4rem] text-white hover:rounded-[2rem] hover:bg-white/10 focus-visible:rounded-[2rem] focus-visible:bg-white/10';
 
 type AsRemixLink = LinkProps & {
   isExternal?: false;
@@ -28,7 +28,7 @@ export const CustomLink = (props: CustomLinkProps) => {
         rel="noopener noreferrer"
         target="_blank"
       >
-        {children}
+        <span>{children}</span>
       </a>
     );
   }
@@ -45,7 +45,7 @@ export const CustomLink = (props: CustomLinkProps) => {
       className={cn(BASE_CLASS_NAMES, className)}
       prefetch={prefetch}
     >
-      {children}
+      <span>{children}</span>
     </Link>
   );
 };
