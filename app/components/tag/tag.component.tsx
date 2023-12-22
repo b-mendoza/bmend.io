@@ -1,20 +1,20 @@
-import type { IconName, IconSize } from '~/components/icon';
-import { Icon } from '~/components/icon';
+/* import type { IconName, IconSize } from '~/components/icon'; */
+/* import { Icon } from '~/components/icon'; */
 import { Paragraph } from '~/components/typography/paragraph';
 import { cn } from '~/utils/cn';
 
-const DEFAULT_ICON_SIZE: IconSize = {
+/* const DEFAULT_ICON_SIZE: IconSize = {
   height: 20,
   width: 20,
-};
+}; */
 
 type TagProps = Pick<React.JSX.IntrinsicElements['li'], 'className'> &
   Readonly<{
     name: string;
-    icon?: IconName;
+    /* icon?: IconName; */
   }>;
 
-const CUSTOM_ICON_SIZES = {
+/* const CUSTOM_ICON_SIZES = {
   javascript: {
     height: 18,
     width: 18,
@@ -31,22 +31,22 @@ const CUSTOM_ICON_SIZES = {
     height: 18,
     width: 18,
   },
-} satisfies Partial<Record<IconName, IconSize>>;
+} satisfies Partial<Record<IconName, IconSize>>; */
 
-const hasCustomSize = (
+/* const hasCustomSize = (
   iconName: IconName | undefined,
 ): iconName is keyof typeof CUSTOM_ICON_SIZES => {
   if (iconName == null) return false;
 
   return iconName in CUSTOM_ICON_SIZES;
-};
+}; */
 
 export const Tag = (props: TagProps) => {
-  const { name, className, icon: iconName } = props;
+  const { name, className /* icon: iconName */ } = props;
 
-  const iconSize = hasCustomSize(iconName)
+  /* const iconSize = hasCustomSize(iconName)
     ? CUSTOM_ICON_SIZES[iconName]
-    : DEFAULT_ICON_SIZE;
+    : DEFAULT_ICON_SIZE; */
 
   return (
     <li
@@ -57,9 +57,9 @@ export const Tag = (props: TagProps) => {
     >
       <Paragraph size="sm">{name}</Paragraph>
 
-      {typeof iconName === 'string' ? (
+      {/* {typeof iconName === 'string' ? (
         <Icon className="fill-white" name={iconName} {...iconSize} />
-      ) : null}
+      ) : null} */}
     </li>
   );
 };

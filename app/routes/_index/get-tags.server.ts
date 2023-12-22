@@ -1,9 +1,9 @@
-import type { IconName } from '~/components/icon';
+/* import type { IconName } from '~/components/icon'; */
 
 export type Tag = {
   id: string;
   text: string;
-  icon?: IconName;
+  /* icon?: IconName; */
 };
 
 export const getTags = () => {
@@ -12,47 +12,47 @@ export const getTags = () => {
     {
       id: crypto.randomUUID(),
       text: 'JavaScript',
-      icon: 'javascript',
+      /* icon: 'javascript', */
     },
     {
       id: crypto.randomUUID(),
       text: 'TypeScript',
-      icon: 'typescript',
+      /* icon: 'typescript', */
     },
     {
       id: crypto.randomUUID(),
       text: 'React',
-      icon: 'react',
+      /* icon: 'react', */
     },
     {
       id: crypto.randomUUID(),
       text: 'Remix',
-      icon: 'remix',
+      /* icon: 'remix', */
     },
     {
       id: crypto.randomUUID(),
       text: 'Next.js',
-      icon: 'nextdotjs',
+      /* icon: 'nextdotjs', */
     },
     {
       id: crypto.randomUUID(),
       text: 'Tailwind CSS',
-      icon: 'tailwindcss',
+      /* icon: 'tailwindcss', */
     },
     {
       id: crypto.randomUUID(),
       text: 'Node.js',
-      icon: 'nodedotjs',
+      /* icon: 'nodedotjs', */
     },
     {
       id: crypto.randomUUID(),
       text: 'GraphQL',
-      icon: 'graphql',
+      /* icon: 'graphql', */
     },
     {
       id: crypto.randomUUID(),
       text: 'PostgreSQL',
-      icon: 'postgresql',
+      /* icon: 'postgresql', */
     },
   ] satisfies Tag[];
 };
