@@ -71,9 +71,9 @@ const Header = () => {
         className="rounded-full"
         height={40}
         layout="fixed"
+        priority
         src="https://res.cloudinary.com/dgqif0kkr/image/upload/c_fill,h_40,w_40/q_auto:best/fl_progressive:steep/bmendoza-io/sm8a1hhpi7wjua4upya1.jpg"
         width={40}
-        priority
       />
 
       <Heading
@@ -144,7 +144,6 @@ export default function IndexHomeRoute() {
       <SectionWrapper className="border-white/20 bg-gradient-to-bl from-[hsl(243_100%_68%)] to-[hsl(243_76%_51%)] px-0">
         <Image
           alt="a close up of a dog on a leash with its mouth open and tongue out and tongue hanging out"
-          background="data:image/webp;base64,UklGRnIBAABXRUJQVlA4IGYBAABQBwCdASodAB0APtFapU0oJSOiMBgIAQAaCWwAnTKEdIc1PAENWEn1mJF0XLSwbc+6pOr6JF4sZyZ6dktPt+XVYvcAAP1nDbxXtnCqAj8mZfRddO/8pAuBzNUIbl057/fU1ILCeqMlUp3nze/c7CKvqxPE8z2478H76vT9ZRbLT8T9Epzd2oPGzmWcdzAfhja2lTOPBSOdbNZrZjphlppxKzupAOyluITmbUEON05BHnPf6L8mnVpChZBZR4rK2yFiL08VQT4Z2t/2XYXjnr++p2kRPGVbS50in1Qb5Pvhgr6vk3zP3raslg1P8VhEBPqWmdRJ6Uw0sFl7wgCL1+n1et7cJ65i5wS25J+ADvnGJt9zwDJiNp+/yRY/6+J/w6coGTViaMJeATwzwK4W+pP7v1vbChQ7dZlx1CzpYY75btbt1ecKP6ltCC5+CDGbo6qy55k7x/cmNqkTVefhzLqNNwVuAAAA"
           cdn="cloudinary"
           className="mx-auto mb-10 rounded-full"
           height={115}
