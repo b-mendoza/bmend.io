@@ -12,7 +12,7 @@ import { Heading } from '~/components/typography/headings';
 import { Paragraph } from '~/components/typography/paragraph';
 import { Subtitle } from '~/components/typography/subtitle';
 import { SectionWrapper } from '~/components/ui/section-wrapper';
-import { WhiteButton } from '~/components/white-button';
+import { WhiteLink } from '~/components/white-link';
 /* import { getDaysInSeconds } from '~/utils/dates.server'; */
 /* import { useState } from 'react'; */
 import { getJobExperience } from './get-job-experience.server';
@@ -166,7 +166,13 @@ export default function IndexHomeRoute() {
             Let&apos;s talk about your project
           </Heading>
 
-          <WhiteButton className="w-full">Book a call</WhiteButton>
+          <WhiteLink
+            className="flex w-full items-center justify-center"
+            isExternal
+            href="https://calendly.com/bmendoza-dev/30-minute-chat-with-bryan-mendoza"
+          >
+            Book a call
+          </WhiteLink>
         </div>
 
         <ul className="flex flex-wrap items-center justify-center gap-12 border-t-[0.1rem] border-t-texts/[0.15] px-8 pt-12">
