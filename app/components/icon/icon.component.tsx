@@ -11,10 +11,10 @@ export type IconProps = React.JSX.IntrinsicElements['svg'] &
 export type IconSize = Pick<IconProps, 'height' | 'width'>;
 
 export const Icon = (props: IconProps) => {
-  const { name, className, ...restOfProps } = props;
+  const { name, className } = props;
 
   return (
-    <svg className={cn('inline self-center', className)} {...restOfProps}>
+    <svg {...props} className={cn('inline self-center', className)}>
       <use href={`${href}#${name}`} />
     </svg>
   );

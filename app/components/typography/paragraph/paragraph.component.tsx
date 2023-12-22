@@ -22,6 +22,6 @@ export const Paragraph = (props: ParagraphProps) => {
   const { className, size = 'md', ...restOfProps } = props;
 
   return (
-    <p className={cn(PARAGRAPH_SIZES[size], className)} {...restOfProps} />
+    <p {...restOfProps} className={cn(PARAGRAPH_SIZES[size], className)} />
   );
 };

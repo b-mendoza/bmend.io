@@ -5,12 +5,12 @@ import { cn } from '~/utils/cn';
 type SubtitleProps = ParagraphProps;
 
 export const Subtitle = (props: SubtitleProps) => {
-  const { className, ...restOfProps } = props;
+  const { className } = props;
 
   return (
     <Paragraph
+      {...props}
       className={cn('font-semibold uppercase', className)}
-      {...restOfProps}
     />
   );
 };
