@@ -1,7 +1,5 @@
-/* import type { OutgoingHttpHeaders } from 'http'; */
-import type {
-  /* HeadersFunction, */ MetaFunction,
-} from '@remix-run/cloudflare';
+import type { OutgoingHttpHeaders } from 'http';
+import type { HeadersFunction, MetaFunction } from '@remix-run/cloudflare';
 import { json } from '@remix-run/cloudflare';
 import { useLoaderData } from '@remix-run/react';
 import { Image } from '@unpic/react';
@@ -13,7 +11,7 @@ import { Paragraph } from '~/components/typography/paragraph';
 import { Subtitle } from '~/components/typography/subtitle';
 import { SectionWrapper } from '~/components/ui/section-wrapper';
 import { WhiteLink } from '~/components/white-link';
-/* import { getDaysInSeconds } from '~/utils/dates.server'; */
+import { getDaysInSeconds } from '~/utils/dates.server';
 /* import { useState } from 'react'; */
 import { getJobExperience } from './get-job-experience.server';
 import { getSocialLinks } from './get-social-links.server';
@@ -26,7 +24,7 @@ export const meta: MetaFunction = () => {
   ];
 };
 
-/* export const headers: HeadersFunction = ({ loaderHeaders }) => {
+export const headers: HeadersFunction = ({ loaderHeaders }) => {
   const loaderCacheControlPolicy = loaderHeaders.get('cache-control');
 
   if (typeof loaderCacheControlPolicy === 'string') {
@@ -36,11 +34,11 @@ export const meta: MetaFunction = () => {
   }
 
   return {
-    'cache-control': `max-age=${getDaysInSeconds(
+    'cache-control': `max-age=60, stale-while-revalidate=${getDaysInSeconds(
       1,
-    )}, stale-while-revalidate=${getDaysInSeconds(7)}`,
+    )}`,
   } satisfies OutgoingHttpHeaders;
-}; */
+};
 
 export const loader = () => {
   return json({
