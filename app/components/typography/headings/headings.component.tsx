@@ -1,9 +1,17 @@
+/* TODO: adjust the font-size values as they seem not to be correct */
+
 import { cn } from '~/utils/cn';
 import { createElement } from 'react';
 
 type Variant = keyof Pick<React.ReactHTML, 'h1' | 'h2' | 'h3'>;
 
 type Size = 'sm' | 'md' | 'lg';
+
+const BASE_CLASS_NAMES: Record<Variant, string> = {
+  h1: 'scroll-m-20 tracking-tight',
+  h2: 'scroll-m-20 tracking-tight first:mt-0',
+  h3: 'scroll-m-20 tracking-tight',
+};
 
 export const HEADING_SIZES: Record<Variant, Record<Size, string>> = {
   h1: {
@@ -46,7 +54,11 @@ export const Heading = <HeadingVariant extends Variant>(
     variant,
     {
       ...restOfProps,
-      className: cn(HEADING_SIZES[variant][size], className),
+      className: cn(
+        BASE_CLASS_NAMES[variant],
+        HEADING_SIZES[variant][size],
+        className,
+      ),
     },
     children,
   );
