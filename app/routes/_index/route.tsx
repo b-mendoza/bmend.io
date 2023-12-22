@@ -62,7 +62,7 @@ const Header = () => {
 
   return (
     <SectionWrapper
-      className={`flex items-center justify-between gap-6 py-6 ${SECTION_BACKGROUND}`}
+      className={`sticky top-4 flex items-center justify-between gap-6 rounded-2xl py-6 ${SECTION_BACKGROUND}`}
     >
       <Image
         alt="a close up of a dog on a leash with its mouth open and tongue out and tongue hanging out"
@@ -99,7 +99,7 @@ export default function IndexHomeRoute() {
   const loaderData = useLoaderData<typeof loader>();
 
   return (
-    <div className="mx-auto flex max-w-[68rem] flex-col gap-4 text-white">
+    <div className="mx-auto max-w-[68rem] text-white">
       <Header />
 
       <SectionWrapper className={SECTION_BACKGROUND}>
