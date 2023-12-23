@@ -7,9 +7,6 @@ import {
   Scripts,
   ScrollRestoration,
 } from '@remix-run/react';
-import geistMediumFont from '~/assets/fonts/geist-medium.woff2';
-import geistRegularFont from '~/assets/fonts/geist-regular.woff2';
-import geistSemiboldFont from '~/assets/fonts/geist-semibold.woff2';
 /* import { href as iconsSpriteHref } from '~/components/icon'; */
 import fontStyles from '~/styles/fonts.styles.css';
 import globalStyles from '~/styles/globals.styles.css';
@@ -18,21 +15,21 @@ export const links: LinksFunction = () => {
   return [
     {
       rel: 'preload',
-      href: geistRegularFont,
+      href: '/fonts/geist-regular.woff2',
       as: 'font',
       crossOrigin: 'anonymous',
       type: 'font/woff2',
     },
     {
       rel: 'preload',
-      href: geistMediumFont,
+      href: '/fonts/geist-medium.woff2',
       as: 'font',
       crossOrigin: 'anonymous',
       type: 'font/woff2',
     },
     {
       rel: 'preload',
-      href: geistSemiboldFont,
+      href: '/fonts/geist-semibold.woff2',
       as: 'font',
       crossOrigin: 'anonymous',
       type: 'font/woff2',
