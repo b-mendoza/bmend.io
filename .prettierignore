@@ -1,9 +1,9 @@
-# Artifacts
+# artifacts
 /.wrangler
 /functions
 /public/build
 
-# Dependencies
+# dependencies
 node_modules
 pnpm-lock.yaml
 
