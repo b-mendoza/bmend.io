@@ -33,8 +33,8 @@ dependencies:
     specifier: 8.0.0-rc17
     version: 8.0.0-rc17(react@18.3.0-canary-c5b937576-20231219)
   isbot:
-    specifier: 4.1.0
-    version: 4.1.0
+    specifier: 3.7.1
+    version: 3.7.1
   react:
     specifier: canary
     version: 18.3.0-canary-c5b937576-20231219
@@ -4306,11 +4306,6 @@ packages:
   /isbot@3.7.1:
     resolution: {integrity: sha512-JfqOaY3O1lcWt2nc+D6Mq231CNpwZrBboLa59Go0J8hjGH+gY/Sy0CA/YLUSIScINmAVwTdJZIsOTk4PfBtRuw==}
     engines: {node: '>=12'}
-    dev: false
-
-  /isbot@4.1.0:
-    resolution: {integrity: sha512-Kz7zk1wc0oC0FYLYtqea1RKdEX4XGlqacPhoaq9HSEQamEXQNJ/MzVzBKAQXDCCHO0h/eo4CdZs9t3Jfbup5Aw==}
-    engines: {node: '>=18'}
     dev: false
 
   /isexe@2.0.0:
