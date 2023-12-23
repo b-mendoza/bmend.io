@@ -8,5 +8,6 @@ export default {
     v3_relativeSplatPath: true,
   },
   ignoredRouteFiles: ['**/.*'],
+  serverDependenciesToBundle: ['tailwind-merge'],
   serverMinify: process.env.NODE_ENV === 'production',
 };
