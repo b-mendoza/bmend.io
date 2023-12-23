@@ -71,6 +71,7 @@ const Header = () => {
         layout="fixed"
         priority
         src="https://res.cloudinary.com/dgqif0kkr/image/upload/c_fill,h_40,w_40/q_auto:best/fl_progressive:steep/bmendoza-io/sm8a1hhpi7wjua4upya1.jpg"
+        transformer={(opts) => opts.url}
         width={40}
       />
 
@@ -142,11 +143,13 @@ export default function IndexHomeRoute() {
       <SectionWrapper className="border-white/20 bg-gradient-to-bl from-[hsl(243_100%_68%)] to-[hsl(243_76%_51%)] px-0">
         <Image
           alt="a close up of a dog on a leash with its mouth open and tongue out and tongue hanging out"
+          background="data:image/webp;base64,UklGRtIAAABXRUJQVlA4IMYAAABQBQCdASoUABQAPt1orFCopaQiqAgBEBuJZgCsL0MkAUoYSjAMo2xfIrnscSMJKossBbgA/i7Ll/Ptn8HYaxUU8MCID/6CKgUAJSyXcDEGu41bMiBQ9rjD7CLv/Pb/uwlR5/GfLK97rmPpjeriIMXGefN7f2Q8HBOBhZPmPVIG1vH+ZrIEVJJmfZQSEH0ipOXKrKn6b7DS0ae8yjck3/DDLxIUHy9k5Acmfn9cgYug/0WojdlOUG1skGuenqyo6GOVrhgAAAA="
           cdn="cloudinary"
           className="mx-auto mb-10 rounded-full"
           height={115}
           layout="fixed"
           src="https://res.cloudinary.com/dgqif0kkr/image/upload/c_fill,h_115,w_115/q_auto:best/fl_progressive:steep/bmendoza-io/sm8a1hhpi7wjua4upya1.jpg"
+          transformer={(opts) => opts.url}
           width={115}
         />
 
