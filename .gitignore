@@ -1,11 +1,10 @@
 # Artifacts
-/.wrangler
-/functions
+/build
 /public/build
 
 # Dependencies
 node_modules
 
 # dotfiles
-.dev.vars
+.env
 *.tsbuildinfo

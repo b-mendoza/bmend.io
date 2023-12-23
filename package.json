@@ -5,9 +5,9 @@
   "type": "module",
   "scripts": {
     "build": "remix build",
-    "clean:hard": "rimraf --verbose .wrangler functions node_modules pnpm-lock.yaml public/build tsconfig.tsbuildinfo",
-    "clean:soft": "rimraf --verbose .wrangler functions node_modules/.cache public/build tsconfig.tsbuildinfo",
-    "dev": "remix dev --manual -c \"pnpm run start\"",
+    "clean:hard": "rimraf --verbose build node_modules pnpm-lock.yaml public/build tsconfig.tsbuildinfo",
+    "clean:soft": "rimraf --verbose build node_modules/.cache public/build tsconfig.tsbuildinfo",
+    "dev": "remix dev --manual",
     "fix": "concurrently --kill-others-on-fail --prefix-colors \"auto\" \"pnpm:fix:*\"",
     "fix:eslint": "eslint --cache --cache-location ./node_modules/.cache/eslint --fix .",
     "fix:prettier": "prettier --ignore-unknown --cache --write .",
@@ -16,14 +16,15 @@
     "lint:prettier": "prettier --ignore-unknown --cache --check .",
     "lint:types": "tsc --pretty",
     "prepare": "husky install",
-    "start": "wrangler pages dev --compatibility-date=2023-12-20 ./public"
+    "start": "remix-serve ./build/index.js"
   },
   "dependencies": {
     "@radix-ui/react-toggle": "1.0.3",
-    "@remix-run/cloudflare": "2.4.1",
-    "@remix-run/cloudflare-pages": "2.4.1",
+    "@remix-run/node": "2.4.1",
     "@remix-run/react": "2.4.1",
+    "@remix-run/serve": "2.4.1",
     "@unpic/react": "0.1.5",
+    "@vercel/remix": "2.4.1",
     "clsx": "2.0.0",
     "dayjs": "1.11.10",
     "embla-carousel-react": "8.0.0-rc17",
@@ -34,7 +35,6 @@
     "zod": "3.22.4"
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "4.20231218.0",
     "@ianvs/prettier-plugin-sort-imports": "4.1.1",
     "@remix-run/dev": "2.4.1",
     "@total-typescript/ts-reset": "0.5.1",
@@ -64,8 +64,7 @@
     "prettier-plugin-tailwindcss": "0.5.9",
     "rimraf": "5.0.5",
     "tailwindcss": "3.4.0",
-    "typescript": "5.3.3",
-    "wrangler": "3.22.1"
+    "typescript": "5.3.3"
   },
   "engines": {
     "node": ">=20.0.0 <21.0.0"

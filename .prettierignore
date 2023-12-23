@@ -1,6 +1,5 @@
 # Artifacts
-/.wrangler
-/functions
+/build
 /public/build
 
 # Dependencies
@@ -8,5 +7,5 @@ node_modules
 pnpm-lock.yaml
 
 # dotfiles
-.dev.vars
+.env
 *.tsbuildinfo

@@ -1,4 +1,3 @@
-import type { LinksFunction } from '@remix-run/cloudflare';
 import {
   Links,
   LiveReload,
@@ -7,6 +6,7 @@ import {
   Scripts,
   ScrollRestoration,
 } from '@remix-run/react';
+import type { LinksFunction } from '@vercel/remix';
 import geistMediumFont from '~/assets/fonts/geist-medium.woff2';
 import geistRegularFont from '~/assets/fonts/geist-regular.woff2';
 import geistSemiboldFont from '~/assets/fonts/geist-semibold.woff2';
@@ -82,3 +82,7 @@ export default function HomeLayoutRoute() {
     </html>
   );
 }
+
+export const config = {
+  runtime: 'edge',
+};
