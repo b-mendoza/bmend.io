@@ -1,3 +1,5 @@
+import crypto from 'crypto';
+
 /* import type { IconName } from '~/components/icon'; */
 
 export type Tag = {

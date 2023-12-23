@@ -1,3 +1,5 @@
+import crypto from 'crypto';
+
 export type Social = {
   id: string;
   name: string;
