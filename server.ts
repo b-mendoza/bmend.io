@@ -1,7 +1,15 @@
-import { logDevReady, type AppLoadContext } from '@remix-run/cloudflare';
-import { createPagesFunctionHandler } from '@remix-run/cloudflare-pages';
+import type { AppLoadContext } from '@remix-run/cloudflare';
+import { logDevReady } from '@remix-run/cloudflare';
 import * as build from '@remix-run/dev/server-build';
+import { Hono } from 'hono';
+import { handle as honoCloudflarePagesHandle } from 'hono/cloudflare-pages';
+import { staticAssets } from 'remix-hono/cloudflare';
+import { remix as remixHonoHandle } from 'remix-hono/handler';
 import { z } from 'zod';
+
+if (process.env['NODE_ENV'] === 'development') {
+  logDevReady(build);
+}
 
 const EnvSchema = z.object({}).passthrough();
 
@@ -14,16 +22,26 @@ declare module '@remix-run/cloudflare' {
   }
 }
 
-if (process.env.NODE_ENV === 'development') {
-  logDevReady(build);
-}
+type HonoServerContext = {
+  Variables: AppLoadContext['env'];
+};
 
-export const onRequest = createPagesFunctionHandler<AppLoadContext['env']>({
-  build,
-  getLoadContext: (context) => {
-    const parsedEnv = EnvSchema.parse(context.env);
+const server = new Hono<HonoServerContext>();
 
-    return { env: parsedEnv };
-  },
-  mode: build.mode,
-});
+server.use(
+  '*',
+  staticAssets(),
+  remixHonoHandle<HonoServerContext>({
+    // @ts-expect-error This is expected due an old version of remix-hono
+    build,
+    mode:
+      process.env['NODE_ENV'] === 'development' ? 'development' : 'production',
+    getLoadContext: (ctx) => {
+      const parsedEnv = EnvSchema.parse(ctx.env);
+
+      return { env: parsedEnv };
+    },
+  }),
+);
+
+export const onRequest = honoCloudflarePagesHandle(server);
