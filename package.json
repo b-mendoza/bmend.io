@@ -27,9 +27,11 @@
     "clsx": "2.0.0",
     "dayjs": "1.11.10",
     "embla-carousel-react": "8.0.0-rc17",
+    "hono": "3.11.9",
     "isbot": "4.1.0",
     "react": "canary",
     "react-dom": "canary",
+    "remix-hono": "0.0.14",
     "tailwind-merge": "2.2.0",
     "zod": "3.22.4"
   },
