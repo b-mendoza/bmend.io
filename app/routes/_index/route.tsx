@@ -25,7 +25,7 @@ const PAGE_METADATA = {
   CanonicalURL: 'https://bmendoza.io/',
   Title: 'Bryan Mendoza',
   Description:
-    'Your go-to web expert with 6 years of experience in creating stunning and functional web apps, tailored to skyrocket your success using React, Next.js, and Remix. My focus is on is on boosting your business while ensuring exceptional accessibility.',
+    'Your experienced web developer with 6 years of experience crafting tailored and accessible apps to skyrocket your success, using React, Next.js, and Remix.',
   Image: {
     alt: 'a person holding a dog in front of a mirror with his head tilted to the side and his eyes wide open',
     src: 'https://res.cloudinary.com/dgqif0kkr/image/upload/q_auto,f_auto/bmendoza-io/shiba-inu.jpg',
