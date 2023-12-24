@@ -1,5 +1,9 @@
 import type { OutgoingHttpHeaders } from 'http';
-import type { HeadersFunction, MetaFunction } from '@remix-run/cloudflare';
+import type {
+  HeadersFunction,
+  LinksFunction,
+  MetaFunction,
+} from '@remix-run/cloudflare';
 import { json } from '@remix-run/cloudflare';
 import { useLoaderData } from '@remix-run/react';
 import { Image } from '@unpic/react';
@@ -17,10 +21,87 @@ import { getJobExperience } from './get-job-experience.server';
 import { getSocialLinks } from './get-social-links.server';
 import { getTags } from './get-tags.server';
 
+const PAGE_METADATA = {
+  CanonicalURL: 'https://bmendoza.io/',
+  Title: 'Bryan Mendoza',
+  Description:
+    'Your go-to web expert with 6 years of experience in creating stunning and functional web apps, tailored to skyrocket your success using React, Next.js, and Remix. My focus is on is on boosting your business while ensuring exceptional accessibility.',
+  Image: {
+    alt: 'a person holding a dog in front of a mirror with his head tilted to the side and his eyes wide open',
+    src: 'https://res.cloudinary.com/dgqif0kkr/image/upload/q_auto,f_auto/bmendoza-io/shiba-inu.jpg',
+  },
+};
+
 export const meta: MetaFunction = () => {
+  /* TODO: update <meta /> tags text content */
   return [
-    { title: 'Bryan M. | Portfolio' },
-    /* { name: 'description', content: 'Welcome to Remix!' }, */
+    { title: PAGE_METADATA.Title },
+    {
+      name: 'description',
+      content: PAGE_METADATA.Description,
+    },
+    {
+      property: 'og:title',
+      content: PAGE_METADATA.Title,
+    },
+    {
+      property: 'og:description',
+      content: PAGE_METADATA.Description,
+    },
+    {
+      property: 'og:image',
+      content: PAGE_METADATA.Image.src,
+    },
+    {
+      property: 'og:url',
+      content: PAGE_METADATA.CanonicalURL,
+    },
+    {
+      property: 'og:type',
+      content: 'website',
+    },
+    {
+      property: 'twitter:card',
+      content: 'summary_large_image',
+    },
+    {
+      property: 'twitter:site',
+      content: '@beMendoza_',
+    },
+    {
+      property: 'twitter:title',
+      content: PAGE_METADATA.Title,
+    },
+    {
+      property: 'twitter:description',
+      content: PAGE_METADATA.Description,
+    },
+    {
+      property: 'twitter:image',
+      content: PAGE_METADATA.Image.src,
+    },
+    {
+      property: 'twitter:image:alt',
+      content: PAGE_METADATA.Image.alt,
+    },
+    {
+      name: 'author',
+      content: 'Bryan Mendoza',
+    },
+    {
+      name: 'keywords',
+      content:
+        'Experienced Developer, JavaScript, TypeScript, React, Remix, Next.js, Tailwind CSS, Node.js, GraphQL, Web Applications, Front-End Development, Back-End Development, Full-Stack Expertise, Responsive Design, Modern Web Technologies, User Experience, Web Accessibility, Application Development',
+    },
+  ];
+};
+
+export const links: LinksFunction = () => {
+  return [
+    {
+      rel: 'canonical',
+      href: PAGE_METADATA.CanonicalURL,
+    },
   ];
 };
 
@@ -63,15 +144,13 @@ const Header = () => {
       className={`sticky top-4 flex items-center justify-between gap-6 rounded-2xl py-6 ${SECTION_BACKGROUND}`}
     >
       <Image
-        alt="a close up of a dog on a leash with its mouth open and tongue out and tongue hanging out"
-        background="data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAADwAQCdASoKAAoAAsBIJZgCdADdRgtoKgAA+x9TzrhmneVUADrUlEIDsYAn07bIUZi1YcqntHT03os/Wv6jCDX1zksOu7tWzZQNug0AAAA="
+        alt={PAGE_METADATA.Image.alt}
         cdn="cloudinary"
         className="rounded-full"
         height={40}
         layout="fixed"
         priority
-        src="https://res.cloudinary.com/dgqif0kkr/image/upload/c_fill,h_40,w_40/q_auto,fl_progressive:steep/bmendoza-io/sm8a1hhpi7wjua4upya1.jpg"
-        transformer={(opts) => opts.url}
+        src="https://res.cloudinary.com/dgqif0kkr/image/upload/q_auto/bmendoza-io/shiba-inu.jpg"
         width={40}
       />
 
@@ -142,13 +221,12 @@ export default function IndexHomeRoute() {
 
       <SectionWrapper className="border-white/20 bg-gradient-to-bl from-[hsl(243_100%_68%)] to-[hsl(243_76%_51%)] px-0">
         <Image
-          alt="a close up of a dog on a leash with its mouth open and tongue out and tongue hanging out"
+          alt={PAGE_METADATA.Image.alt}
           cdn="cloudinary"
           className="mx-auto mb-10 rounded-full"
           height={115}
           layout="fixed"
-          src="https://res.cloudinary.com/dgqif0kkr/image/upload/c_fill,h_115,w_115/q_auto,f_auto/bmendoza-io/sm8a1hhpi7wjua4upya1.jpg"
-          transformer={(opts) => opts.url}
+          src="https://res.cloudinary.com/dgqif0kkr/image/upload/q_auto/bmendoza-io/shiba-inu.jpg"
           width={115}
         />
 
