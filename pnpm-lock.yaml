@@ -30,8 +30,8 @@ dependencies:
     specifier: 8.0.0-rc17
     version: 8.0.0-rc17(react@18.3.0-canary-c5b937576-20231219)
   hono:
-    specifier: 3.11.9
-    version: 3.11.9
+    specifier: 3.11.10
+    version: 3.11.10
   isbot:
     specifier: 4.1.0
     version: 4.1.0
@@ -4337,8 +4337,8 @@ packages:
     resolution: {integrity: sha512-nAxA0v8+vXSBDt3AnRUNjyRIQ0rD+ntpbAp4LnPkumc5M9yUbSMa4XDU9Q6etY4f1Wp4bNgvc1yjiZtsTTrSng==}
     dev: true
 
-  /hono@3.11.9:
-    resolution: {integrity: sha512-vjwVHw/y9xXPf7a87XjAPE9d3NFLyDiDBHmTU5SsGiJoe4BSiU/Yiu5UB9orhP+YGkSwD7fzXmuG7lpvKnr15w==}
+  /hono@3.11.10:
+    resolution: {integrity: sha512-vizPp5PfVq5dwgN+EM+8v7RHlvrrEbnpkHtM2GMsl6KICA/MvWcnEMJ5L8SjYPxueB8VJMwc6nzzgKj5Vovp7g==}
     engines: {node: '>=16.0.0'}
     dev: false
 
@@ -6875,7 +6875,7 @@ packages:
     resolution: {integrity: sha512-1Uf+IlCxjYycLMdE93ytOtV29/3Ro9kmMYsmadvrlS2acfIh33tFE0rlgwMk+ZT2oVmpou5Bb5dt3VYk1R+OLA==}
     dependencies:
       '@remix-run/server-runtime': 1.19.3
-      hono: 3.11.9
+      hono: 3.11.10
       pretty-cache-header: 1.0.0
     optionalDependencies:
       '@remix-run/cloudflare': 1.19.3(@cloudflare/workers-types@4.20231218.0)
