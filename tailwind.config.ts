@@ -28,7 +28,7 @@ export default {
         white: `hsl(var(--white) / ${ALPHA_VALUE})`,
       },
       fontFamily: {
-        sans: ['Geist', 'Arial'],
+        sans: ['Geist', 'Geist Fallback'],
       },
       fontSize: {
         sm: '1.4rem',
