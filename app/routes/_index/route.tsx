@@ -183,7 +183,7 @@ export default function IndexHomeRoute() {
       <SectionWrapper className={SECTION_BACKGROUND}>
         <Subtitle className="mb-12">About</Subtitle>
 
-        <Heading className="mb-8 font-medium" size="sm" variant="h1">
+        <Heading className="mb-8 font-semibold" size="sm" variant="h1">
           Senior Software Engineer
         </Heading>
 
