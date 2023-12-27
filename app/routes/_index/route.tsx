@@ -196,7 +196,6 @@ export default function IndexHomeRoute() {
         </Paragraph>
 
         <TagMapper
-          getTagId={(tag) => tag.id}
           getTagName={(tag) => tag.text}
           /* getIconName={(tag) => tag.icon} */
           tags={loaderData.tags}
@@ -208,12 +207,12 @@ export default function IndexHomeRoute() {
       >
         <Subtitle>Experience</Subtitle>
 
-        {loaderData.jobExperience.map((jobExperience) => (
+        {loaderData.jobExperience.map((jobExperience, idx) => (
           <ExperienceCard
             companyName={jobExperience.companyName}
             description={jobExperience.description}
             jobTitle={jobExperience.jobTitle}
-            key={jobExperience.id}
+            key={idx}
             timePeriod={jobExperience.timePeriod}
           />
         ))}
@@ -253,8 +252,8 @@ export default function IndexHomeRoute() {
         </div>
 
         <ul className="flex flex-wrap items-center justify-center gap-12 border-t-[0.1rem] border-t-texts/[0.15] px-8 pt-12">
-          {loaderData.socialLinks.map((socialLink) => (
-            <li key={socialLink.id}>
+          {loaderData.socialLinks.map((socialLink, idx) => (
+            <li key={idx}>
               <Link isExternal href={socialLink.to}>
                 {socialLink.name}
               </Link>

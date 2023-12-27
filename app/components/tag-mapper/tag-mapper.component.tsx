@@ -3,7 +3,6 @@ import { Tag } from '~/components/tag';
 import { cn } from '~/utils/cn';
 
 type TagMapperProps<T> = Readonly<{
-  getTagId: (tag: T) => string;
   getTagName: (tag: T) => string;
   tags: T[];
   /* getIconName?: (tag: T) => IconName | undefined; */
@@ -13,7 +12,6 @@ type TagMapperProps<T> = Readonly<{
 
 export const TagMapper = <Tag,>(props: TagMapperProps<Tag>) => {
   const {
-    getTagId,
     getTagName,
     tags,
     /* getIconName, */
@@ -23,11 +21,11 @@ export const TagMapper = <Tag,>(props: TagMapperProps<Tag>) => {
 
   return (
     <ul className={cn('flex flex-wrap gap-[0.8rem]', tagsWrapperClassName)}>
-      {tags.map((tag) => {
+      {tags.map((tag, idx) => {
         return (
           <Tag
             className={tagClassName}
-            key={getTagId(tag)}
+            key={idx}
             name={getTagName(tag)}
             /* icon={getIconName?.(tag)} */
           />
