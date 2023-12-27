@@ -7,32 +7,16 @@ import {
   Scripts,
   ScrollRestoration,
 } from '@remix-run/react';
-import geistMediumFont from '~/assets/fonts/geist-medium.woff2';
-import geistRegularFont from '~/assets/fonts/geist-regular.woff2';
-import geistSemiboldFont from '~/assets/fonts/geist-semibold.woff2';
+import interWoff2 from '~/assets/fonts/inter-latin-wght-normal.woff2';
 /* import { href as iconsSpriteHref } from '~/components/icon'; */
-import fontStyles from '~/styles/fonts.styles.css';
+import fontStyles from '~/styles/font.styles.css';
 import globalStyles from '~/styles/globals.styles.css';
 
 export const links: LinksFunction = () => {
   return [
     {
       rel: 'preload',
-      href: geistRegularFont,
-      as: 'font',
-      crossOrigin: 'anonymous',
-      type: 'font/woff2',
-    },
-    {
-      rel: 'preload',
-      href: geistMediumFont,
-      as: 'font',
-      crossOrigin: 'anonymous',
-      type: 'font/woff2',
-    },
-    {
-      rel: 'preload',
-      href: geistSemiboldFont,
+      href: interWoff2,
       as: 'font',
       crossOrigin: 'anonymous',
       type: 'font/woff2',
