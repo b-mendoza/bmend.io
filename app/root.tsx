@@ -57,7 +57,7 @@ export default function HomeLayoutRoute() {
         <Meta />
         <Links />
       </head>
-      <body className="min-h-screen bg-background text-white">
+      <body className="min-h-screen bg-background text-white antialiased">
         <Outlet />
         <ScrollRestoration />
         <Scripts />
