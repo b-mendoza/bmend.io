@@ -10,7 +10,7 @@ import {
 import interWoff2 from '~/assets/fonts/inter-latin-wght-normal.woff2';
 /* import { href as iconsSpriteHref } from '~/components/icon'; */
 import fontStyles from '~/styles/font.styles.css';
-import globalStyles from '~/styles/globals.styles.css';
+import globalStyles from '~/styles/global.styles.css';
 
 export const links: LinksFunction = () => {
   return [
