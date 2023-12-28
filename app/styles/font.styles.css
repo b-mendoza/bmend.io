@@ -1,8 +1,41 @@
 @font-face {
   font-family: 'Inter';
   font-style: normal;
-  font-weight: 100 900;
   font-display: swap;
+  font-weight: 100 900;
   src: url('../assets/fonts/inter-latin-wght-normal.woff2')
     format('woff2-variations');
+}
+
+@font-face {
+  font-family: 'Inter Fallback';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Arial');
+  ascent-override: 90%;
+  descent-override: 22.43%;
+  line-gap-override: 0;
+  size-adjust: 107.64%;
+}
+
+@font-face {
+  font-family: 'Inter Fallback';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Arial');
+  ascent-override: 90%;
+  descent-override: 22.43%;
+  line-gap-override: 0;
+  size-adjust: 107.64%;
+}
+
+@font-face {
+  font-family: 'Inter Fallback';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Arial Bold');
+  ascent-override: 97.37%;
+  descent-override: 24.27%;
+  line-gap-override: 0;
+  size-adjust: 99.49%;
 }
