@@ -177,7 +177,7 @@ export default function IndexHomeRoute() {
   const loaderData = useLoaderData<typeof loader>();
 
   return (
-    <div className="mx-auto max-w-[68rem] text-white">
+    <main className="mx-auto max-w-[68rem] text-white">
       <Header />
 
       <SectionWrapper className={SECTION_BACKGROUND}>
@@ -261,6 +261,6 @@ export default function IndexHomeRoute() {
           ))}
         </ul>
       </SectionWrapper>
-    </div>
+    </main>
   );
 }
