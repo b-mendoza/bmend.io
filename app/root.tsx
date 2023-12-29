@@ -4,7 +4,6 @@ import {
   LiveReload,
   Meta,
   Outlet,
-  Scripts,
   ScrollRestoration,
 } from '@remix-run/react';
 import interWoff2 from '~/assets/fonts/inter-latin-wght-normal.woff2';
@@ -60,7 +59,6 @@ export default function HomeLayoutRoute() {
       <body className="min-h-screen bg-background text-white antialiased">
         <Outlet />
         <ScrollRestoration />
-        <Scripts />
         <LiveReload />
       </body>
     </html>
