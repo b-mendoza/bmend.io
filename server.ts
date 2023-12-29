@@ -1,8 +1,8 @@
 import type { AppLoadContext } from '@remix-run/cloudflare';
 import { logDevReady } from '@remix-run/cloudflare';
 import * as build from '@remix-run/dev/server-build';
-import { Hono } from 'hono';
 import { handle as honoCloudflarePagesHandle } from 'hono/cloudflare-pages';
+import { Hono } from 'hono/quick';
 import { staticAssets } from 'remix-hono/cloudflare';
 import { remix as remixHonoHandle } from 'remix-hono/handler';
 import { z } from 'zod';
