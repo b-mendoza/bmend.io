@@ -15,6 +15,7 @@ import { Paragraph } from '~/components/typography/paragraph';
 import { Subtitle } from '~/components/typography/subtitle';
 import { SectionWrapper } from '~/components/ui/section-wrapper';
 import { WhiteLink } from '~/components/white-link';
+import { cn } from '~/utils/cn';
 import { getDaysInSeconds } from '~/utils/dates.server';
 /* import { useState } from 'react'; */
 import { getJobExperience } from './get-job-experience.server';
@@ -142,7 +143,10 @@ const Header = () => {
   return (
     <SectionWrapper
       as="header"
-      className={`sticky top-4 flex items-center justify-between gap-6 rounded-2xl py-6 ${SECTION_BACKGROUND}`}
+      className={cn(
+        'sticky top-4 flex items-center justify-between gap-6 rounded-2xl py-6',
+        SECTION_BACKGROUND,
+      )}
     >
       <Image
         alt={PAGE_METADATA.Image.alt}
@@ -206,7 +210,7 @@ export default function IndexHomeRoute() {
 
         <SectionWrapper
           as="section"
-          className={`flex flex-col gap-[3.6rem] ${SECTION_BACKGROUND}`}
+          className={cn('flex flex-col gap-[3.6rem]', SECTION_BACKGROUND)}
         >
           <Subtitle>Experience</Subtitle>
 
