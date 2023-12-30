@@ -262,15 +262,17 @@ export default function IndexHomeRoute() {
           </WhiteLink>
         </div>
 
-        <ul className="flex flex-wrap items-center justify-center gap-12 border-t-[0.1rem] border-t-texts/[0.15] px-8 pt-12">
-          {loaderData.socialLinks.map((socialLink, idx) => (
-            <li key={idx}>
-              <Link isExternal href={socialLink.to}>
-                {socialLink.name}
-              </Link>
-            </li>
-          ))}
-        </ul>
+        <nav aria-label="social links">
+          <ul className="flex flex-wrap items-center justify-center gap-12 border-t-[0.1rem] border-t-texts/[0.15] px-8 pt-12">
+            {loaderData.socialLinks.map((socialLink, idx) => (
+              <li key={idx}>
+                <Link isExternal href={socialLink.to}>
+                  {socialLink.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
       </SectionWrapper>
     </div>
   );
