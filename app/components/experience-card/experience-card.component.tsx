@@ -1,6 +1,6 @@
 import { Heading } from '~/components/typography/headings';
 import { Paragraph } from '~/components/typography/paragraph';
-import type { JobExperience } from '~/routes/_index/get-job-experience.server';
+import type { JobExperience } from '~/models/get-job-experience.server';
 
 type ExperienceCardProps = Readonly<JobExperience>;
 

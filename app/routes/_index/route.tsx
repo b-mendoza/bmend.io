@@ -15,12 +15,12 @@ import { Paragraph } from '~/components/typography/paragraph';
 import { Subtitle } from '~/components/typography/subtitle';
 import { SectionWrapper } from '~/components/ui/section-wrapper';
 import { WhiteLink } from '~/components/white-link';
+/* import { useState } from 'react'; */
+import { getJobExperience } from '~/models/get-job-experience.server';
+import { getSocialLinks } from '~/models/get-social-links.server';
+import { getTags } from '~/models/get-tags.server';
 import { cn } from '~/utils/cn';
 import { getDaysInSeconds } from '~/utils/dates.server';
-/* import { useState } from 'react'; */
-import { getJobExperience } from './get-job-experience.server';
-import { getSocialLinks } from './get-social-links.server';
-import { getTags } from './get-tags.server';
 
 const PAGE_METADATA = {
   CanonicalURL: 'https://bmendoza.io/',
