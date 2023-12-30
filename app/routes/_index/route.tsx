@@ -141,6 +141,7 @@ const Header = () => {
 
   return (
     <SectionWrapper
+      as="header"
       className={`sticky top-4 flex items-center justify-between gap-6 rounded-2xl py-6 ${SECTION_BACKGROUND}`}
     >
       <Image
@@ -177,48 +178,54 @@ export default function IndexHomeRoute() {
   const loaderData = useLoaderData<typeof loader>();
 
   return (
-    <main className="mx-auto max-w-[68rem] text-white">
+    <div className="mx-auto max-w-[68rem] text-white">
       <Header />
 
-      <SectionWrapper className={SECTION_BACKGROUND}>
-        <Subtitle className="mb-12">About</Subtitle>
+      <main>
+        <SectionWrapper as="section" className={SECTION_BACKGROUND}>
+          <Subtitle className="mb-12">About</Subtitle>
 
-        <Heading className="mb-8 font-semibold" size="sm" variant="h1">
-          Senior Software Engineer
-        </Heading>
+          <Heading className="mb-8 font-semibold" size="sm" variant="h1">
+            Senior Software Engineer
+          </Heading>
 
-        <Paragraph className="mb-16 text-balance">
-          I am a highly skilled developer with 6 years of experience building
-          high-quality applications for small and medium-sized businesses. I am
-          passionate about creating exceptional user experiences and ensuring
-          accessibility with expertise in modern tools like React, Next.js, and
-          Remix.
-        </Paragraph>
+          <Paragraph className="mb-16 text-balance">
+            I am a highly skilled developer with 6 years of experience building
+            high-quality applications for small and medium-sized businesses. I
+            am passionate about creating exceptional user experiences and
+            ensuring accessibility with expertise in modern tools like React,
+            Next.js, and Remix.
+          </Paragraph>
 
-        <TagMapper
-          getTagName={(tag) => tag.text}
-          /* getIconName={(tag) => tag.icon} */
-          tags={loaderData.tags}
-        />
-      </SectionWrapper>
+          <TagMapper
+            getTagName={(tag) => tag.text}
+            /* getIconName={(tag) => tag.icon} */
+            tags={loaderData.tags}
+          />
+        </SectionWrapper>
+
+        <SectionWrapper
+          as="section"
+          className={`flex flex-col gap-[3.6rem] ${SECTION_BACKGROUND}`}
+        >
+          <Subtitle>Experience</Subtitle>
+
+          {loaderData.jobExperience.map((jobExperience, idx) => (
+            <ExperienceCard
+              companyName={jobExperience.companyName}
+              description={jobExperience.description}
+              jobTitle={jobExperience.jobTitle}
+              key={idx}
+              timePeriod={jobExperience.timePeriod}
+            />
+          ))}
+        </SectionWrapper>
+      </main>
 
       <SectionWrapper
-        className={`flex flex-col gap-[3.6rem] ${SECTION_BACKGROUND}`}
+        as="footer"
+        className="border-white/20 bg-gradient-to-bl from-[hsl(243_100%_68%)] to-[hsl(243_76%_51%)] px-0"
       >
-        <Subtitle>Experience</Subtitle>
-
-        {loaderData.jobExperience.map((jobExperience, idx) => (
-          <ExperienceCard
-            companyName={jobExperience.companyName}
-            description={jobExperience.description}
-            jobTitle={jobExperience.jobTitle}
-            key={idx}
-            timePeriod={jobExperience.timePeriod}
-          />
-        ))}
-      </SectionWrapper>
-
-      <SectionWrapper className="border-white/20 bg-gradient-to-bl from-[hsl(243_100%_68%)] to-[hsl(243_76%_51%)] px-0">
         <Image
           alt={PAGE_METADATA.Image.alt}
           cdn="cloudinary"
@@ -261,6 +268,6 @@ export default function IndexHomeRoute() {
           ))}
         </ul>
       </SectionWrapper>
-    </main>
+    </div>
   );
 }
