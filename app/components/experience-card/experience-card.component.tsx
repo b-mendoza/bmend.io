@@ -10,7 +10,7 @@ export const ExperienceCard = (props: ExperienceCardProps) => {
 
   return (
     <article>
-      <Paragraph className="mb-8 text-texts/70" size="sm">
+      <Paragraph className="text-texts/70" size="sm">
         {startDate} to {endDate ?? 'Present'}
       </Paragraph>
 
