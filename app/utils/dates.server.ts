@@ -17,5 +17,5 @@ export const getDaysInSeconds = (days: number) => {
  * formatDate('2023-04-01') will return 'Apr 2023'
  */
 export const formatDate = (date: string) => {
-  return dayjs(date).format('MMM YYYY');
+  return dayjs(date).format('MMM. YYYY');
 };
