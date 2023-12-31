@@ -215,13 +215,7 @@ export default function IndexHomeRoute() {
           <Subtitle>Experience</Subtitle>
 
           {loaderData.jobExperience.map((jobExperience, idx) => (
-            <ExperienceCard
-              companyName={jobExperience.companyName}
-              description={jobExperience.description}
-              jobTitle={jobExperience.jobTitle}
-              key={idx}
-              timePeriod={jobExperience.timePeriod}
-            />
+            <ExperienceCard {...jobExperience} key={idx} />
           ))}
         </SectionWrapper>
       </main>

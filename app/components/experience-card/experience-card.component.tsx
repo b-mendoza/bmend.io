@@ -5,11 +5,13 @@ import type { JobExperience } from '~/models/get-job-experience.server';
 type ExperienceCardProps = Readonly<JobExperience>;
 
 export const ExperienceCard = (props: ExperienceCardProps) => {
-  const { companyName, description, timePeriod, jobTitle } = props;
+  const { companyName, description, jobTitle, startDate, endDate } = props;
 
   return (
     <article>
-      <Paragraph className="mb-8 text-texts/70">{timePeriod}</Paragraph>
+      <Paragraph className="mb-8 text-texts/70">
+        {startDate} - {endDate ?? 'Present'}
+      </Paragraph>
 
       <Heading variant="h2" size="sm" className="mb-[0.2rem] font-medium">
         {companyName}
