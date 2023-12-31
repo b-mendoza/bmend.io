@@ -11,7 +11,7 @@ import { ExperienceCard } from '~/components/experience-card';
 import { Link } from '~/components/link';
 import { TagMapper } from '~/components/tag-mapper';
 import { Heading } from '~/components/typography/headings';
-import { Paragraph } from '~/components/typography/paragraph';
+import { Paragraph, PARAGRAPH_SIZES } from '~/components/typography/paragraph';
 import { Subtitle } from '~/components/typography/subtitle';
 import { SectionWrapper } from '~/components/ui/section-wrapper';
 import { WhiteLink } from '~/components/white-link';
@@ -212,7 +212,13 @@ export default function IndexHomeRoute() {
           as="section"
           className={cn('flex flex-col gap-[3.6rem]', SECTION_BACKGROUND)}
         >
-          <Subtitle>Experience</Subtitle>
+          <Heading
+            className={cn('font-semibold uppercase', PARAGRAPH_SIZES.md)}
+            size="sm"
+            variant="h2"
+          >
+            Experience
+          </Heading>
 
           {loaderData.jobExperience.map((jobExperience, idx) => (
             <ExperienceCard {...jobExperience} key={idx} />
