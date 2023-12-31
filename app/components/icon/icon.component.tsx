@@ -4,9 +4,7 @@ import href from './icon.svg';
 export { href };
 
 export type IconProps = React.JSX.IntrinsicElements['svg'] &
-  Readonly<{
-    name: IconName;
-  }>;
+  Readonly<{ name: IconName }>;
 
 export type IconSize = Pick<IconProps, 'height' | 'width'>;
 

@@ -7,13 +7,13 @@ type Variant = keyof Pick<React.ReactHTML, 'h1' | 'h2' | 'h3'>;
 
 type Size = 'sm' | 'md' | 'lg';
 
-const BASE_CLASS_NAMES: Record<Variant, string> = {
+const BASE_CLASS_NAMES = {
   h1: 'scroll-m-20 tracking-tight',
   h2: 'scroll-m-20 tracking-tight first:mt-0',
   h3: 'scroll-m-20 tracking-tight',
-};
+} satisfies Record<Variant, string>;
 
-export const HEADING_SIZES: Record<Variant, Record<Size, string>> = {
+export const HEADING_SIZES = {
   h1: {
     sm: 'text-[3.1rem]',
     md: 'text-[3.8rem]',
@@ -29,10 +29,10 @@ export const HEADING_SIZES: Record<Variant, Record<Size, string>> = {
     md: 'text-[2rem]',
     lg: 'text-[2.2rem]',
   },
-};
+} satisfies Record<Variant, Record<Size, string>>;
 
-type HeadingProps<T extends Variant> = Readonly<
-  React.JSX.IntrinsicElements[T] & {
+type HeadingProps<T extends Variant> = React.JSX.IntrinsicElements[T] &
+  Readonly<{
     /**
      * The variant of the heading to render.
      */
@@ -42,8 +42,7 @@ type HeadingProps<T extends Variant> = Readonly<
      * @default "md"
      */
     size?: Size;
-  }
->;
+  }>;
 
 export const Heading = <HeadingVariant extends Variant>(
   props: HeadingProps<HeadingVariant>,

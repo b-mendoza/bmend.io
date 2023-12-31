@@ -1,13 +1,10 @@
 import { Link } from '@remix-run/react';
 import type { LinkProps } from '@remix-run/react';
 
-type AsRemixLink = LinkProps & {
-  isExternal?: false;
-};
+type AsRemixLink = LinkProps & Readonly<{ isExternal?: false }>;
 
-type AsExternalLink = React.JSX.IntrinsicElements['a'] & {
-  isExternal: true;
-};
+type AsExternalLink = React.JSX.IntrinsicElements['a'] &
+  Readonly<{ isExternal: true }>;
 
 export type BaseLinkProps = AsRemixLink | AsExternalLink;
 
