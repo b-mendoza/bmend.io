@@ -1,6 +1,7 @@
 import { Heading } from '~/components/typography/headings';
-import { Paragraph } from '~/components/typography/paragraph';
+import { Paragraph, PARAGRAPH_SIZES } from '~/components/typography/paragraph';
 import type { JobExperience } from '~/models/get-job-experience.server';
+import { cn } from '~/utils/cn';
 
 type ExperienceCardProps = Readonly<JobExperience>;
 
@@ -9,15 +10,17 @@ export const ExperienceCard = (props: ExperienceCardProps) => {
 
   return (
     <article>
-      <Paragraph className="mb-8 text-texts/70">
-        {startDate} - {endDate ?? 'Present'}
+      <Paragraph className="mb-8 text-texts/70" size="sm">
+        {startDate} to {endDate ?? 'Present'}
       </Paragraph>
 
-      <Heading variant="h2" size="sm" className="mb-[0.2rem] font-medium">
+      <Heading variant="h3" size="lg" className="mb-[0.2rem] font-medium">
         {companyName}
       </Heading>
 
-      <Paragraph className="mb-8 text-texts/50">{jobTitle}</Paragraph>
+      <h4 className={cn('mb-8 text-texts/50', PARAGRAPH_SIZES.md)}>
+        {jobTitle}
+      </h4>
 
       <Paragraph className="whitespace-pre-wrap text-pretty">
         {description}
