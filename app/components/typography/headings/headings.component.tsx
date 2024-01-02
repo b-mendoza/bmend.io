@@ -1,7 +1,8 @@
 /* TODO: adjust the font-size values as they seem not to be correct */
 
-import { cn } from '~/utils/cn';
 import { createElement } from 'react';
+
+import { cn } from '~/utils/cn';
 
 type Variant = keyof Pick<React.ReactHTML, 'h1' | 'h2' | 'h3'>;
 

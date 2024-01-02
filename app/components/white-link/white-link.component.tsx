@@ -1,5 +1,5 @@
-import { BaseLink } from '~/components/base-link';
 import type { BaseLinkProps } from '~/components/base-link';
+import { BaseLink } from '~/components/base-link';
 import { PARAGRAPH_SIZES } from '~/components/typography/paragraph';
 import { cn } from '~/utils/cn';
 

@@ -1,5 +1,5 @@
-import { Link } from '@remix-run/react';
 import type { LinkProps } from '@remix-run/react';
+import { Link } from '@remix-run/react';
 
 type AsRemixLink = LinkProps & Readonly<{ isExternal?: false }>;
 

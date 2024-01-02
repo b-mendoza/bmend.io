@@ -1,5 +1,6 @@
-import { cn } from '~/utils/cn';
 import { createElement } from 'react';
+
+import { cn } from '~/utils/cn';
 
 type SupportedTags = keyof Pick<
   React.JSX.IntrinsicElements,

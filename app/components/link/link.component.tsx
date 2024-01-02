@@ -1,5 +1,5 @@
-import { BaseLink } from '~/components/base-link';
 import type { BaseLinkProps } from '~/components/base-link';
+import { BaseLink } from '~/components/base-link';
 import { cn } from '~/utils/cn';
 
 export type LinkProps = BaseLinkProps;

@@ -1,4 +1,3 @@
-import type { OutgoingHttpHeaders } from 'http';
 import type {
   HeadersFunction,
   LinksFunction,
@@ -7,6 +6,8 @@ import type {
 import { json } from '@remix-run/cloudflare';
 import { useLoaderData } from '@remix-run/react';
 import { Image } from '@unpic/react';
+import type { OutgoingHttpHeaders } from 'http';
+
 import { ExperienceCard } from '~/components/experience-card';
 import { Link } from '~/components/link';
 import { TagMapper } from '~/components/tag-mapper';

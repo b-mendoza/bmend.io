@@ -7,6 +7,7 @@ import {
   Scripts,
   ScrollRestoration,
 } from '@remix-run/react';
+
 import interWoff2 from '~/assets/fonts/inter-latin-wght-normal.woff2';
 /* import { href as iconsSpriteHref } from '~/components/icon'; */
 import fontStyles from '~/styles/font.styles.css';
