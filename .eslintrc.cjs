@@ -7,11 +7,13 @@ const SeverityTypes = Object.freeze({
   ERROR: 2,
 });
 
-/** @type {import('eslint').ESLint.ConfigData} */
+/** @type {import('eslint').Linter.Config} */
 module.exports = {
+  root: true,
   env: {
     browser: true,
-    node: true,
+    commonjs: true,
+    es6: true,
   },
   extends: [
     'eslint:recommended',
@@ -22,6 +24,7 @@ module.exports = {
     'plugin:react/jsx-runtime',
     'plugin:react-hooks/recommended',
     'plugin:jsx-a11y/strict',
+    'plugin:sonarjs/recommended',
     'plugin:deprecation/recommended',
     'prettier',
   ],
@@ -35,8 +38,17 @@ module.exports = {
     sourceType: 'module',
     tsconfigRootDir: __dirname,
   },
-  plugins: ['@typescript-eslint'],
-  root: true,
+  plugins: ['@typescript-eslint', 'simple-import-sort'],
+  settings: {
+    react: {
+      version: 'detect',
+    },
+    formComponents: ['Form'],
+    linkComponents: [
+      { name: 'Link', linkAttribute: 'to' },
+      { name: 'NavLink', linkAttribute: 'to' },
+    ],
+  },
   rules: {
     '@typescript-eslint/consistent-type-definitions': [
       SeverityTypes.ERROR,
@@ -47,6 +59,9 @@ module.exports = {
       { fixStyle: 'separate-type-imports' },
     ],
     '@typescript-eslint/explicit-function-return-type': SeverityTypes.OFF,
+    'import/first': SeverityTypes.ERROR,
+    'import/newline-after-import': SeverityTypes.ERROR,
+    'import/no-duplicates': SeverityTypes.ERROR,
     'jsx-a11y/alt-text': [
       SeverityTypes.ERROR,
       {
@@ -56,25 +71,14 @@ module.exports = {
     ],
     'jsx-a11y/anchor-has-content': [
       SeverityTypes.ERROR,
-      {
-        components: ['Link', 'NavLink'],
-      },
+      { components: ['Link', 'NavLink'] },
     ],
     'react/jsx-no-leaked-render': [
       SeverityTypes.ERROR,
       { validStrategies: ['ternary'] },
     ],
-    'react/prefer-read-only-props': SeverityTypes.ERROR,
-  },
-  settings: {
-    react: {
-      version: 'detect',
-    },
-    formComponents: ['Form'],
-    linkComponents: [
-      { name: 'Link', linkAttribute: 'to' },
-      { name: 'NavLink', linkAttribute: 'to' },
-    ],
+    'simple-import-sort/exports': SeverityTypes.ERROR,
+    'simple-import-sort/imports': SeverityTypes.ERROR,
   },
   overrides: [
     {
