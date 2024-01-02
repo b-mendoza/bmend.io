@@ -52,9 +52,6 @@ devDependencies:
   '@cloudflare/workers-types':
     specifier: 4.20231218.0
     version: 4.20231218.0
-  '@ianvs/prettier-plugin-sort-imports':
-    specifier: 4.1.1
-    version: 4.1.1(prettier@3.1.1)
   '@remix-run/dev':
     specifier: 2.4.1
     version: 2.4.1(@types/node@20.10.0)(typescript@5.3.3)
@@ -135,7 +132,7 @@ devDependencies:
     version: 2.4.8(prettier@3.1.1)
   prettier-plugin-tailwindcss:
     specifier: 0.5.10
-    version: 0.5.10(@ianvs/prettier-plugin-sort-imports@4.1.1)(prettier@3.1.1)
+    version: 0.5.10(prettier@3.1.1)
   rimraf:
     specifier: 5.0.5
     version: 5.0.5
@@ -1241,26 +1238,6 @@ packages:
 
   /@humanwhocodes/object-schema@2.0.1:
     resolution: {integrity: sha512-dvuCeX5fC9dXgJn9t+X5atfmgQAzUOWqS1254Gh0m6i8wKd10ebXkfNKiRK+1GWi/yTvvLDHpoxLr0xxxeslWw==}
-    dev: true
-
-  /@ianvs/prettier-plugin-sort-imports@4.1.1(prettier@3.1.1):
-    resolution: {integrity: sha512-kJhXq63ngpTQ2dxgf5GasbPJWsJA3LgoOdd7WGhpUSzLgLgI4IsIzYkbJf9kmpOHe7Vdm/o3PcRA3jmizXUuAQ==}
-    peerDependencies:
-      '@vue/compiler-sfc': '>=3.0.0'
-      prettier: 2 || 3
-    peerDependenciesMeta:
-      '@vue/compiler-sfc':
-        optional: true
-    dependencies:
-      '@babel/core': 7.23.7
-      '@babel/generator': 7.23.6
-      '@babel/parser': 7.23.6
-      '@babel/traverse': 7.23.7
-      '@babel/types': 7.23.6
-      prettier: 3.1.1
-      semver: 7.5.4
-    transitivePeerDependencies:
-      - supports-color
     dev: true
 
   /@isaacs/cliui@8.0.2:
@@ -6004,7 +5981,7 @@ packages:
       synckit: 0.8.8
     dev: true
 
-  /prettier-plugin-tailwindcss@0.5.10(@ianvs/prettier-plugin-sort-imports@4.1.1)(prettier@3.1.1):
+  /prettier-plugin-tailwindcss@0.5.10(prettier@3.1.1):
     resolution: {integrity: sha512-9UGSejqFxGG6brYjFfTYlJ8zs4L/lvZg1AngFfaC5Fs1otSskASv5IWKmjPu5MlABQUtTKtMArKyYr/hWpXSUg==}
     engines: {node: '>=14.21.3'}
     peerDependencies:
@@ -6053,7 +6030,6 @@ packages:
       prettier-plugin-twig-melody:
         optional: true
     dependencies:
-      '@ianvs/prettier-plugin-sort-imports': 4.1.1(prettier@3.1.1)
       prettier: 3.1.1
     dev: true
 

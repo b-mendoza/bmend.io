@@ -3,11 +3,7 @@
 /** @type {import('prettier').Config} */
 const prettierConfig = {
   singleQuote: true,
-  plugins: [
-    'prettier-plugin-packagejson',
-    '@ianvs/prettier-plugin-sort-imports',
-    'prettier-plugin-tailwindcss',
-  ],
+  plugins: ['prettier-plugin-packagejson', 'prettier-plugin-tailwindcss'],
   tailwindFunctions: ['cn'],
 };
 
