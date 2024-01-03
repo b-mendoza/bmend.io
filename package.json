@@ -26,8 +26,8 @@
     "@unpic/react": "0.1.5",
     "clsx": "2.1.0",
     "dayjs": "1.11.10",
-    "hono": "3.11.11",
-    "isbot": "4.1.0",
+    "hono": "3.11.12",
+    "isbot": "4.1.1",
     "react": "canary",
     "react-dom": "canary",
     "remix-hono": "0.0.14",
@@ -41,8 +41,8 @@
     "@types/node": "20.10.0",
     "@types/react": "18.2.46",
     "@types/react-dom": "18.2.18",
-    "@typescript-eslint/eslint-plugin": "6.16.0",
-    "@typescript-eslint/parser": "6.16.0",
+    "@typescript-eslint/eslint-plugin": "6.17.0",
+    "@typescript-eslint/parser": "6.17.0",
     "autoprefixer": "10.4.16",
     "concurrently": "8.2.2",
     "eslint": "8.56.0",
@@ -51,7 +51,7 @@
     "eslint-plugin-deprecation": "2.0.0",
     "eslint-plugin-import": "2.29.1",
     "eslint-plugin-jsx-a11y": "6.8.0",
-    "eslint-plugin-n": "16.6.0",
+    "eslint-plugin-n": "16.6.1",
     "eslint-plugin-promise": "6.1.1",
     "eslint-plugin-react": "7.33.2",
     "eslint-plugin-react-hooks": "4.6.0",
@@ -66,7 +66,7 @@
     "rimraf": "5.0.5",
     "tailwindcss": "3.4.0",
     "typescript": "5.3.3",
-    "wrangler": "3.22.1"
+    "wrangler": "3.22.2"
   },
   "engines": {
     "node": ">=20.0.0 <21.0.0"
