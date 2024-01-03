@@ -8,7 +8,7 @@ import {
   ScrollRestoration,
 } from '@remix-run/react';
 
-import interWoff2 from '~/assets/fonts/inter-latin-wght-normal.woff2';
+import onestWoff2 from '~/assets/fonts/onest-latin-wght-normal.woff2';
 /* import { href as iconsSpriteHref } from '~/components/icon'; */
 import fontStyles from '~/styles/font.styles.css';
 import globalStyles from '~/styles/global.styles.css';
@@ -17,7 +17,7 @@ export const links: LinksFunction = () => {
   return [
     {
       rel: 'preload',
-      href: interWoff2,
+      href: onestWoff2,
       as: 'font',
       crossOrigin: 'anonymous',
       type: 'font/woff2',

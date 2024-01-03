@@ -1,41 +1,41 @@
 @font-face {
-  font-family: 'Inter';
+  font-family: Onest;
   font-style: normal;
   font-display: swap;
   font-weight: 100 900;
-  src: url('../assets/fonts/inter-latin-wght-normal.woff2')
+  src: url('../assets/fonts/onest-latin-wght-normal.woff2')
     format('woff2-variations');
 }
 
 @font-face {
-  font-family: 'Inter Fallback';
+  font-family: 'Onest Fallback';
   font-style: normal;
   font-weight: 400;
   src: local('Arial');
-  ascent-override: 90%;
-  descent-override: 22.43%;
+  ascent-override: 91.42%;
+  descent-override: 28.75%;
   line-gap-override: 0;
-  size-adjust: 107.64%;
+  size-adjust: 106.1%;
 }
 
 @font-face {
-  font-family: 'Inter Fallback';
+  font-family: 'Onest Fallback';
   font-style: normal;
   font-weight: 500;
   src: local('Arial');
-  ascent-override: 90%;
-  descent-override: 22.43%;
+  ascent-override: 91.42%;
+  descent-override: 28.75%;
   line-gap-override: 0;
-  size-adjust: 107.64%;
+  size-adjust: 106.1%;
 }
 
 @font-face {
-  font-family: 'Inter Fallback';
+  font-family: 'Onest Fallback';
   font-style: normal;
   font-weight: 600;
   src: local('Arial Bold');
-  ascent-override: 97.37%;
-  descent-override: 24.27%;
+  ascent-override: 98.91%;
+  descent-override: 31.1%;
   line-gap-override: 0;
-  size-adjust: 99.49%;
+  size-adjust: 98.07%;
 }

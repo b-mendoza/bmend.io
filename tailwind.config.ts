@@ -28,7 +28,7 @@ export default {
         white: `hsl(var(--white) / ${ALPHA_VALUE})`,
       },
       fontFamily: {
-        sans: ['Inter', 'Inter Fallback'],
+        sans: ['Onest', 'Onest Fallback'],
       },
       fontSize: {
         sm: '1.4rem',
