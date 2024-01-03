@@ -16,7 +16,7 @@
     "lint:prettier": "prettier --ignore-unknown --cache --check .",
     "lint:types": "tsc --pretty",
     "prepare": "husky install",
-    "start": "wrangler pages dev --compatibility-date=2023-12-20 ./public"
+    "start": "wrangler pages dev --compatibility-date=2024-01-03 ./public"
   },
   "dependencies": {
     "@radix-ui/react-toggle": "1.0.3",
