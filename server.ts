@@ -8,7 +8,14 @@ import { remix as remixHonoHandle } from 'remix-hono/handler';
 import { z } from 'zod';
 
 if (process.env['NODE_ENV'] === 'development') {
-  logDevReady(build);
+  /**
+   * This is a workaround for a bug in Remix v2.5.0, make sure to remove it, once
+   * {@link https://github.com/remix-run/remix/pull/8492 | this PR} has been merged.
+   */
+  logDevReady({
+    ...build,
+    isSpaMode: false,
+  });
 }
 
 const EnvSchema = z.object({}).passthrough();
