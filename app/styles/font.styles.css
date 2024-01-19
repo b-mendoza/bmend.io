@@ -1,41 +1,41 @@
 @font-face {
-  font-family: Onest;
+  font-family: Inter;
   font-style: normal;
   font-display: swap;
   font-weight: 100 900;
-  src: url('../assets/fonts/onest-latin-wght-normal.woff2')
+  src: url('../assets/fonts/inter-latin-wght-normal.woff2')
     format('woff2-variations');
 }
 
 @font-face {
-  font-family: 'Onest Fallback';
+  font-family: 'Inter Fallback';
   font-style: normal;
   font-weight: 400;
   src: local('Arial');
-  ascent-override: 91.42%;
-  descent-override: 28.75%;
-  line-gap-override: 0;
-  size-adjust: 106.1%;
+  ascent-override: 90.51%;
+  descent-override: 21.64%;
+  line-gap-override: 9.84%;
+  size-adjust: 101.65%;
 }
 
 @font-face {
-  font-family: 'Onest Fallback';
+  font-family: 'Inter Fallback';
   font-style: normal;
   font-weight: 500;
   src: local('Arial');
-  ascent-override: 91.42%;
-  descent-override: 28.75%;
-  line-gap-override: 0;
-  size-adjust: 106.1%;
+  ascent-override: 90.51%;
+  descent-override: 21.64%;
+  line-gap-override: 9.84%;
+  size-adjust: 101.65%;
 }
 
 @font-face {
-  font-family: 'Onest Fallback';
+  font-family: 'Inter Fallback';
   font-style: normal;
   font-weight: 600;
   src: local('Arial Bold');
-  ascent-override: 98.91%;
-  descent-override: 31.1%;
-  line-gap-override: 0;
-  size-adjust: 98.07%;
+  ascent-override: 97.92%;
+  descent-override: 23.42%;
+  line-gap-override: 10.64%;
+  size-adjust: 93.96%;
 }
