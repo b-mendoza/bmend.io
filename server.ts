@@ -8,14 +8,7 @@ import { remix as remixHonoHandle } from 'remix-hono/handler';
 import { z } from 'zod';
 
 if (process.env['NODE_ENV'] === 'development') {
-  /**
-   * This is a workaround for a bug in Remix v2.5.0, make sure to remove it, once
-   * {@link https://github.com/remix-run/remix/pull/8492 | this PR} has been merged.
-   */
-  logDevReady({
-    ...build,
-    isSpaMode: false,
-  });
+  logDevReady(build);
 }
 
 const EnvSchema = z.object({}).passthrough();
@@ -38,8 +31,7 @@ const server = new Hono<HonoServerContext>();
 server.use(
   '*',
   staticAssets(),
-  remixHonoHandle<HonoServerContext>({
-    // @ts-expect-error This is expected due an old version of remix-hono
+  remixHonoHandle({
     build,
     mode:
       process.env['NODE_ENV'] === 'development' ? 'development' : 'production',
