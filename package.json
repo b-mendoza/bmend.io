@@ -28,8 +28,8 @@
     "dayjs": "1.11.10",
     "hono": "3.12.7",
     "isbot": "4.4.0",
-    "react": "18.3.0-canary-feed8f3f9-20240118",
-    "react-dom": "18.3.0-canary-feed8f3f9-20240118",
+    "react": "18.3.0-canary-8bb6ee1d3-20240125",
+    "react-dom": "18.3.0-canary-8bb6ee1d3-20240125",
     "remix-hono": "0.0.15",
     "tailwind-merge": "2.2.1",
     "zod": "3.22.4"
