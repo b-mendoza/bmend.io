@@ -15,7 +15,7 @@
     "lint:eslint": "eslint --cache --cache-location ./node_modules/.cache/eslint .",
     "lint:prettier": "prettier --ignore-unknown --cache --check .",
     "lint:types": "tsc --pretty",
-    "prepare": "husky install",
+    "prepare": "husky",
     "start": "wrangler pages dev --compatibility-date=2024-01-14 ./public"
   },
   "dependencies": {
