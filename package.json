@@ -16,7 +16,7 @@
     "lint:prettier": "prettier --ignore-unknown --cache --check .",
     "lint:types": "tsc --pretty",
     "prepare": "husky",
-    "start": "wrangler pages dev --compatibility-date=2024-01-14 ./public"
+    "start": "wrangler pages dev --compatibility-date=2024-01-30 ./public"
   },
   "dependencies": {
     "@radix-ui/react-toggle": "1.0.3",
@@ -35,13 +35,13 @@
     "zod": "3.22.4"
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "4.20240117.0",
+    "@cloudflare/workers-types": "4.20240129.0",
     "@remix-run/dev": "2.5.1",
     "@total-typescript/ts-reset": "0.5.1",
     "@types/react": "18.2.48",
     "@types/react-dom": "18.2.18",
-    "@typescript-eslint/eslint-plugin": "6.19.1",
-    "@typescript-eslint/parser": "6.19.1",
+    "@typescript-eslint/eslint-plugin": "6.20.0",
+    "@typescript-eslint/parser": "6.20.0",
     "autoprefixer": "10.4.17",
     "concurrently": "8.2.2",
     "eslint": "8.56.0",
@@ -56,7 +56,7 @@
     "eslint-plugin-react-hooks": "4.6.0",
     "eslint-plugin-simple-import-sort": "10.0.0",
     "eslint-plugin-sonarjs": "0.23.0",
-    "husky": "9.0.6",
+    "husky": "9.0.7",
     "lint-staged": "15.2.0",
     "postcss": "8.4.33",
     "prettier": "3.2.4",
