@@ -36,13 +36,5 @@ export const getTags = () => {
       text: 'Node.js',
       /* icon: 'nodedotjs', */
     },
-    {
-      text: 'GraphQL',
-      /* icon: 'graphql', */
-    },
-    {
-      text: 'PostgreSQL',
-      /* icon: 'postgresql', */
-    },
   ] satisfies Tag[];
 };
