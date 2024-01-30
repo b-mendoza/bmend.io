@@ -27,7 +27,7 @@ const PAGE_METADATA = {
   CanonicalURL: 'https://bmendoza.io/',
   Title: 'Bryan Mendoza',
   Description:
-    'Your experienced web developer with 6 years of experience crafting tailored and accessible apps to skyrocket your success, using React, Next.js, and Remix.',
+    'Your experienced web developer with nearly seven years of experience crafting tailored and accessible apps to skyrocket your success, using React, Next.js, and Remix.',
   Image: {
     alt: 'a person holding a dog in front of a mirror with his head tilted to the side and his eyes wide open',
     src: 'https://res.cloudinary.com/dgqif0kkr/image/upload/q_auto,f_auto/bmendoza-io/shiba-inu.jpg',
@@ -195,11 +195,11 @@ export default function IndexHomeRoute() {
           </Heading>
 
           <Paragraph className="mb-16 text-balance">
-            I am a highly skilled developer with 6 years of experience building
-            high-quality applications for small and medium-sized businesses. I
-            am passionate about creating exceptional user experiences and
-            ensuring accessibility with expertise in modern tools like React,
-            Next.js, and Remix.
+            I am a highly skilled developer with nearly seven years of
+            experience building high-quality applications for small to
+            medium-sized businesses. My passion lies in working with
+            cutting-edge technology while I commit to creating accessible and
+            exceptional user experiences.
           </Paragraph>
 
           <TagMapper
