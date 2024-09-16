@@ -26,7 +26,7 @@
     "@unpic/react": "0.1.9",
     "clsx": "2.1.0",
     "dayjs": "1.11.10",
-    "hono": "3.12.12",
+    "hono": "4.5.8",
     "isbot": "4.4.0",
     "react": "18.3.0-canary-2cd19ed1d-20240207",
     "react-dom": "18.3.0-canary-2cd19ed1d-20240207",
