@@ -1,0 +1,14 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    ":automergeMinor",
+    "config:best-practices",
+    "replacements:all",
+    "workarounds:all"
+  ],
+  "lockFileMaintenance": {
+    "enabled": true
+  },
+  "rebaseWhen": "conflicted",
+  "reviewers": ["b-mendoza"]
+}
