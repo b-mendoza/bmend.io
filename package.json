@@ -66,11 +66,8 @@
     "typescript": "5.3.3",
     "wrangler": "3.27.0"
   },
+  "packageManager": "pnpm@8.15.9+sha256.daa27a0b541bc635323ff96c2ded995467ff9fe6d69ff67021558aa9ad9dcc36",
   "engines": {
     "node": ">=20.0.0 <21.0.0"
-  },
-  "volta": {
-    "node": "20.11.0",
-    "pnpm": "8.15.0"
   }
 }
