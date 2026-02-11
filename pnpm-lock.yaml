@@ -27,8 +27,8 @@ dependencies:
     specifier: 1.11.10
     version: 1.11.10
   hono:
-    specifier: 4.11.7
-    version: 4.11.7
+    specifier: 4.11.9
+    version: 4.11.9
   isbot:
     specifier: 4.4.0
     version: 4.4.0
@@ -4420,8 +4420,8 @@ packages:
     engines: {node: '>=16.0.0'}
     dev: false
 
-  /hono@4.11.7:
-    resolution: {integrity: sha512-l7qMiNee7t82bH3SeyUCt9UF15EVmaBvsppY2zQtrbIhl/yzBTny+YUxsVjSjQ6gaqaeVtZmGocom8TzBlA4Yw==}
+  /hono@4.11.9:
+    resolution: {integrity: sha512-Eaw2YTGM6WOxA6CXbckaEvslr2Ne4NFsKrvc0v97JD5awbmeBLO5w9Ho9L9kmKonrwF9RJlW6BxT1PVv/agBHQ==}
     engines: {node: '>=16.9.0'}
     dev: false
 
