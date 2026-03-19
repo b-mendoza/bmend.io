@@ -35,7 +35,7 @@
     "zod": "3.22.4"
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "4.20240129.0",
+    "@cloudflare/workers-types": "4.20260316.1",
     "@remix-run/dev": "2.6.0",
     "@total-typescript/ts-reset": "0.5.1",
     "@types/react": "18.2.55",
