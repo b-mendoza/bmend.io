@@ -24,8 +24,8 @@ dependencies:
     specifier: 2.1.0
     version: 2.1.0
   dayjs:
-    specifier: 1.11.10
-    version: 1.11.10
+    specifier: 1.11.20
+    version: 1.11.20
   hono:
     specifier: 3.12.12
     version: 3.12.12
@@ -3103,8 +3103,8 @@ packages:
       '@babel/runtime': 7.23.9
     dev: true
 
-  /dayjs@1.11.10:
-    resolution: {integrity: sha512-vjAczensTgRcqDERK0SR2XMwsF/tSvnvlv6VcF2GIhg6Sx4yOIt/irsr1RDJsKiIyBzJDpCoXiWWq28MqH2cnQ==}
+  /dayjs@1.11.20:
+    resolution: {integrity: sha512-YbwwqR/uYpeoP4pu043q+LTDLFBLApUP6VxRihdfNTqu4ubqMlGDLd6ErXhEgsyvY0K6nCs7nggYumAN+9uEuQ==}
     dev: false
 
   /debug@2.6.9:
