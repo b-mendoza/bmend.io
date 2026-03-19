@@ -1,0 +1,10 @@
+name: Code Quality Checks
+
+description: 'Runs linting, formatting, and type checks to ensure code quality'
+
+runs:
+  using: composite
+  steps:
+    - name: 'Run linting, formatting, and type checks'
+      shell: bash
+      run: pnpm run lint

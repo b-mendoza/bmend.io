@@ -1,0 +1,42 @@
+name: 'Setup Node.js, pnpm and dependencies'
+
+description: Setup Node.js environment, pnpm package manager, and install project dependencies
+
+outputs:
+  store-path:
+    description: Path to the pnpm content-addressable store
+    value: ${{ steps.pnpm-store-path.outputs.path }}
+  cache-hit:
+    description: Whether an exact cache key match was found
+    value: ${{ steps.cache-restore.outputs.cache-hit }}
+
+runs:
+  using: composite
+  steps:
+    - name: Setup pnpm
+      uses: pnpm/action-setup@v5.0.0
+      with:
+        run_install: false
+
+    - name: Get pnpm store path
+      id: pnpm-store-path
+      shell: bash
+      run: echo "path=$(pnpm store path)" >> $GITHUB_OUTPUT
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v6.3.0
+      with:
+        node-version-file: .nvmrc
+
+    - name: Restore pnpm store cache
+      id: cache-restore
+      uses: actions/cache/restore@v5.0.4
+      with:
+        path: '${{ steps.pnpm-store-path.outputs.path }}'
+        key: pnpm-store-${{ runner.os }}-${{ hashFiles('**/pnpm-lock.yaml') }}
+        restore-keys: |
+          pnpm-store-${{ runner.os }}-
+
+    - name: Install dependencies
+      shell: bash
+      run: pnpm install --frozen-lockfile
