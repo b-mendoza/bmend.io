@@ -18,8 +18,8 @@ dependencies:
     specifier: 2.17.3
     version: 2.17.3(react-dom@18.3.0-canary-2cd19ed1d-20240207)(react@18.3.0-canary-2cd19ed1d-20240207)(typescript@5.3.3)
   '@unpic/react':
-    specifier: 0.1.9
-    version: 0.1.9(react-dom@18.3.0-canary-2cd19ed1d-20240207)(react@18.3.0-canary-2cd19ed1d-20240207)
+    specifier: 0.1.15
+    version: 0.1.15(react-dom@18.3.0-canary-2cd19ed1d-20240207)(react@18.3.0-canary-2cd19ed1d-20240207)
   clsx:
     specifier: 2.1.0
     version: 2.1.0
@@ -2277,23 +2277,23 @@ packages:
     resolution: {integrity: sha512-zuVdFrMJiuCDQUMCzQaD6KL28MjnqqN8XnAqiEq9PNm/hCPTSGfrXCOfwj1ow4LFb/tNymJPwsNbVePc1xFqrQ==}
     dev: true
 
-  /@unpic/core@0.0.45:
-    resolution: {integrity: sha512-q8NIbtfLS5JL3Q67Qo9Ai2fRxYb2VAqeVVBlfI2PYiQ2Hl8hKg1ibQCFWLMdBCPYmpyKugQAhKVgarJdc5r0Mg==}
+  /@unpic/core@0.1.0:
+    resolution: {integrity: sha512-Xw6BNChpV1klga8Qe/Y4slkohMl4GLmsQCEOxx+yRrm7cMzT6covLvUMVP606YTtIFpJauh0fSZ+N2A03y80iA==}
     dependencies:
-      unpic: 3.16.1
+      unpic: 3.22.0
     dev: false
 
-  /@unpic/react@0.1.9(react-dom@18.3.0-canary-2cd19ed1d-20240207)(react@18.3.0-canary-2cd19ed1d-20240207):
-    resolution: {integrity: sha512-tbadh20YWcEX9nRK5rcyfWYrp35l+2bchbnxn+lDIPefsxH4eSLdl/hqOZXtrsD9lqb0K6YqgrkndnCpLs562w==}
+  /@unpic/react@0.1.15(react-dom@18.3.0-canary-2cd19ed1d-20240207)(react@18.3.0-canary-2cd19ed1d-20240207):
+    resolution: {integrity: sha512-Mr5cC96O1AZNRDfgDtL3VChr3xferCHLEzkj4Xg6XekdHltI/FHm9LPKHECE1V/bUn2qmJXoYOSmCB+4QDhIJg==}
     peerDependencies:
-      next: '>=14'
-      react: '>=17'
-      react-dom: '>=17'
+      next: ^13.0.0 || ^14.0.0 || ^15.0.0
+      react: ^17.0.0 || ^18.0.0
+      react-dom: ^17.0.0 || ^18.0.0
     peerDependenciesMeta:
       next:
         optional: true
     dependencies:
-      '@unpic/core': 0.0.45
+      '@unpic/core': 0.1.0
       react: 18.3.0-canary-2cd19ed1d-20240207
       react-dom: 18.3.0-canary-2cd19ed1d-20240207(react@18.3.0-canary-2cd19ed1d-20240207)
     dev: false
@@ -7742,8 +7742,8 @@ packages:
     engines: {node: '>= 10.0.0'}
     dev: true
 
-  /unpic@3.16.1:
-    resolution: {integrity: sha512-ko7OFwYMb9+vKj4REr/f1LVy1nljhXH3hvO2gTpHWONaqvZD8sE1u2UclqgnivF8VQOMjeaVV5tK1o5W4OTGRA==}
+  /unpic@3.22.0:
+    resolution: {integrity: sha512-NFhB8HgHHWkNzTxwWg6KHx8+3RZnhWFm4Axdqp9iI176iY3wskzfP16NRSJ2SSTfXzyK4W6GsBqs8iOOdvOB3g==}
     dev: false
 
   /unpipe@1.0.0:
