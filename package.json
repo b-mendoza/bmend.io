@@ -49,7 +49,7 @@
     "eslint-config-love": "43.1.0",
     "eslint-plugin-deprecation": "2.0.0",
     "eslint-plugin-import": "2.32.0",
-    "eslint-plugin-jsx-a11y": "6.8.0",
+    "eslint-plugin-jsx-a11y": "6.10.2",
     "eslint-plugin-n": "16.6.2",
     "eslint-plugin-promise": "6.1.1",
     "eslint-plugin-react": "7.33.2",
