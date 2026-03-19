@@ -1,0 +1,32 @@
+name: Code Quality Checks
+
+on:
+  pull_request: null
+  push:
+    branches:
+      - main
+
+concurrency:
+  group: '${{ github.workflow }}-${{ github.ref }}'
+  cancel-in-progress: true
+
+jobs:
+  quality-checks:
+    name: Run code quality checks
+    runs-on: blacksmith-4vcpu-ubuntu-2404
+    steps:
+      - uses: actions/checkout@v6.0.2
+
+      - name: 'Setup Node.js, pnpm and dependencies'
+        id: setup
+        uses: ./.github/actions/setup-env
+
+      - name: 'Run linting, formatting and type checks'
+        uses: ./.github/actions/code-quality-checks
+
+      - name: Save pnpm store cache
+        if: always() && steps.setup.outputs.cache-hit != 'true'
+        uses: actions/cache/save@v5.0.4
+        with:
+          path: ${{ steps.setup.outputs.store-path }}
+          key: pnpm-store-${{ runner.os }}-${{ hashFiles('**/pnpm-lock.yaml') }}
