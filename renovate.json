@@ -3,8 +3,7 @@
   "extends": [
     ":automergeMinor",
     "config:best-practices",
-    "replacements:all",
-    "workarounds:all"
+    ":pinAllExceptPeerDependencies"
   ],
   "lockFileMaintenance": {
     "enabled": true
