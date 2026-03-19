@@ -14,7 +14,7 @@ runs:
   using: composite
   steps:
     - name: Setup pnpm
-      uses: pnpm/action-setup@v5.0.0
+      uses: pnpm/action-setup@fc06bc1257f339d1d5d8b3a19a8cae5388b55320 # v5.0.0
       with:
         run_install: false
 
@@ -24,13 +24,13 @@ runs:
       run: echo "path=$(pnpm store path)" >> $GITHUB_OUTPUT
 
     - name: Setup Node.js
-      uses: actions/setup-node@v6.3.0
+      uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
       with:
         node-version-file: .nvmrc
 
     - name: Restore pnpm store cache
       id: cache-restore
-      uses: actions/cache/restore@v5.0.4
+      uses: actions/cache/restore@668228422ae6a00e4ad889ee87cd7109ec5666a7 # v5.0.4
       with:
         path: '${{ steps.pnpm-store-path.outputs.path }}'
         key: pnpm-store-${{ runner.os }}-${{ hashFiles('**/pnpm-lock.yaml') }}
