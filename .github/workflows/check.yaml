@@ -13,7 +13,7 @@ concurrency:
 jobs:
   quality-checks:
     name: Run code quality checks
-    runs-on: blacksmith-4vcpu-ubuntu-2404
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6.0.2
 
