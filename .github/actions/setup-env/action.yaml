@@ -1,14 +1,16 @@
 name: 'Setup Node.js, pnpm and dependencies'
 
-description: Setup Node.js environment, pnpm package manager, and install project dependencies
+description: >-
+  Setup Node.js environment, pnpm package manager, and install project
+  dependencies
 
 outputs:
   store-path:
     description: Path to the pnpm content-addressable store
-    value: ${{ steps.pnpm-store-path.outputs.path }}
+    value: '${{ steps.pnpm-store-path.outputs.path }}'
   cache-hit:
     description: Whether an exact cache key match was found
-    value: ${{ steps.cache-restore.outputs.cache-hit }}
+    value: '${{ steps.cache-restore.outputs.cache-hit }}'
 
 runs:
   using: composite
@@ -33,7 +35,7 @@ runs:
       uses: actions/cache/restore@668228422ae6a00e4ad889ee87cd7109ec5666a7 # v5.0.4
       with:
         path: '${{ steps.pnpm-store-path.outputs.path }}'
-        key: pnpm-store-${{ runner.os }}-${{ hashFiles('**/pnpm-lock.yaml') }}
+        key: "pnpm-store-${{ runner.os }}-${{ hashFiles('**/pnpm-lock.yaml') }}"
         restore-keys: |
           pnpm-store-${{ runner.os }}-
 
