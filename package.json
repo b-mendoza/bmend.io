@@ -31,7 +31,7 @@
     "react": "18.3.0-canary-2cd19ed1d-20240207",
     "react-dom": "18.3.0-canary-2cd19ed1d-20240207",
     "remix-hono": "0.0.15",
-    "tailwind-merge": "2.2.1",
+    "tailwind-merge": "2.6.1",
     "zod": "3.22.4"
   },
   "devDependencies": {
