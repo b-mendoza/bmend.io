@@ -122,11 +122,11 @@ devDependencies:
     specifier: 8.4.35
     version: 8.4.35
   prettier:
-    specifier: 3.2.5
-    version: 3.2.5
+    specifier: 3.8.1
+    version: 3.8.1
   prettier-plugin-tailwindcss:
     specifier: 0.5.11
-    version: 0.5.11(prettier@3.2.5)
+    version: 0.5.11(prettier@3.8.1)
   rimraf:
     specifier: 5.0.10
     version: 5.0.10
@@ -6519,7 +6519,7 @@ packages:
     engines: {node: '>= 0.8.0'}
     dev: true
 
-  /prettier-plugin-tailwindcss@0.5.11(prettier@3.2.5):
+  /prettier-plugin-tailwindcss@0.5.11(prettier@3.8.1):
     resolution: {integrity: sha512-AvI/DNyMctyyxGOjyePgi/gqj5hJYClZ1avtQvLlqMT3uDZkRbi4HhGUpok3DRzv9z7Lti85Kdj3s3/1CeNI0w==}
     engines: {node: '>=14.21.3'}
     peerDependencies:
@@ -6568,7 +6568,7 @@ packages:
       prettier-plugin-twig-melody:
         optional: true
     dependencies:
-      prettier: 3.2.5
+      prettier: 3.8.1
     dev: true
 
   /prettier@2.8.8:
@@ -6577,8 +6577,8 @@ packages:
     hasBin: true
     dev: true
 
-  /prettier@3.2.5:
-    resolution: {integrity: sha512-3/GWa9aOC0YeD7LUfvOG2NiDyhOWRvt1k+rcKhOuYnMY24iiCphgneUfJDyFXd6rZCAnuLBv6UeAULtrhT/F4A==}
+  /prettier@3.8.1:
+    resolution: {integrity: sha512-UOnG6LftzbdaHZcKoPFtOcCKztrQ57WkHDeRD9t/PTQtmT0NHSeWWepj6pS0z/N7+08BHFDQVUrfmfMRcZwbMg==}
     engines: {node: '>=14'}
     hasBin: true
     dev: true
