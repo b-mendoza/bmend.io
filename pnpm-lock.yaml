@@ -42,8 +42,8 @@ dependencies:
     specifier: 0.0.15
     version: 0.0.15(@cloudflare/workers-types@4.20260317.1)(@remix-run/react@2.17.3)(react-i18next@14.0.5)(react@18.3.0-canary-2cd19ed1d-20240207)(typescript@5.9.3)
   tailwind-merge:
-    specifier: 2.2.1
-    version: 2.2.1
+    specifier: 2.6.1
+    version: 2.6.1
   zod:
     specifier: 3.22.4
     version: 3.22.4
@@ -7603,10 +7603,8 @@ packages:
     engines: {node: '>= 0.4'}
     dev: true
 
-  /tailwind-merge@2.2.1:
-    resolution: {integrity: sha512-o+2GTLkthfa5YUt4JxPfzMIpQzZ3adD1vLVkvKE1Twl9UAhGsEbIZhHHZVRttyW177S8PDJI3bTQNaebyofK3Q==}
-    dependencies:
-      '@babel/runtime': 7.23.9
+  /tailwind-merge@2.6.1:
+    resolution: {integrity: sha512-Oo6tHdpZsGpkKG88HJ8RR1rg/RdnEkQEfMoEk2x1XRI3F1AxeU+ijRXpiVUF4UbLfcxxRGw6TbUINKYdWVsQTQ==}
     dev: false
 
   /tailwindcss@3.4.19:
