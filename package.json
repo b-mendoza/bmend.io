@@ -19,7 +19,7 @@
     "start": "wrangler pages dev --compatibility-date=2024-02-07 ./public"
   },
   "dependencies": {
-    "@radix-ui/react-toggle": "1.0.3",
+    "@radix-ui/react-toggle": "1.1.10",
     "@remix-run/cloudflare": "2.6.0",
     "@remix-run/cloudflare-pages": "2.6.0",
     "@remix-run/react": "2.17.3",
