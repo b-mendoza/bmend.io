@@ -46,7 +46,7 @@ The skill also includes a final "obviously AI generated" audit pass and a second
 
 > "LLMs use statistical algorithms to guess what should come next. The result tends toward the most statistically likely result that applies to the widest variety of cases."
 
-## 24 Patterns Detected (with Before/After Examples)
+## 25 Patterns Detected (with Before/After Examples)
 
 ### Content Patterns
 
@@ -72,14 +72,15 @@ The skill also includes a final "obviously AI generated" audit pass and a second
 
 ### Style Patterns
 
-| #   | Pattern                 | Before                                            | After                                     |
-| --- | ----------------------- | ------------------------------------------------- | ----------------------------------------- |
-| 13  | **Em dash overuse**     | "institutions—not the people—yet this continues—" | Use commas or periods                     |
-| 14  | **Boldface overuse**    | "**OKRs**, **KPIs**, **BMC**"                     | "OKRs, KPIs, BMC"                         |
-| 15  | **Inline-header lists** | "**Performance:** Performance improved"           | Convert to prose                          |
-| 16  | **Title Case Headings** | "Strategic Negotiations And Partnerships"         | "Strategic negotiations and partnerships" |
-| 17  | **Emojis**              | "🚀 Launch Phase: 💡 Key Insight:"                | Remove emojis                             |
-| 18  | **Curly quotes**        | `said “the project”`                              | `said "the project"`                      |
+| #   | Pattern                   | Before                                            | After                                     |
+| --- | ------------------------- | ------------------------------------------------- | ----------------------------------------- |
+| 13  | **Em dash overuse**       | "institutions—not the people—yet this continues—" | Use commas or periods                     |
+| 14  | **Boldface overuse**      | "**OKRs**, **KPIs**, **BMC**"                     | "OKRs, KPIs, BMC"                         |
+| 15  | **Inline-header lists**   | "**Performance:** Performance improved"           | Convert to prose                          |
+| 16  | **Title Case Headings**   | "Strategic Negotiations And Partnerships"         | "Strategic negotiations and partnerships" |
+| 17  | **Emojis**                | "🚀 Launch Phase: 💡 Key Insight:"                | Remove emojis                             |
+| 18  | **Curly quotes**          | `said “the project”`                              | `said “the project”`                      |
+| 25  | **Hyphenated word pairs** | “cross-functional, data-driven, client-facing”    | Drop hyphens on common word pairs         |
 
 ### Communication Patterns
 
@@ -134,6 +135,7 @@ The skill also includes a final "obviously AI generated" audit pass and a second
 
 ## Version History
 
+- **2.3.0** - Added pattern #25: hyphenated word pair overuse
 - **2.2.0** - Added a final "obviously AI generated" audit + second-pass rewrite prompts
 - **2.1.1** - Fixed pattern #18 example (curly quotes vs straight quotes)
 - **2.1.0** - Added before/after examples for all 24 patterns

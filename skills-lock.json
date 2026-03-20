@@ -11,10 +11,15 @@
       "sourceType": "github",
       "computedHash": "2f709d1a2c7564f8ce6a9bb707e7f5451117ba80f8e8e2302662c29bc61246a6"
     },
+    "gh-cli": {
+      "source": "github/awesome-copilot",
+      "sourceType": "github",
+      "computedHash": "cbe644b0c6760ae2a1eaafa39133920d889331327065d92a131675a665273e56"
+    },
     "humanizer": {
       "source": "blader/humanizer",
       "sourceType": "github",
-      "computedHash": "67bd72223e92b4f520a1abbc9ff9db50641ed84128ba9521028d9b151dbd2429"
+      "computedHash": "c03da5ce68828393461eff0c81a2a81535342daee0c6ca292910395065218433"
     },
     "subagent-driven-development": {
       "source": "obra/superpowers",
