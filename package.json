@@ -46,7 +46,7 @@
     "concurrently": "8.2.2",
     "eslint": "8.57.1",
     "eslint-config-prettier": "9.1.2",
-    "eslint-config-love": "43.1.0",
+    "eslint-config-love": "153.0.0",
     "eslint-plugin-deprecation": "2.0.0",
     "eslint-plugin-import": "2.32.0",
     "eslint-plugin-jsx-a11y": "6.10.2",
