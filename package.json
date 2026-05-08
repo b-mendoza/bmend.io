@@ -58,7 +58,7 @@
     "eslint-plugin-sonarjs": "0.25.1",
     "husky": "9.1.7",
     "lint-staged": "15.5.2",
-    "postcss": "8.5.10",
+    "postcss": "8.5.14",
     "prettier": "3.8.3",
     "prettier-plugin-tailwindcss": "0.7.3",
     "rimraf": "5.0.10",
