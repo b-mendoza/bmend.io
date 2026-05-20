@@ -1,45 +1,89 @@
 {
   "version": 1,
   "skills": {
+    "code-review-excellence": {
+      "source": "wshobson/agents",
+      "sourceType": "github",
+      "skillPath": "plugins/developer-essentials/skills/code-review-excellence/SKILL.md",
+      "computedHash": "0f585a4ad2f6d8353069ca9051c6f0e8865abb9d3a6a268d423784c3c3852962"
+    },
     "commit-work": {
       "source": "softaworks/agent-toolkit",
       "sourceType": "github",
+      "skillPath": "skills/commit-work/SKILL.md",
       "computedHash": "88cec816d028de357ae7ede3ace36a2bc235a225e3e7d2bb18cdb5190ab6c482"
+    },
+    "committing-scoped-changes": {
+      "source": "b-mendoza/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/committing-scoped-changes/SKILL.md",
+      "computedHash": "eea82ead1cabc00f94ab157b8d1105239a0b49934e5c38eabb9e5428fb129c6a"
     },
     "executing-plans": {
       "source": "obra/superpowers",
       "sourceType": "github",
-      "computedHash": "2f709d1a2c7564f8ce6a9bb707e7f5451117ba80f8e8e2302662c29bc61246a6"
+      "skillPath": "skills/executing-plans/SKILL.md",
+      "computedHash": "b41c919caf1bb07fbacb0e29899ac513f9eb11cd4dd695975ad352c2c03cc4d7"
     },
-    "gh-cli": {
-      "source": "github/awesome-copilot",
+    "generate-handoff-document": {
+      "source": "b-mendoza/agent-skills",
       "sourceType": "github",
-      "computedHash": "cbe644b0c6760ae2a1eaafa39133920d889331327065d92a131675a665273e56"
+      "skillPath": "skills/generate-handoff-document/SKILL.md",
+      "computedHash": "c52fa77b0b70d559fa0fa5960317c7270547be947308f3b65d2d168990a872f6"
+    },
+    "grill-me": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "skillPath": "skills/productivity/grill-me/SKILL.md",
+      "computedHash": "784f0dbb7403b0f00324bce9a112f715342777a0daee7bbb7385f9c6f0a170ea"
     },
     "humanizer": {
       "source": "blader/humanizer",
       "sourceType": "github",
-      "computedHash": "c03da5ce68828393461eff0c81a2a81535342daee0c6ca292910395065218433"
+      "skillPath": "SKILL.md",
+      "computedHash": "b813857f183da05d08d5a80adac671df94c139f855809bd47ab8b7bb245546a2"
+    },
+    "pr-creator": {
+      "source": "b-mendoza/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/pr-creator/SKILL.md",
+      "computedHash": "9af7bc1d68778101a2b2511c16c9207f639ae753491f1c15bfc76fc86e598bed"
+    },
+    "receiving-code-review": {
+      "source": "obra/superpowers",
+      "sourceType": "github",
+      "skillPath": "skills/receiving-code-review/SKILL.md",
+      "computedHash": "2760c85d4f4117b0006e7ba755f4bbd61f8f4c185f347999763c97f507274e30"
+    },
+    "recency-guard": {
+      "source": "b-mendoza/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/recency-guard/SKILL.md",
+      "computedHash": "1c6e334f498e5d686e27997b79065daa717910b27e4d9ed081eb958da85fe66c"
     },
     "subagent-driven-development": {
       "source": "obra/superpowers",
       "sourceType": "github",
-      "computedHash": "a197f8e5fba5ea59013e1adbaa90dd42db35de8f074feca200c8038de584a83b"
+      "skillPath": "skills/subagent-driven-development/SKILL.md",
+      "computedHash": "b38be2f3a092d758127f6d47e77c2493885aebf38aae359e4c786df2c343b837"
     },
     "test-driven-development": {
       "source": "obra/superpowers",
       "sourceType": "github",
+      "skillPath": "skills/test-driven-development/SKILL.md",
       "computedHash": "126f1ebf6ccd414f42544f6e83d8cc5adb089e1108eaffb7c400701e37eecd9f"
     },
     "validate-implementation-plan": {
       "source": "b-mendoza/agent-skills",
       "sourceType": "github",
-      "computedHash": "7be31a55bb1b364c6359d18a9054c38e05a0d10840de1d5494cec0d7e796c3d9"
+      "skillPath": "skills/validate-implementation-plan/SKILL.md",
+      "computedHash": "2fe831605d0304809aa408a4ad02ec59ee8fa0709dd3e4b2332b05fa93b83181"
     },
     "writing-plans": {
       "source": "obra/superpowers",
       "sourceType": "github",
-      "computedHash": "70fe626d5970349239e939f311893389563a6338cda40eb0500606dd48aa3afa"
+      "skillPath": "skills/writing-plans/SKILL.md",
+      "computedHash": "2b986445454a025ca2c3839f8a2024747e8cce0517948437232cd113d2719060"
     }
   }
 }
