@@ -24,8 +24,8 @@ dependencies:
     specifier: 2.1.1
     version: 2.1.1
   dayjs:
-    specifier: 1.11.21
-    version: 1.11.21
+    specifier: 1.11.23
+    version: 1.11.23
   hono:
     specifier: 3.12.12
     version: 3.12.12
@@ -3197,8 +3197,8 @@ packages:
       is-data-view: 1.0.2
     dev: true
 
-  /dayjs@1.11.21:
-    resolution: {integrity: sha512-98IT+HOahAisibz/yjKbzuOBwYcjJ7BCLPzARyHiyEBmRz4fatF+KPJszEHXsGYjUG234aH/cOjW1wwTbKUZlA==}
+  /dayjs@1.11.23:
+    resolution: {integrity: sha512-QDTCU0M0MxR3hQfnlDJfwekQiaanm1ubOD231u73WBckQ/fsamwRLiE2GBz6D3a/xF1NgfiDLJjXBa1hYOYTtQ==}
     dev: false
 
   /debug@2.6.9:
