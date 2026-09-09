@@ -20,9 +20,9 @@
   },
   "dependencies": {
     "@radix-ui/react-toggle": "1.1.18",
-    "@remix-run/cloudflare": "2.6.0",
-    "@remix-run/cloudflare-pages": "2.6.0",
-    "@remix-run/react": "2.17.3",
+    "@remix-run/cloudflare": "2.17.5",
+    "@remix-run/cloudflare-pages": "2.17.5",
+    "@remix-run/react": "2.17.5",
     "@unpic/react": "0.1.15",
     "clsx": "2.1.1",
     "dayjs": "1.11.23",
@@ -36,7 +36,7 @@
   },
   "devDependencies": {
     "@cloudflare/workers-types": "4.20260702.1",
-    "@remix-run/dev": "2.6.0",
+    "@remix-run/dev": "2.17.5",
     "@total-typescript/ts-reset": "0.6.1",
     "@types/react": "18.3.31",
     "@types/react-dom": "18.3.7",
