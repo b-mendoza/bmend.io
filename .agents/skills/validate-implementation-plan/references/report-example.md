@@ -1,20 +1,28 @@
 # Report Example
 
-Read this file only when assembling the final audit and a concrete layout
-example would help. It is an example, not an additional checklist.
+Read this file only when assembling the final audit and a concrete layout example would help. It is an example, not an additional checklist.
 
 ## Audit Scope
 
 - Source plan: `docs/retry-plan.md`
 - Snapshot artifact: `docs/retry-plan.audit-input.md`
 - Output report: `docs/retry-plan.audit.md`
+- Artifact action: `create`
 - User request: Add a retry mechanism to the API client for transient failures.
+- Baseline context used: `docs/JNS-6065.md`
+- Local technical evidence used: `docs/http-client-notes.md`
 - Baseline caveat: the request does not mention existing tracing infrastructure.
 
 ## Source Requirements
 
 1. [EXPLICIT] Add a retry mechanism to the API client.
 2. [EXPLICIT] Target transient failures specifically.
+3. [CONSTRAINT] Keep the existing HTTP client wrapper.
+
+## Technical Evidence Review
+
+- `supported` - Claim: the existing wrapper exposes response status codes. Evidence: `docs/http-client-notes.md` says interceptors receive the response object.
+- `not-reviewed` - Claim: OpenTelemetry is already deployed for this service. Evidence: no approved local technical evidence covered tracing.
 
 ## Findings By Plan Section
 
@@ -27,8 +35,8 @@ Snapshot summary:
 
 Findings:
 
-- Requirements Auditor: `info` - Exponential backoff and jitter reasonably map to requirement [1].
-- YAGNI Auditor: `critical` - Circuit breaker behavior and request deduplication exceed requirement [1] and introduce separate concerns.
+- Requirements Auditor: `info` - Exponential backoff and jitter reasonably map to requirements [1] and [2].
+- YAGNI Auditor: `critical` - Circuit breaker behavior and request deduplication exceed requirement [1]. Smaller alternative: implement bounded retries inside the existing wrapper.
 
 ### Step 2: Add retry interceptor
 
@@ -39,9 +47,9 @@ Snapshot summary:
 
 Findings:
 
-- Requirements Auditor: `info` - Maps directly to requirements [1] and [2].
+- Requirements Auditor: `info` - Maps directly to requirements [1], [2], and [3].
 - YAGNI Auditor: `info` - Scope is appropriate for the stated request.
-- Assumptions Auditor: `info` - No risky assumption detected from the approved baseline.
+- Assumptions Auditor: `info` - Assumes the wrapper exposes response status codes; approved technical evidence supports this.
 
 ### Step 3: Add observability
 
@@ -52,13 +60,13 @@ Snapshot summary:
 
 Findings:
 
-- Requirements Auditor: `critical` - Observability is a new concern with no basis in requirements [1] or [2].
+- Requirements Auditor: `critical` - Observability is a new concern with no basis in requirements [1] through [3].
 - YAGNI Auditor: `warning` - Full tracing, dashboards, and alerting exceed the current scope; structured retry logs would satisfy the likely operational need.
 - Assumptions Auditor: `critical` - The plan assumes tracing infrastructure already exists, but the user confirmed OpenTelemetry is not in use today.
 
 ## Requirement Gaps
 
-- None.
+None.
 
 ## Audit Summary
 
@@ -68,9 +76,7 @@ Findings:
 | YAGNI Compliance          | 1        | 1       | 1    |
 | Assumption Audit          | 1        | 0       | 1    |
 
-Confidence is high for the out-of-scope findings because the baseline request is
-short and explicit. The only initially ambiguous area was tracing infrastructure,
-and user clarification resolved it.
+Confidence is high for the out-of-scope findings because the baseline request is short and explicit. The only initially ambiguous area was tracing infrastructure, and user clarification resolved it.
 
 ## Resolved Assumptions
 
