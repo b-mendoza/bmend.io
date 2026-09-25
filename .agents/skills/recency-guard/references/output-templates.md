@@ -1,12 +1,6 @@
 # Output Templates
 
-> Read this file when assembling the final structured report inside a
-> `recency-guard` subagent. Templates live here so subagent definitions stay
-> focused on procedure.
-
-Use the template as written for the matching subagent. Do not add fields
-outside the template. Examples are intentionally compact; load external sources
-only for methodology, not for report shape.
+Read this file when assembling a structured subagent report. Use the matching template as written and do not add fields outside it. Examples are compact by design; they illustrate shape, not source authority.
 
 ## RECENCY_CHECK Template
 
@@ -17,32 +11,29 @@ High: <n> | Med: <n> | Low: <n>
 
 Flagged claims:
 1. Claim: "<quoted or paraphrased claim>"
-   Issue: Outdated | Needs qualification | Unverified
+   Issue: Outdated | Needs qualification | Unverified | Needs date context
    Best source: <source> | Tier <n> | <date or "undated">
    Confidence: High | Med | Low
    Action: Replace | Date-stamp | Qualify | Remove
-   Suggested revision: "<revised wording>"
+   Suggested revision: "<revised wording grounded in the best source>"
 
 Verified summary:
 - <count> claims required no changes
-- <count> claims may need only light date context
 
 Unresolved risks:
-- <only if any remain>
+- <only if any remain, otherwise None>
 ```
 
-If no claims are flagged, write `Flagged claims: None.` Only entries under
-`Flagged claims` require edits.
+If no claims are flagged, write `Flagged claims: None.` A `PASS` report means no claim needs any wording change, including light date context. If a claim needs a date stamp, status is `FAIL` and the claim appears under `Flagged claims`.
 
-### RECENCY_CHECK Example
+## RECENCY_CHECK Example
 
-<example>
+```text
 RECENCY_CHECK: FAIL
 Claims checked: 5
 High: 3 | Med: 1 | Low: 1
 
 Flagged claims:
-
 1. Claim: "Framework X is on version 4.2."
    Issue: Outdated
    Best source: Framework X release notes | Tier 1 | 2026-03-19
@@ -51,14 +42,11 @@ Flagged claims:
    Suggested revision: "Framework X is on version 4.4 as of March 2026."
 
 Verified summary:
-
 - 4 claims required no changes
-- 0 claims may need only light date context
 
 Unresolved risks:
-
 - None
-  </example>
+```
 
 ## CLAIM_REVIEW Template
 
@@ -66,7 +54,7 @@ Repeat the Claim block once per reviewed claim and omit unused slots.
 
 ```text
 CLAIM_REVIEW: PASS | FAIL | TOOLS_MISSING | ERROR
-Claims reviewed: <1-3>
+Claims reviewed: <number>
 High: <n> | Med: <n> | Low: <n>
 
 Claim 1: "<one-sentence claim>"
@@ -75,21 +63,22 @@ Best source: <source> | Tier <n> | <date or "undated">
 Counterexample: None found | <brief exception or alternative view>
 Failure modes: None | <comma-separated list>
 Confidence: High | Med | Low
-Action: No change | Qualify | Reframe | Add counterpoint | Remove
-Suggested revision: "<only when action is not No change>"
+Action: none | Qualify | Reframe | Add counterpoint | Remove
+Suggested revision: "<only when action is not none>"
+
+Unreviewed candidates:
+- None | "<candidate claim>" - <why not deep-reviewed>
 
 Summary:
-- Critical issues: <count of claims needing changes>
-- Unresolved risks: <only if any remain>
+- Critical issues: <count of reviewed claims needing changes>
+- Unresolved risks: <only if any remain, otherwise None>
 ```
 
-Use `Action: No change` only when the claim is acceptable as written. If a
-claim needs a caveat, softer framing, counterpoint, or removal, return
-`FAIL` and give a suggested revision.
+Use `Action: none` only when the claim is acceptable as written. If a claim needs a caveat, softer framing, counterpoint, or removal, return `FAIL` and give a suggested revision. Always include `Unreviewed candidates`; write `None` only when every candidate was deep-reviewed.
 
-### CLAIM_REVIEW Example
+## CLAIM_REVIEW Example
 
-<example>
+```text
 CLAIM_REVIEW: FAIL
 Claims reviewed: 1
 High: 0 | Med: 1 | Low: 0
@@ -103,20 +92,21 @@ Confidence: Med
 Action: Reframe
 Suggested revision: "Prisma is a strong default for many greenfield TypeScript SaaS teams, while Drizzle can be a better fit for teams that prefer thinner abstractions and SQL-first workflows."
 
-Summary:
+Unreviewed candidates:
+- "Prisma has the best migration workflow" - lower impact than the overall ORM recommendation.
 
+Summary:
 - Critical issues: 1
 - Unresolved risks: None
-  </example>
+```
 
 ## TOOLS_MISSING / ERROR Status Block
 
-Use this block in either subagent when work cannot complete normally.
-Replace `<REPORT_NAME>` with `RECENCY_CHECK` or `CLAIM_REVIEW`.
+Use this block in either subagent when work cannot complete normally. Replace `<REPORT_NAME>` with `RECENCY_CHECK` or `CLAIM_REVIEW`.
 
 ```text
 <REPORT_NAME>: TOOLS_MISSING | ERROR
 Reason: <what blocked the audit or review>
-Last successful step: <one of the listed phases / none>
+Last successful step: <one listed instruction step or none>
 Claims affected: <number or "unknown">
 ```
