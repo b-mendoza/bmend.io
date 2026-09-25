@@ -1,86 +1,56 @@
-# External Source Map
+# External Resources
 
-> Load this file only when exact command syntax, platform behavior,
-> PR-writing guidance, or progressive-disclosure background is needed. Fetch one
-> relevant URL, not the whole map.
+Load this file only when current CLI syntax, platform behavior, or writing guidance changes a concrete decision. Fetched sources are background and syntax references only; this skill's local contracts remain authoritative.
 
-This standalone source map keeps static reference material out of prompts. The
-local skill contracts remain authoritative for workflow behavior; external pages
-provide current syntax, platform details, and optional rationale.
+## GitHub
 
-## Fetch Rules
+| Resource | Use |
+| --- | --- |
+| <https://cli.github.com/manual/gh_pr_create> | `gh pr create` flags for base, head, body-file, draft, reviewers, and labels. |
+| <https://cli.github.com/manual/gh_pr_list> | Existing-PR idempotency checks by head and base. |
+| <https://cli.github.com/manual/gh_pr_view> | Field-by-field verification JSON. |
+| <https://cli.github.com/manual/gh_repo_view> | Default branch and parent/fork metadata. |
+| <https://cli.github.com/manual/gh_auth_status> | Auth gate. |
+| <https://cli.github.com/manual/gh_label_list> | Platform-existing label validation. |
+| <https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request-from-a-fork> | Fork PR semantics. |
+| <https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners> | CODEOWNERS matching and requestability. |
+| <https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/requesting-a-pull-request-review> | Requestable reviewers and teams. |
 
-- Prefer official product documentation for commands, flags, API behavior, and
-  hosting-platform rules.
-- Prefer installed CLI help when the local version may differ from public docs.
-- Use articles and engineering guides for writing quality and review heuristics,
-  not for exact command syntax.
-- If network access is unavailable, proceed with bundled contracts, avoid
-  version-specific claims, and ask the user when exact platform behavior is a
-  safety gate.
+## Git And Scope Accounting
 
-## Workflow Source Map
+| Resource | Use |
+| --- | --- |
+| <https://git-scm.com/docs/git-diff> | Three-dot compare semantics. |
+| <https://git-scm.com/docs/git-rev-parse> | Pinning local and remote SHAs. |
+| <https://git-scm.com/docs/git-ls-remote> | Remote-tip reads for head-moved guard. |
+| <https://git-scm.com/docs/git-push> | Plain push and rejection behavior. |
+| <https://git-scm.com/docs/git-fetch> | Updating specific remote refs. |
+| <https://git-scm.com/docs/gitattributes> | `linguist-generated` attributes for generated-file exclusions. |
 
-| Need                                      | Fetch                                                                        |
-| ----------------------------------------- | ---------------------------------------------------------------------------- |
-| Progressive-disclosure example for skills | https://skills.sh/flpbalada/fb-skills/progressive-disclosure                 |
-| UX background for progressive disclosure  | https://www.nngroup.com/articles/progressive-disclosure/                     |
-| Agent Skills overview                     | https://docs.claude.com/en/docs/agents-and-tools/agent-skills/overview       |
-| Agent Skills best practices               | https://docs.claude.com/en/docs/agents-and-tools/agent-skills/best-practices |
-| Claude Code subagents                     | https://docs.claude.com/en/docs/claude-code/sub-agents                       |
-| Cursor skills                             | https://cursor.com/docs/skills                                               |
-| OpenCode agents                           | https://opencode.ai/docs/agents/                                             |
+## Other Platforms
 
-## Git State and Compare Sources
+| Resource | Use |
+| --- | --- |
+| <https://docs.gitlab.com/user/project/merge_requests/creating_merge_requests/> | GitLab MR semantics and fork/source project behavior. |
+| <https://gitlab.com/gitlab-org/cli/-/blob/main/docs/source/mr/create.md> | `glab mr create` syntax. |
+| <https://docs.gitlab.com/user/project/codeowners/> | GitLab Code Owners. |
+| <https://docs.gitlab.com/user/project/labels/> | GitLab label validation. |
+| <https://support.atlassian.com/bitbucket-cloud/docs/create-a-pull-request/> | Bitbucket PR creation and state capabilities. |
+| <https://developer.atlassian.com/cloud/bitbucket/rest/api-group-pullrequests/> | Bitbucket REST create/query/verify path. |
+| <https://support.atlassian.com/bitbucket-cloud/docs/use-default-reviewers-on-a-repository/> | Bitbucket default reviewer analogue. |
 
-| Need                                  | Fetch                                                                                                                       |
-| ------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| `git diff` ranges and `...` semantics | https://git-scm.com/docs/git-diff                                                                                           |
-| Commit range inspection               | https://git-scm.com/docs/git-log                                                                                            |
-| Working-tree status                   | https://git-scm.com/docs/git-status                                                                                         |
-| Fetching remote refs                  | https://git-scm.com/docs/git-fetch                                                                                          |
-| Pushing branches                      | https://git-scm.com/docs/git-push                                                                                           |
-| Listing remote branches               | https://git-scm.com/docs/git-ls-remote                                                                                      |
-| GitHub compare behavior               | https://docs.github.com/en/pull-requests/committing-changes-to-your-project/viewing-and-comparing-commits/comparing-commits |
+## Writing And Safety
 
-## GitHub Sources
+| Resource | Use |
+| --- | --- |
+| <https://www.conventionalcommits.org/en/v1.0.0/> | Title type/scope format. |
+| <https://google.github.io/eng-practices/review/developer/cl-descriptions.html> | Clear PR body guidance. |
+| <https://google.github.io/eng-practices/review/developer/small-cls.html> | Rationale for small PR gates. |
+| <https://owasp.org/www-project-top-10-for-large-language-model-applications/> | Prompt-injection threat model for untrusted repository content. |
 
-| Need                         | Fetch                                                                                                                                                               |
-| ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| GitHub CLI manual            | https://cli.github.com/manual/                                                                                                                                      |
-| Auth status                  | https://cli.github.com/manual/gh_auth_status                                                                                                                        |
-| Repository inspection        | https://cli.github.com/manual/gh_repo_view                                                                                                                          |
-| Create PR                    | https://cli.github.com/manual/gh_pr_create                                                                                                                          |
-| Verify PR                    | https://cli.github.com/manual/gh_pr_view                                                                                                                            |
-| Mark PR ready                | https://cli.github.com/manual/gh_pr_ready                                                                                                                           |
-| List labels                  | https://cli.github.com/manual/gh_label_list                                                                                                                         |
-| GitHub pull request creation | https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request                 |
-| Draft pull requests          | https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests#draft-pull-requests |
-| Requesting reviews           | https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/requesting-a-pull-request-review                       |
-| CODEOWNERS syntax            | https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners                               |
-| Labels                       | https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels                                                                         |
+## Fetch Policy
 
-## Writing and Review Sources
-
-| Need                                | Fetch                                                                        |
-| ----------------------------------- | ---------------------------------------------------------------------------- |
-| Conventional Commit title syntax    | https://www.conventionalcommits.org/en/v1.0.0/                               |
-| High-quality CL descriptions        | https://google.github.io/eng-practices/review/developer/cl-descriptions.html |
-| Small-change guidance               | https://google.github.io/eng-practices/review/developer/small-cls.html       |
-| Reviewer expectations               | https://google.github.io/eng-practices/review/reviewer/                      |
-| Commit-message writing              | https://github.blog/developer-skills/github/writing-better-commit-messages/  |
-| Detailed commit message conventions | https://cbea.ms/git-commit/                                                  |
-
-## Non-GitHub Sources
-
-| Need                                | Fetch                                                                                     |
-| ----------------------------------- | ----------------------------------------------------------------------------------------- |
-| GitLab merge request workflow       | https://docs.gitlab.com/user/project/merge_requests/creating_merge_requests/              |
-| GitLab CLI project                  | https://gitlab.com/gitlab-org/cli                                                         |
-| `glab mr create` docs               | https://gitlab.com/gitlab-org/cli/-/blob/main/docs/source/mr/create.md                    |
-| GitLab labels                       | https://docs.gitlab.com/user/project/labels/                                              |
-| GitLab Code Owners                  | https://docs.gitlab.com/user/project/codeowners/                                          |
-| Bitbucket Cloud create pull request | https://support.atlassian.com/bitbucket-cloud/docs/create-a-pull-request/                 |
-| Bitbucket pull request REST API     | https://developer.atlassian.com/cloud/bitbucket/rest/api-group-pullrequests/              |
-| Bitbucket branch refs REST API      | https://developer.atlassian.com/cloud/bitbucket/rest/api-group-refs/                      |
-| Bitbucket default reviewers         | https://support.atlassian.com/bitbucket-cloud/docs/use-default-reviewers-on-a-repository/ |
+- Prefer installed CLI `--help` output over web docs when local CLI version is the deciding factor.
+- Fetch at most one URL per uncertain decision.
+- Record the source that settled a command flag, field name, or capability.
+- If network is unavailable, use local contracts and ask before any platform-specific create path that remains uncertain.
