@@ -1,6 +1,6 @@
 # CLAUDE.md
 
-A Remix application running on Cloudflare Pages with Hono, using strict TypeScript and accessibility standards.
+A TanStack Start application running on Cloudflare Workers, using strict TypeScript and accessibility standards.
 
 ## Quick Reference
 
