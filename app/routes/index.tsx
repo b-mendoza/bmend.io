@@ -9,7 +9,6 @@ import { Paragraph, PARAGRAPH_SIZES } from '~/components/typography/paragraph';
 import { Subtitle } from '~/components/typography/subtitle';
 import { SectionWrapper } from '~/components/ui/section-wrapper';
 import { WhiteLink } from '~/components/white-link';
-/* import { useState } from 'react'; */
 import { getHomeData } from '~/functions/get-home-data';
 import { cn } from '~/utils/cn';
 
@@ -36,12 +35,6 @@ const methodNotAllowed = () =>
   new Response(null, { status: 405, headers: METHOD_NOT_ALLOWED_HEADERS });
 
 const Header = () => {
-  /* const [isMenuOpen, setIsMenuOpen] = useState(false); */
-
-  /* const handleMenuIconPress = () => {
-    setIsMenuOpen((isMenuOpen) => !isMenuOpen);
-  }; */
-
   return (
     <SectionWrapper
       as="header"
@@ -68,14 +61,6 @@ const Header = () => {
       >
         Bryan Mendoza
       </Heading>
-
-      {/* <RootToggle
-        aria-label="Open menu"
-        pressed={isMenuOpen}
-        onPressedChange={handleMenuIconPress}
-      >
-        <Icon name={isMenuOpen ? 'x' : 'menu-2'} height={30} width={30} />
-      </RootToggle> */}
     </SectionWrapper>
   );
 };
