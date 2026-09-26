@@ -1,23 +1,4 @@
-# artifacts
-/.wrangler
-/functions
-/public/build
-
-# dependencies
-node_modules
 pnpm-lock.yaml
-
-# dotfiles
-.dev.vars
-*.tsbuildinfo
-
-# AI-related configuration files
 /.agents
 /.claude
-
-# build artifacts
-/dist
-/.tanstack
-
-# generated files
 /app/routeTree.gen.ts
