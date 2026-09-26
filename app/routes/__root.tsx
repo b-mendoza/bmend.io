@@ -7,7 +7,6 @@ import {
 import type { ReactNode } from 'react';
 
 import interWoff2 from '~/assets/fonts/inter-latin-wght-normal.woff2';
-/* import { href as iconsSpriteHref } from '~/components/icon'; */
 import fontStyles from '~/styles/font.styles.css?url';
 import globalStyles from '~/styles/global.styles.css?url';
 
@@ -35,12 +34,6 @@ export const Route = createRootRoute({
         as: 'style',
         href: globalStyles,
       },
-      /* {
-        rel: 'preload',
-        as: 'image',
-        href: iconsSpriteHref,
-        type: 'image/svg+xml',
-      }, */
       {
         rel: 'stylesheet',
         href: fontStyles,
