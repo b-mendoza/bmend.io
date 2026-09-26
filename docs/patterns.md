@@ -16,8 +16,8 @@ Components use folder structure with separate files:
 Example:
 
 ```
-app/components/button/
-  ├── button.component.tsx
+app/components/link/
+  ├── link.component.tsx
   └── index.ts
 ```
 
