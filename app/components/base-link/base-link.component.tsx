@@ -1,12 +1,13 @@
-import type { LinkProps } from '@remix-run/react';
-import { Link } from '@remix-run/react';
+import { Link } from '@tanstack/react-router';
+import type { ComponentProps, ReactNode } from 'react';
 
-type AsRemixLink = LinkProps & Readonly<{ isExternal?: false }>;
+type AsInternalLink = Omit<ComponentProps<typeof Link>, 'children'> &
+  Readonly<{ isExternal?: false; children?: ReactNode }>;
 
 type AsExternalLink = React.JSX.IntrinsicElements['a'] &
   Readonly<{ isExternal: true }>;
 
-export type BaseLinkProps = AsRemixLink | AsExternalLink;
+export type BaseLinkProps = AsInternalLink | AsExternalLink;
 
 /**
  * @internal
@@ -26,12 +27,12 @@ export const BaseLink = (props: BaseLinkProps) => {
   const {
     isExternal,
     children,
-    prefetch = 'intent',
-    ...restOfRemixLinkProps
+    preload = 'intent',
+    ...restOfInternalLinkProps
   } = props;
 
   return (
-    <Link {...restOfRemixLinkProps} prefetch={prefetch}>
+    <Link {...restOfInternalLinkProps} preload={preload}>
       <span>{children}</span>
     </Link>
   );
