@@ -9,7 +9,6 @@
     ".eslintrc.cjs",
     "lint-staged.config.js",
     "postcss.config.js",
-    "prettier.config.js",
-    "remix.config.js"
+    "prettier.config.js"
   ]
 }

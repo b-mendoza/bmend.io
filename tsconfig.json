@@ -30,5 +30,6 @@
     "target": "ES2022",
     "verbatimModuleSyntax": true
   },
-  "include": ["remix.env.d.ts", "**/*.ts", "**/*.tsx"]
+  "include": ["vite.env.d.ts", "**/*.ts", "**/*.tsx"],
+  "exclude": ["dist", ".wrangler", ".tanstack", "node_modules"]
 }
