@@ -32,6 +32,5 @@ Extremely strict setup with:
 - **React version**: 18.3.1
 - **UI patterns**:
   - Typography components in `app/components/typography/`
-  - Radix UI primitives used for accessible components
   - Component props follow strict typing
 - **Development mode**: Vite HMR is only active in development (`pnpm run dev`); production builds run with SSR and client hydration enabled
