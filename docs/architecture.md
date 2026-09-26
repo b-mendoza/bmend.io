@@ -20,11 +20,10 @@
 
 - **Path alias**: `~/*` maps to `./app/*` (configured in tsconfig.json)
 - **Component organization**: Components use folder structure with `*.component.tsx` + `index.ts` pattern
-  - Example: `app/components/button/button.component.tsx` + `app/components/button/index.ts`
+  - Example: `app/components/link/link.component.tsx` + `app/components/link/index.ts`
 - **Server-only code**: Files ending with `.server.ts` contain server-only logic (models, utilities) and are kept out of the client bundle
 - **Server function boundary**: Route loaders call server functions in `app/functions/*.ts` (built with `createServerFn`), which dynamically import the corresponding `.server.ts` model to preserve the client/server boundary
-- **Data models**: Located in `app/models/*.server.ts` - contain data fetching functions
-  - Current models use in-memory data with comments indicating future database/CMS integration
+- **Homepage data**: `app/models/get-home-data.server.ts` constructs job experience, social links, and tags in memory
 - **CSS imports**: Stylesheets are imported with Vite's `?url` suffix (e.g. `import globalStyles from '~/styles/global.styles.css?url'`) and registered as `<link>` tags in the root route's `head()`
 
 ## Environment and Context
