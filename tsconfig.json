@@ -1,11 +1,9 @@
 {
   "compilerOptions": {
-    "allowJs": false,
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,
     "baseUrl": "./",
     "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
     "incremental": true,
     "isolatedModules": true,
     "jsx": "react-jsx",
@@ -30,6 +28,6 @@
     "target": "ES2022",
     "verbatimModuleSyntax": true
   },
-  "include": ["vite.env.d.ts", "**/*.ts", "**/*.tsx"],
-  "exclude": ["dist", ".wrangler", ".tanstack", "node_modules"]
+  "include": ["**/*.ts", "**/*.tsx"],
+  "exclude": ["dist", ".wrangler", ".tanstack"]
 }
