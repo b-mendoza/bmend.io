@@ -1,28 +1,47 @@
-# templates/unstable-vite
+# bmendoza.io
 
-⚠️ Remix support for Vite is unstable and not recommended for production.
-
-📖 See the [Remix Vite docs][remix-vite-docs] for details on supported features.
+Personal site built with TanStack Start on Cloudflare Workers.
 
 ## Setup
 
 ```shellscript
-npx create-remix@latest --template remix-run/remix/templates/unstable-vite
+pnpm install
 ```
 
-## Run
-
-Spin up the Vite dev server:
+## Develop
 
 ```shellscript
-npm run dev
+pnpm run dev
 ```
 
-Or build your app for production and run it:
+## Build
 
 ```shellscript
-npm run build
-npm run start
+pnpm run build
 ```
 
-[remix-vite-docs]: https://remix.run/docs/en/main/future/vite
+## Preview the production build
+
+```shellscript
+pnpm run start
+```
+
+## Test
+
+Runs against the existing build (build first):
+
+```shellscript
+pnpm run build
+pnpm run test
+```
+
+## Deploy (manual, not run by CI)
+
+Build first, then deploy:
+
+```shellscript
+pnpm run build
+pnpm exec wrangler deploy
+```
+
+This is not executed as part of this migration and requires Cloudflare account/auth setup for the live domain cutover.
