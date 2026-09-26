@@ -34,9 +34,6 @@ devDependencies:
   '@cloudflare/vite-plugin':
     specifier: 1.60.2
     version: 1.60.2(@types/node@24.19.0)(vite@7.3.6)(wrangler@4.141.0)
-  '@total-typescript/ts-reset':
-    specifier: 0.6.1
-    version: 0.6.1
   '@types/node':
     specifier: 24.19.0
     version: 24.19.0
@@ -2005,10 +2002,6 @@ packages:
     resolution: {integrity: sha512-uhOeFyxLcU41HzvrxsGpiWdcMbScY1EDgbZ5K7DVRMYInbLYWAC0EA/kx9wXAoSM8q82bUG2hRl8+EAjE6XAbA==}
     engines: {node: '>=20.19'}
     dev: false
-
-  /@total-typescript/ts-reset@0.6.1:
-    resolution: {integrity: sha512-cka47fVSo6lfQDIATYqb/vO1nvFfbPw7uWLayIXIhGETj0wcOOlrlkobOMDNQOFr9QOafegUPq13V2+6vtD7yg==}
-    dev: true
 
   /@types/babel__core@7.20.5:
     resolution: {integrity: sha512-qoQprZvz5wQFJwMDqeseRXWv3rqMvhgpbXFfVyWhbx9X47POIA6i/+dXefEmZKoAgOaTdaIgNSMqMIU61yRyzA==}
