@@ -7,9 +7,6 @@ export default {
   theme: {
     extend: {
       colors: {
-        transparent: 'transparent',
-        current: 'currentColor',
-
         /* Custom CSS vars */
         background: `hsl(var(--background) / ${ALPHA_VALUE})`,
         'block-background-1': `hsl(var(--block-background-1) / ${ALPHA_VALUE})`,
@@ -32,5 +29,4 @@ export default {
       },
     },
   },
-  plugins: [],
 } satisfies Config;
