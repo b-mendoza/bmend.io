@@ -4,17 +4,18 @@
 
 - **Install dependencies**: `pnpm install`
 - **Corepack**: This project uses pnpm 8.15.9 via the `packageManager` field in package.json
-- **Node version**: Requires Node.js >=20.0.0 <21.0.0
+- **Node version**: Requires Node.js `^22.12.0 || ^24.0.0` (see `.nvmrc`)
 
 ## Development Commands
 
 ### Running the Application
 
 - **Start development server**: `pnpm run dev`
-  - Runs Remix in dev mode with manual HMR
-  - Starts Wrangler Pages dev server on `./public` with compatibility date 2024-02-07
+  - Runs Vite with the Cloudflare Vite plugin against workerd
 - **Build for production**: `pnpm run build`
-- **Start production server**: `pnpm run start`
+  - Outputs `dist/client` and `dist/server` via `vite build`
+- **Preview the production build**: `pnpm run start`
+  - Runs `vite preview` against workerd
 
 ### Linting and Formatting
 
@@ -31,10 +32,19 @@
 - `pnpm run fix:eslint` - Auto-fix ESLint issues
 - `pnpm run fix:prettier` - Auto-format with Prettier
 
+### Testing
+
+- Build first, then test: `pnpm run build && pnpm run test` - the test run spawns a preview of the existing build (`node --test test/smoke.test.mjs`)
+
 ### Cleanup
 
 - **Soft clean**: `pnpm run clean:soft` - Removes cache and build artifacts
 - **Hard clean**: `pnpm run clean:hard` - Removes everything including node_modules and lock file
+
+### Deploying (manual, not run by CI)
+
+- `pnpm run build && pnpm exec wrangler deploy` - deploys the built Worker to Cloudflare
+  - Not executed as part of this migration; requires Cloudflare account/auth configuration for the live domain cutover
 
 ## Git Hooks
 
