@@ -16,7 +16,6 @@
     "lint:prettier": "prettier --ignore-unknown --cache --check .",
     "lint:types": "tsc --pretty",
     "prepare": "husky",
-    "preview": "vite preview",
     "start": "vite preview",
     "test": "node --test test/smoke.test.mjs"
   },
