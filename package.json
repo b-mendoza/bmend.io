@@ -4,10 +4,10 @@
   "sideEffects": false,
   "type": "module",
   "scripts": {
-    "build": "remix build",
-    "clean:hard": "rimraf --verbose .wrangler functions node_modules pnpm-lock.yaml public/build tsconfig.tsbuildinfo",
-    "clean:soft": "rimraf --verbose .wrangler functions node_modules/.cache public/build tsconfig.tsbuildinfo",
-    "dev": "remix dev --manual -c \"pnpm run start\"",
+    "build": "vite build",
+    "clean:hard": "rimraf --verbose .wrangler dist .tanstack node_modules pnpm-lock.yaml tsconfig.tsbuildinfo",
+    "clean:soft": "rimraf --verbose .wrangler dist .tanstack node_modules/.cache tsconfig.tsbuildinfo",
+    "dev": "vite",
     "fix": "concurrently --kill-others-on-fail --prefix-colors \"auto\" \"pnpm:fix:*\"",
     "fix:eslint": "eslint --cache --cache-location ./node_modules/.cache/eslint --fix .",
     "fix:prettier": "prettier --ignore-unknown --cache --write .",
@@ -16,7 +16,8 @@
     "lint:prettier": "prettier --ignore-unknown --cache --check .",
     "lint:types": "tsc --pretty",
     "prepare": "husky",
-    "start": "wrangler pages dev --compatibility-date=2024-02-07 ./public"
+    "preview": "vite preview",
+    "start": "vite preview"
   },
   "dependencies": {
     "@radix-ui/react-toggle": "1.1.18",
