@@ -11,10 +11,6 @@
  * The child's process group is claimed the moment it is spawned, so a
  * readiness timeout or an early exit reaps it too.
  *
- * Expectations are derived from the current source models and the current
- * production build's actual responses. Anything the baseline does not do
- * (e.g. an `Allow` header on 405) is recorded, not asserted.
- *
  * Asset URLs are discovered from the served HTML, so the hashed-asset path
  * prefix may change between builds without invalidating this test.
  */
@@ -80,8 +76,6 @@ const IMMUTABLE_CACHE_CONTROL = 'public, max-age=31536000, immutable';
 const FAVICON_CACHE_CONTROL = 'public, max-age=3600, s-maxage=3600';
 /** Methods the approved contract requires to keep answering 405. */
 const UNSUPPORTED_METHODS = ['POST', 'PUT', 'PATCH', 'DELETE'];
-/** Recorded for comparison only; not part of the approved 405 contract. */
-const EXTRA_METHODS = ['OPTIONS'];
 
 /* --- Small HTTP helpers -------------------------------------------------- */
 
@@ -400,7 +394,6 @@ describe(`baseline HTTP contract at ${BASE_URL}`, () => {
   it('unknown route and unknown asset return 404, never 200', async () => {
     const missingRoute = await request('/missing-route-baseline-probe');
     assert.equal(missingRoute.status, 404, 'unknown route');
-    assert.notEqual(missingRoute.status, 200);
 
     const { html } = await getHtml('/');
     const stylesheet = linkHrefs(html, (tag) => {
@@ -429,32 +422,11 @@ describe(`baseline HTTP contract at ${BASE_URL}`, () => {
     assert.equal(await head.text(), '');
   });
 
-  it('unsupported methods on / return 405', async (t) => {
-    const rows = [];
-
-    for (const method of [...UNSUPPORTED_METHODS, ...EXTRA_METHODS]) {
+  it('unsupported methods on / return 405', async () => {
+    for (const method of UNSUPPORTED_METHODS) {
       const response = await request('/', { method });
-      const row = {
-        method,
-        status: response.status,
-        allow: response.headers.get('allow'),
-        cacheControl: response.headers.get('cache-control'),
-        contract: UNSUPPORTED_METHODS.includes(method),
-      };
-      rows.push(row);
-      if (row.contract) {
-        assert.equal(response.status, 405, `${method} / should be 405`);
-      }
+      assert.equal(response.status, 405, `${method} / should be 405`);
       await response.arrayBuffer();
     }
-
-    t.diagnostic(
-      `method/status/allow/cache-control table:\n${rows
-        .map(
-          (row) =>
-            `  ${row.method.padEnd(7)} status=${row.status} allow=${row.allow ?? '<none>'} cache-control=${row.cacheControl ?? '<none>'}${row.contract ? '' : ' (recorded only)'}`,
-        )
-        .join('\n')}`,
-    );
   });
 });
