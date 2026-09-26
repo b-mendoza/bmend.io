@@ -23,6 +23,8 @@
     "@remix-run/cloudflare": "2.6.0",
     "@remix-run/cloudflare-pages": "2.6.0",
     "@remix-run/react": "2.17.3",
+    "@tanstack/react-router": "1.170.38",
+    "@tanstack/react-start": "1.168.56",
     "@unpic/react": "0.1.15",
     "clsx": "2.1.1",
     "dayjs": "1.11.23",
@@ -35,13 +37,16 @@
     "zod": "3.25.76"
   },
   "devDependencies": {
+    "@cloudflare/vite-plugin": "1.60.2",
     "@cloudflare/workers-types": "4.20260702.1",
     "@remix-run/dev": "2.6.0",
     "@total-typescript/ts-reset": "0.6.1",
+    "@types/node": "24.19.0",
     "@types/react": "18.3.31",
     "@types/react-dom": "18.3.7",
     "@typescript-eslint/eslint-plugin": "6.21.0",
     "@typescript-eslint/parser": "6.21.0",
+    "@vitejs/plugin-react": "5.1.0",
     "autoprefixer": "10.5.4",
     "concurrently": "9.2.4",
     "eslint": "8.57.1",
@@ -64,10 +69,11 @@
     "rimraf": "6.1.3",
     "tailwindcss": "3.4.19",
     "typescript": "5.9.3",
-    "wrangler": "3.114.17"
+    "vite": "7.3.6",
+    "wrangler": "4.141.0"
   },
   "packageManager": "pnpm@8.15.9+sha256.daa27a0b541bc635323ff96c2ded995467ff9fe6d69ff67021558aa9ad9dcc36",
   "engines": {
-    "node": ">=20.0.0 <25.0.0"
+    "node": "^22.12.0 || ^24.0.0"
   }
 }
