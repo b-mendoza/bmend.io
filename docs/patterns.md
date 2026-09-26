@@ -23,9 +23,9 @@ app/components/button/
 
 ## Data Fetching
 
-- Use loader functions in routes
+- Use loader functions in routes, which call server functions in `app/functions/*.ts` as the client/server boundary
 - Server-only logic goes in `app/models/*.server.ts`
-- Cache-control headers can be set via the `headers` export in routes
+- Cache-control headers can be set via the `headers` option on `createFileRoute`
 
 ## Code Organization
 
