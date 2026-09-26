@@ -9,3 +9,8 @@ node_modules
 # dotfiles
 .dev.vars
 *.tsbuildinfo
+
+# AI-related configuration files
+.mcp.json
+/.codex
+opencode.jsonc

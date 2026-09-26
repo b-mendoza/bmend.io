@@ -10,3 +10,7 @@ pnpm-lock.yaml
 # dotfiles
 .dev.vars
 *.tsbuildinfo
+
+# AI-related configuration files
+/.agents
+/.claude
