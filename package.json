@@ -42,7 +42,7 @@
     "@vitejs/plugin-react": "5.1.0",
     "autoprefixer": "10.5.4",
     "concurrently": "9.2.4",
-    "eslint": "8.57.1",
+    "eslint": "10.11.0",
     "eslint-config-prettier": "10.1.8",
     "eslint-config-love": "43.1.0",
     "eslint-plugin-deprecation": "3.0.0",
