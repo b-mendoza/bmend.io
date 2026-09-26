@@ -14,3 +14,7 @@ node_modules
 .mcp.json
 /.codex
 opencode.jsonc
+
+# build artifacts
+/dist
+/.tanstack

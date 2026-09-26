@@ -10,3 +10,10 @@ pnpm-lock.yaml
 # dotfiles
 .dev.vars
 *.tsbuildinfo
+
+# build artifacts
+/dist
+/.tanstack
+
+# generated files
+/app/routeTree.gen.ts

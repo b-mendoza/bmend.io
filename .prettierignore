@@ -14,3 +14,10 @@ pnpm-lock.yaml
 # AI-related configuration files
 /.agents
 /.claude
+
+# build artifacts
+/dist
+/.tanstack
+
+# generated files
+/app/routeTree.gen.ts
