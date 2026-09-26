@@ -88,11 +88,7 @@ function IndexHomeRoute() {
             exceptional user experiences.
           </Paragraph>
 
-          <TagMapper
-            getTagName={(tag) => tag.text}
-            /* getIconName={(tag) => tag.icon} */
-            tags={loaderData.tags}
-          />
+          <TagMapper getTagName={(tag) => tag.text} tags={loaderData.tags} />
         </SectionWrapper>
 
         <SectionWrapper
