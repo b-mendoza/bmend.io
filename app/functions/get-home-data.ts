@@ -1,9 +1,9 @@
-import { createServerFn } from '@tanstack/react-start';
+import { createServerFn } from "@tanstack/react-start";
 
-export const getHomeData = createServerFn({ method: 'GET' }).handler(
+export const getHomeData = createServerFn({ method: "GET" }).handler(
   async () => {
     const { getHomeData: readHomeData } =
-      await import('~/models/get-home-data.server');
+      await import("~/models/get-home-data.server");
     return readHomeData();
   },
 );
