@@ -22,7 +22,7 @@ export const ExperienceCard = (props: ExperienceCardProps) => {
         {jobTitle}
       </h4>
 
-      <Paragraph className="whitespace-pre-wrap text-pretty">
+      <Paragraph className="text-pretty whitespace-pre-wrap">
         {description}
       </Paragraph>
     </article>
