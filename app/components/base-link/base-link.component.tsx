@@ -1,10 +1,10 @@
-import { Link } from '@tanstack/react-router';
-import type { ComponentProps, ReactNode } from 'react';
+import { Link } from "@tanstack/react-router";
+import type { ComponentProps, ReactNode } from "react";
 
-type AsInternalLink = Omit<ComponentProps<typeof Link>, 'children'> &
+type AsInternalLink = Omit<ComponentProps<typeof Link>, "children"> &
   Readonly<{ isExternal?: false; children?: ReactNode }>;
 
-type AsExternalLink = React.JSX.IntrinsicElements['a'] &
+type AsExternalLink = React.JSX.IntrinsicElements["a"] &
   Readonly<{ isExternal: true }>;
 
 export type BaseLinkProps = AsInternalLink | AsExternalLink;
@@ -27,7 +27,7 @@ export const BaseLink = (props: BaseLinkProps) => {
   const {
     isExternal,
     children,
-    preload = 'intent',
+    preload = "intent",
     ...restOfInternalLinkProps
   } = props;
 
