@@ -4,7 +4,7 @@ import { createElement } from 'react';
 
 import { cn } from '~/utils/cn';
 
-type Variant = keyof Pick<React.ReactHTML, 'h1' | 'h2' | 'h3'>;
+type Variant = 'h1' | 'h2' | 'h3';
 
 type Size = 'sm' | 'md' | 'lg';
 
