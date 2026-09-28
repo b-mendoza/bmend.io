@@ -26,14 +26,6 @@ const PAGE_METADATA = {
 const SECTION_BACKGROUND =
   'bg-gradient-to-tr from-section-background-bottom to-section-background-top';
 
-const METHOD_NOT_ALLOWED_HEADERS = {
-  Allow: 'GET, HEAD',
-  'Cache-Control': 'no-store',
-};
-
-const methodNotAllowed = () =>
-  new Response(null, { status: 405, headers: METHOD_NOT_ALLOWED_HEADERS });
-
 const Header = () => {
   return (
     <SectionWrapper
@@ -235,14 +227,5 @@ export const Route = createFileRoute('/')({
   headers: () => ({
     'Cache-Control': 'max-age=60, stale-while-revalidate=86400',
   }),
-  server: {
-    handlers: {
-      POST: methodNotAllowed,
-      PUT: methodNotAllowed,
-      PATCH: methodNotAllowed,
-      DELETE: methodNotAllowed,
-      OPTIONS: methodNotAllowed,
-    },
-  },
   component: IndexHomeRoute,
 });
