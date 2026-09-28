@@ -1,5 +1,5 @@
-import { Tag } from '~/components/tag';
-import { cn } from '~/utils/cn';
+import { Tag } from "~/components/tag";
+import { cn } from "~/utils/cn";
 
 type TagMapperProps<T> = Readonly<{
   getTagName: (tag: T) => string;
@@ -12,7 +12,7 @@ export const TagMapper = <Tag,>(props: TagMapperProps<Tag>) => {
   const { getTagName, tags, tagClassName, tagsWrapperClassName } = props;
 
   return (
-    <ul className={cn('flex flex-wrap gap-[0.8rem]', tagsWrapperClassName)}>
+    <ul className={cn("flex flex-wrap gap-[0.8rem]", tagsWrapperClassName)}>
       {tags.map((tag, idx) => {
         return (
           <Tag className={tagClassName} key={idx} name={getTagName(tag)} />
