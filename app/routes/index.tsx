@@ -121,7 +121,7 @@ function IndexHomeRoute() {
 
         <div className="mx-8 mb-12">
           <Heading
-            className="mb-12 text-balance text-center font-medium"
+            className="mb-12 text-center font-medium text-balance"
             size="lg"
             variant="h2"
           >
@@ -157,7 +157,7 @@ export const Route = createFileRoute('/')({
   loader: async () => await getHomeData(),
   head: () => ({
     meta: [
-      /* TODO: update <meta /> tags text content */
+      /* Follow-up: update <meta /> tags text content */
       { title: PAGE_METADATA.Title },
       {
         name: 'description',
