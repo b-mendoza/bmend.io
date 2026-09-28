@@ -1,4 +1,4 @@
-import dayjs from 'dayjs';
+import dayjs from "dayjs";
 
 /**
  * Formats a given date string to the format 'MMM YYYY'.
@@ -10,5 +10,5 @@ import dayjs from 'dayjs';
  * formatDate('2023-04-01') will return 'Apr 2023'
  */
 export const formatDate = (date: string) => {
-  return dayjs(date).format('MMM YYYY');
+  return dayjs(date).format("MMM YYYY");
 };
