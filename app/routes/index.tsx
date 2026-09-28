@@ -1,37 +1,37 @@
-import { createFileRoute } from '@tanstack/react-router';
-import { Image } from '@unpic/react';
+import { createFileRoute } from "@tanstack/react-router";
+import { Image } from "@unpic/react";
 
-import { ExperienceCard } from '~/components/experience-card';
-import { Link } from '~/components/link';
-import { TagMapper } from '~/components/tag-mapper';
-import { Heading } from '~/components/typography/headings';
-import { Paragraph, PARAGRAPH_SIZES } from '~/components/typography/paragraph';
-import { Subtitle } from '~/components/typography/subtitle';
-import { SectionWrapper } from '~/components/ui/section-wrapper';
-import { WhiteLink } from '~/components/white-link';
-import { getHomeData } from '~/functions/get-home-data';
-import { cn } from '~/utils/cn';
+import { ExperienceCard } from "~/components/experience-card";
+import { Link } from "~/components/link";
+import { TagMapper } from "~/components/tag-mapper";
+import { Heading } from "~/components/typography/headings";
+import { Paragraph, PARAGRAPH_SIZES } from "~/components/typography/paragraph";
+import { Subtitle } from "~/components/typography/subtitle";
+import { SectionWrapper } from "~/components/ui/section-wrapper";
+import { WhiteLink } from "~/components/white-link";
+import { getHomeData } from "~/functions/get-home-data";
+import { cn } from "~/utils/cn";
 
 const PAGE_METADATA = {
-  CanonicalURL: 'https://bmendoza.io/',
-  Title: 'Bryan Mendoza',
+  CanonicalURL: "https://bmendoza.io/",
+  Title: "Bryan Mendoza",
   Description:
-    'Your experienced web developer with nearly seven years of experience crafting tailored and accessible apps to skyrocket your success, using React, Next.js, and Remix.',
+    "Your experienced web developer with nearly seven years of experience crafting tailored and accessible apps to skyrocket your success, using React, Next.js, and Remix.",
   Image: {
-    alt: 'a person holding a dog in front of a mirror with his head tilted to the side and his eyes wide open',
-    src: 'https://res.cloudinary.com/dgqif0kkr/image/upload/q_auto,f_auto/bmendoza-io/shiba-inu.jpg',
+    alt: "a person holding a dog in front of a mirror with his head tilted to the side and his eyes wide open",
+    src: "https://res.cloudinary.com/dgqif0kkr/image/upload/q_auto,f_auto/bmendoza-io/shiba-inu.jpg",
   },
 };
 
 const SECTION_BACKGROUND =
-  'bg-linear-to-tr/srgb from-section-background-bottom to-section-background-top';
+  "bg-linear-to-tr/srgb from-section-background-bottom to-section-background-top";
 
 const Header = () => {
   return (
     <SectionWrapper
       as="header"
       className={cn(
-        'sticky top-4 flex items-center justify-between gap-6 rounded-2xl py-6',
+        "sticky top-4 flex items-center justify-between gap-6 rounded-2xl py-6",
         SECTION_BACKGROUND,
       )}
     >
@@ -85,10 +85,10 @@ function IndexHomeRoute() {
 
         <SectionWrapper
           as="section"
-          className={cn('flex flex-col gap-[3.6rem]', SECTION_BACKGROUND)}
+          className={cn("flex flex-col gap-[3.6rem]", SECTION_BACKGROUND)}
         >
           <Heading
-            className={cn('font-semibold uppercase', PARAGRAPH_SIZES.md)}
+            className={cn("font-semibold uppercase", PARAGRAPH_SIZES.md)}
             size="sm"
             variant="h2"
           >
@@ -153,79 +153,79 @@ function IndexHomeRoute() {
   );
 }
 
-export const Route = createFileRoute('/')({
+export const Route = createFileRoute("/")({
   loader: async () => await getHomeData(),
   head: () => ({
     meta: [
       /* Follow-up: update <meta /> tags text content */
       { title: PAGE_METADATA.Title },
       {
-        name: 'description',
+        name: "description",
         content: PAGE_METADATA.Description,
       },
       {
-        property: 'og:title',
+        property: "og:title",
         content: PAGE_METADATA.Title,
       },
       {
-        property: 'og:description',
+        property: "og:description",
         content: PAGE_METADATA.Description,
       },
       {
-        property: 'og:image',
+        property: "og:image",
         content: PAGE_METADATA.Image.src,
       },
       {
-        property: 'og:url',
+        property: "og:url",
         content: PAGE_METADATA.CanonicalURL,
       },
       {
-        property: 'og:type',
-        content: 'website',
+        property: "og:type",
+        content: "website",
       },
       {
-        property: 'twitter:card',
-        content: 'summary_large_image',
+        property: "twitter:card",
+        content: "summary_large_image",
       },
       {
-        property: 'twitter:site',
-        content: '@beMendoza_',
+        property: "twitter:site",
+        content: "@beMendoza_",
       },
       {
-        property: 'twitter:title',
+        property: "twitter:title",
         content: PAGE_METADATA.Title,
       },
       {
-        property: 'twitter:description',
+        property: "twitter:description",
         content: PAGE_METADATA.Description,
       },
       {
-        property: 'twitter:image',
+        property: "twitter:image",
         content: PAGE_METADATA.Image.src,
       },
       {
-        property: 'twitter:image:alt',
+        property: "twitter:image:alt",
         content: PAGE_METADATA.Image.alt,
       },
       {
-        name: 'author',
-        content: 'Bryan Mendoza',
+        name: "author",
+        content: "Bryan Mendoza",
       },
       {
-        name: 'keywords',
+        name: "keywords",
         content:
-          'Experienced Developer, JavaScript, TypeScript, React, Remix, Next.js, Tailwind CSS, Node.js, GraphQL, Web Applications, Front-End Development, Back-End Development, Full-Stack Expertise, Responsive Design, Modern Web Technologies, User Experience, Web Accessibility, Application Development',
+          "Experienced Developer, JavaScript, TypeScript, React, Remix, Next.js, Tailwind CSS, Node.js, GraphQL, Web Applications, Front-End Development, Back-End Development, Full-Stack Expertise, Responsive Design, Modern Web Technologies, User Experience, Web Accessibility, Application Development",
       },
     ],
     links: [
       {
-        rel: 'canonical',
+        rel: "canonical",
         href: PAGE_METADATA.CanonicalURL,
       },
     ],
   }),
   headers: () => ({
-    'Cache-Control': 'max-age=60, stale-while-revalidate=86400',
+    "Cache-Control": "max-age=60, stale-while-revalidate=86400",
   }),
   component: IndexHomeRoute,
 });
