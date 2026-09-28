@@ -4,7 +4,7 @@ A TanStack Start application running on Cloudflare Workers, using strict TypeScr
 
 ## Quick Reference
 
-- **Package manager**: pnpm 8.15.9 (via corepack - ensure it's enabled)
+- **Package manager**: pnpm 12.6.0 (via Corepack)
 - **Dev server**: `pnpm run dev`
 - **Build**: `pnpm run build`
 - **Lint & type-check**: `pnpm run lint`
