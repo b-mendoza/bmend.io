@@ -103,7 +103,7 @@ function IndexHomeRoute() {
 
       <SectionWrapper
         as="footer"
-        className="border-white/20 bg-gradient-to-bl from-[hsl(243_100%_68%)] to-[hsl(243_76%_51%)] px-0"
+        className="border-white/20 bg-linear-to-bl/srgb from-[hsl(243_100%_68%)] to-[hsl(243_76%_51%)] px-0"
       >
         <Image
           alt={PAGE_METADATA.Image.alt}
