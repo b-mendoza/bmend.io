@@ -1,1 +1,1 @@
-export * from './white-link.component';
+export * from "./white-link.component";
