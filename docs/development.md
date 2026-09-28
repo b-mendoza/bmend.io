@@ -20,17 +20,17 @@
 ### Linting and Formatting
 
 - **Run all linters**: `pnpm run lint`
-  - Runs ESLint, Prettier check, and TypeScript type checking in parallel
+  - Runs ESLint, Oxfmt check, and TypeScript type checking in parallel
 - **Fix all issues**: `pnpm run fix`
-  - Auto-fixes ESLint and Prettier issues
+  - Auto-fixes ESLint and Oxfmt issues
 
 ### Individual Commands
 
 - `pnpm run lint:eslint` - ESLint only
-- `pnpm run lint:prettier` - Prettier check only
+- `pnpm run lint:oxfmt` - Oxfmt check only
 - `pnpm run lint:types` - TypeScript type check only
 - `pnpm run fix:eslint` - Auto-fix ESLint issues
-- `pnpm run fix:prettier` - Auto-format with Prettier
+- `pnpm run fix:oxfmt` - Auto-format with Oxfmt
 
 ### Testing
 
@@ -50,6 +50,6 @@
 
 - Husky is configured with a pre-commit hook
 - Lint-staged runs on staged files:
-  - Prettier on all files
+  - Oxfmt on supported files
   - ESLint on JS/TS files
   - TypeScript type checking on the entire project
