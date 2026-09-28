@@ -1,1 +1,1 @@
-export * from './headings.component';
+export * from "./headings.component";
