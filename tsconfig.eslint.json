@@ -5,10 +5,5 @@
     "types": ["@types/node"]
   },
   "extends": "./tsconfig.json",
-  "include": [
-    ".eslintrc.cjs",
-    "lint-staged.config.js",
-    "postcss.config.js",
-    "prettier.config.js"
-  ]
+  "include": ["eslint.config.js", "lint-staged.config.js", "prettier.config.js"]
 }
