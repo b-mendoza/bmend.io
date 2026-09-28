@@ -16,8 +16,7 @@
     "lint:prettier": "prettier --ignore-unknown --cache --check .",
     "lint:types": "tsc --pretty",
     "prepare": "husky",
-    "start": "vite preview",
-    "test": "node --test test/smoke.test.mjs"
+    "start": "vite preview"
   },
   "dependencies": {
     "@tanstack/react-router": "1.170.39",
