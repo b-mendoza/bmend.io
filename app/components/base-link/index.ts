@@ -1,1 +1,1 @@
-export * from './base-link.component';
+export * from "./base-link.component";
