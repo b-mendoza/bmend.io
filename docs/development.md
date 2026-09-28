@@ -4,7 +4,7 @@
 
 - **Install dependencies**: `pnpm install`
 - **Corepack**: This project uses pnpm 8.15.9 via the `packageManager` field in package.json
-- **Node version**: Requires Node.js `^22.12.0 || ^24.0.0` (see `.nvmrc`)
+- **Node version**: Requires Node.js `^22.22.1 || ^24.0.0` (see `.nvmrc`)
 
 ## Development Commands
 
