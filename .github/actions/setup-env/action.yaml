@@ -1,4 +1,4 @@
-name: 'Setup Node.js, pnpm and dependencies'
+name: "Setup Node.js, pnpm and dependencies"
 
 description: Setup Node.js environment, pnpm package manager, restore/save the pnpm store cache, and install project dependencies
 
