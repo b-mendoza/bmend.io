@@ -3,43 +3,43 @@ import {
   HeadContent,
   Outlet,
   Scripts,
-} from '@tanstack/react-router';
-import type { ReactNode } from 'react';
+} from "@tanstack/react-router";
+import type { ReactNode } from "react";
 
-import interWoff2 from '~/assets/fonts/inter-latin-wght-normal.woff2';
-import fontStyles from '~/styles/font.styles.css?url';
-import globalStyles from '~/styles/global.styles.css?url';
+import interWoff2 from "~/assets/fonts/inter-latin-wght-normal.woff2";
+import fontStyles from "~/styles/font.styles.css?url";
+import globalStyles from "~/styles/global.styles.css?url";
 
 export const Route = createRootRoute({
   head: () => ({
     meta: [
-      { charSet: 'UTF-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1.0' },
+      { charSet: "UTF-8" },
+      { name: "viewport", content: "width=device-width, initial-scale=1.0" },
     ],
     links: [
       {
-        rel: 'preload',
+        rel: "preload",
         href: interWoff2,
-        as: 'font',
-        crossOrigin: 'anonymous',
-        type: 'font/woff2',
+        as: "font",
+        crossOrigin: "anonymous",
+        type: "font/woff2",
       },
       {
-        rel: 'preload',
-        as: 'style',
+        rel: "preload",
+        as: "style",
         href: fontStyles,
       },
       {
-        rel: 'preload',
-        as: 'style',
+        rel: "preload",
+        as: "style",
         href: globalStyles,
       },
       {
-        rel: 'stylesheet',
+        rel: "stylesheet",
         href: fontStyles,
       },
       {
-        rel: 'stylesheet',
+        rel: "stylesheet",
         href: globalStyles,
       },
     ],
