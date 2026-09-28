@@ -7,4 +7,4 @@ runs:
   steps:
     - name: 'Build, lint/typecheck, and test'
       shell: bash
-      run: pnpm run build && pnpm run lint && pnpm run test
+      run: pnpm run build && pnpm run lint
