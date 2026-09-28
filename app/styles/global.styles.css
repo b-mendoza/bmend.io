@@ -1,5 +1,25 @@
 @import 'tailwindcss';
 
+@theme inline {
+  --font-sans: 'Inter', 'Inter Fallback';
+  --default-font-family: 'Inter', 'Inter Fallback';
+  --text-sm: 1.4rem;
+  --text-md: 1.6rem;
+  --text-lg: 1.8rem;
+  --text-sm--line-height: initial;
+  --text-lg--line-height: initial;
+  --color-background: hsl(var(--background));
+  --color-block-background-1: hsl(var(--block-background-1));
+  --color-button-hover-background: hsl(var(--button-hover-background));
+  --color-button-hover-text: hsl(var(--button-hover-text));
+  --color-section-background-bottom: hsl(var(--section-background-bottom));
+  --color-section-background-top: hsl(var(--section-background-top));
+  --color-section-border: hsl(var(--section-border));
+  --color-texts: hsl(var(--texts));
+  --color-violet-glow: hsl(var(--violet-glow));
+  --color-white: hsl(var(--white));
+}
+
 @layer base {
   html {
     font-size: 62.5%;
