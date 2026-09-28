@@ -12,7 +12,9 @@ export default {
       return [];
     }
 
-    return [`prettier --ignore-unknown --write ${filtered.join(' ')}`];
+    return [
+      `oxfmt --no-error-on-unmatched-pattern --write ${filtered.map((file) => JSON.stringify(file)).join(' ')}`,
+    ];
   },
   '*.{js,ts,tsx}': 'eslint --fix',
   '**/*.ts?(x)': () => 'tsc -p tsconfig.json --noEmit',
