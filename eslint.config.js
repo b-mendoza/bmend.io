@@ -3,7 +3,6 @@
 import eslint from '@eslint/js';
 import love from 'eslint-config-love';
 import prettier from 'eslint-config-prettier';
-import deprecation from 'eslint-plugin-deprecation';
 import a11y from 'eslint-plugin-jsx-a11y';
 import n from 'eslint-plugin-n';
 import react from 'eslint-plugin-react';
@@ -18,30 +17,38 @@ const files = ['**/*.{js,cjs,mjs,ts,tsx}'];
 export default [
   {
     ignores: [
-      '**/node_modules/**',
       '.wrangler/**',
       'functions/**',
       'public/build/**',
       'dist/**',
       '.tanstack/**',
-      '**/pnpm-lock.yaml',
-      '**/.dev.vars',
-      '**/*.tsbuildinfo',
       'app/routeTree.gen.ts',
       '**/.claude/**',
     ],
   },
+  { ...eslint.configs.recommended, files },
+  ...[
+    ...tseslint.configs.strictTypeChecked,
+    ...tseslint.configs.stylisticTypeChecked,
+  ].map((config) => ({
+    ...config,
+    files: 'files' in config ? config.files : files,
+  })),
+  { ...love, files, plugins: { ...love.plugins, n } },
+  { ...react.configs.flat['recommended'], files },
+  { ...react.configs.flat['jsx-runtime'], files },
+  { ...hooks.configs.flat.recommended, files },
+  { ...a11y.flatConfigs.strict, files },
+  { ...sonarConfigs.recommended, files },
+  { ...prettier, files },
   {
     files,
     languageOptions: {
-      globals: { ...globals.browser, ...globals.commonjs, ...globals.es2015 },
-      parser: tseslint.parser,
+      globals: { ...globals.browser, ...globals.commonjs },
       parserOptions: {
-        ecmaFeatures: { jsx: true },
-        ecmaVersion: 'latest',
         project: ['./tsconfig.json', './tsconfig.eslint.json'],
-        sourceType: 'module',
         tsconfigRootDir: import.meta.dirname,
+        projectService: false,
       },
     },
     settings: {
@@ -52,42 +59,6 @@ export default [
         { name: 'NavLink', linkAttribute: 'to' },
       ],
     },
-  },
-  { ...eslint.configs.recommended, files },
-  ...tseslint.configs.strictTypeChecked.map((config) => ({
-    ...config,
-    files: 'files' in config ? config.files : files,
-  })),
-  ...tseslint.configs.stylisticTypeChecked.map((config) => ({
-    ...config,
-    files: 'files' in config ? config.files : files,
-  })),
-  {
-    ...love,
-    files,
-    languageOptions: {
-      ...love.languageOptions,
-      parserOptions: { projectService: false },
-    },
-    plugins: { ...love.plugins, n },
-  },
-  { ...react.configs.flat['recommended'], files },
-  { ...react.configs.flat['jsx-runtime'], files },
-  { ...hooks.configs.flat.recommended, files },
-  { ...a11y.flatConfigs.strict, files },
-  {
-    ...sonarConfigs.recommended,
-    files,
-    settings: { react: { version: 'detect' } },
-  },
-  {
-    files,
-    plugins: { deprecation },
-    rules: deprecation.configs.recommended.rules,
-  },
-  { ...prettier, files },
-  {
-    files,
     plugins: { 'simple-import-sort': sort },
     rules: {
       '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
@@ -96,9 +67,8 @@ export default [
         { fixStyle: 'separate-type-imports' },
       ],
       '@typescript-eslint/explicit-function-return-type': 'off',
-      'import/first': 'error',
+      '@typescript-eslint/no-deprecated': 'error',
       'import/newline-after-import': 'error',
-      'import/no-duplicates': 'error',
       'jsx-a11y/alt-text': ['error', { elements: ['img'], img: ['Image'] }],
       'jsx-a11y/anchor-has-content': [
         'error',

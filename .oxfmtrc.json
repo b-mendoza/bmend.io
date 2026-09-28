@@ -1,0 +1,16 @@
+{
+  "$schema": "./node_modules/oxfmt/configuration_schema.json",
+  "printWidth": 80,
+  "singleQuote": true,
+  "sortPackageJson": false,
+  "sortTailwindcss": {
+    "functions": ["cn"],
+    "stylesheet": "./app/styles/global.styles.css"
+  },
+  "ignorePatterns": [
+    "pnpm-lock.yaml",
+    "/.agents",
+    "/.claude",
+    "/app/routeTree.gen.ts"
+  ]
+}
