@@ -1,4 +1,4 @@
-/* TODO: adjust the font-size values as they seem not to be correct */
+/* Follow-up: adjust the font-size values as they seem not to be correct */
 
 import { createElement } from 'react';
 
