@@ -24,7 +24,7 @@ const PAGE_METADATA = {
 };
 
 const SECTION_BACKGROUND =
-  'bg-gradient-to-tr from-section-background-bottom to-section-background-top';
+  'bg-linear-to-tr/srgb from-section-background-bottom to-section-background-top';
 
 const Header = () => {
   return (
