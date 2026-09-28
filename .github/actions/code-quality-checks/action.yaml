@@ -1,10 +1,10 @@
 name: Code Quality Checks
 
-description: 'Runs the build, linting, formatting, and type checks, and tests to ensure code quality'
+description: "Runs the build, linting, formatting, and type checks, and tests to ensure code quality"
 
 runs:
   using: composite
   steps:
-    - name: 'Build, lint/typecheck, and test'
+    - name: "Build, lint/typecheck, and test"
       shell: bash
       run: pnpm run build && pnpm run lint
