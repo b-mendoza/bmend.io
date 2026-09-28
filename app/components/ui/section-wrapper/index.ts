@@ -1,1 +1,1 @@
-export * from './section-wrapper.component';
+export * from "./section-wrapper.component";
