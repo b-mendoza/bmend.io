@@ -1,0 +1,7 @@
+saveExact: true
+
+allowBuilds:
+  esbuild: true
+  workerd: true
+
+minimumReleaseAgeStrict: true
