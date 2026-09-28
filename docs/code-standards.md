@@ -29,7 +29,7 @@ Extremely strict setup with:
 
 ## React Patterns
 
-- **React version**: 18.3.1
+- **React version**: 19.3.0
 - **UI patterns**:
   - Typography components in `app/components/typography/`
   - Component props follow strict typing
