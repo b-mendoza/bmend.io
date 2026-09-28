@@ -1,1 +1,1 @@
-export * from './tag-mapper.component';
+export * from "./tag-mapper.component";
