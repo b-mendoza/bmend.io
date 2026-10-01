@@ -19,8 +19,8 @@
 ## Application Structure
 
 - **Path alias**: `~/*` maps to `./app/*` (configured in tsconfig.json)
-- **Component organization**: Components use folder structure with `*.component.tsx` + `index.ts` pattern
-  - Example: `app/components/link/link.component.tsx` + `app/components/link/index.ts`
+- **Component organization**: Components use folder structure with `*.component.tsx` files, imported directly by path
+  - Example: `app/components/external-link/external-link.component.tsx`
 - **Server-only code**: Files ending with `.server.ts` contain server-only logic (models, utilities) and are kept out of the client bundle
 - **Server function boundary**: Route loaders call server functions in `app/functions/*.ts` (built with `createServerFn`), which dynamically import the corresponding `.server.ts` model to preserve the client/server boundary
 - **Homepage data**: `app/models/get-home-data.server.ts` constructs job experience, social links, and tags in memory

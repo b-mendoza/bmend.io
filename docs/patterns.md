@@ -8,17 +8,15 @@
 
 ## Component Organization
 
-Components use folder structure with separate files:
+Components use folder structure and are imported directly by path:
 
 - `component-name.component.tsx` - Component implementation
-- `index.ts` - Barrel export file
 
 Example:
 
 ```
-app/components/link/
-  ├── link.component.tsx
-  └── index.ts
+app/components/external-link/
+  └── external-link.component.tsx
 ```
 
 ## Data Fetching
@@ -30,5 +28,4 @@ app/components/link/
 ## Code Organization
 
 - **Server-only imports**: Keep in `.server.ts` files to prevent client bundling
-- **Barrel exports**: Export component logic from `index.ts` files
 - **Path alias**: Use the `~/*` alias for app imports instead of relative paths
