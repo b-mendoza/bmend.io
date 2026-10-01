@@ -9,7 +9,6 @@ import {
   Paragraph,
   PARAGRAPH_SIZES,
 } from "~/components/typography/paragraph/paragraph.component";
-import { Subtitle } from "~/components/typography/subtitle/subtitle.component";
 import { SectionWrapper } from "~/components/ui/section-wrapper/section-wrapper.component";
 import { getHomeData } from "~/functions/get-home-data";
 import { cn } from "~/utils/cn";
@@ -71,7 +70,7 @@ function IndexHomeRoute() {
 
       <main>
         <section className={cn(SECTION_BASE, SECTION_BACKGROUND)}>
-          <Subtitle className="mb-12">About</Subtitle>
+          <Paragraph className="mb-12 font-semibold uppercase">About</Paragraph>
 
           <Heading className="mb-8 font-semibold" size="sm" variant="h1">
             Senior Software Engineer
