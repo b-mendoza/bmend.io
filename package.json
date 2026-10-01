@@ -19,8 +19,8 @@
     "start": "vite preview"
   },
   "dependencies": {
-    "@tanstack/react-router": "1.170.39",
-    "@tanstack/react-start": "1.168.58",
+    "@tanstack/react-router": "1.170.40",
+    "@tanstack/react-start": "1.168.59",
     "@unpic/react": "1.0.2",
     "clsx": "2.1.1",
     "dayjs": "1.11.23",
