@@ -171,50 +171,19 @@ export const Route = createFileRoute("/")({
         name: "description",
         content: PAGE_METADATA.Description,
       },
-      {
-        property: "og:title",
-        content: PAGE_METADATA.Title,
-      },
-      {
-        property: "og:description",
-        content: PAGE_METADATA.Description,
-      },
-      {
-        property: "og:image",
-        content: PAGE_METADATA.Image.src,
-      },
-      {
-        property: "og:url",
-        content: PAGE_METADATA.CanonicalURL,
-      },
-      {
-        property: "og:type",
-        content: "website",
-      },
-      {
-        property: "twitter:card",
-        content: "summary_large_image",
-      },
-      {
-        property: "twitter:site",
-        content: "@beMendoza_",
-      },
-      {
-        property: "twitter:title",
-        content: PAGE_METADATA.Title,
-      },
-      {
-        property: "twitter:description",
-        content: PAGE_METADATA.Description,
-      },
-      {
-        property: "twitter:image",
-        content: PAGE_METADATA.Image.src,
-      },
-      {
-        property: "twitter:image:alt",
-        content: PAGE_METADATA.Image.alt,
-      },
+      ...Object.entries({
+        "og:title": PAGE_METADATA.Title,
+        "og:description": PAGE_METADATA.Description,
+        "og:image": PAGE_METADATA.Image.src,
+        "og:url": PAGE_METADATA.CanonicalURL,
+        "og:type": "website",
+        "twitter:card": "summary_large_image",
+        "twitter:site": "@beMendoza_",
+        "twitter:title": PAGE_METADATA.Title,
+        "twitter:description": PAGE_METADATA.Description,
+        "twitter:image": PAGE_METADATA.Image.src,
+        "twitter:image:alt": PAGE_METADATA.Image.alt,
+      }).map(([property, content]) => ({ property, content })),
       {
         name: "author",
         content: "Bryan Mendoza",
