@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Image } from "@unpic/react";
 
 import { ExperienceCard } from "~/components/experience-card/experience-card.component";
-import { Link } from "~/components/link/link.component";
+import { ExternalLink } from "~/components/external-link/external-link.component";
 import { TagMapper } from "~/components/tag-mapper/tag-mapper.component";
 import { Heading } from "~/components/typography/headings/headings.component";
 import {
@@ -11,7 +11,6 @@ import {
 } from "~/components/typography/paragraph/paragraph.component";
 import { Subtitle } from "~/components/typography/subtitle/subtitle.component";
 import { SectionWrapper } from "~/components/ui/section-wrapper/section-wrapper.component";
-import { WhiteLink } from "~/components/white-link/white-link.component";
 import { getHomeData } from "~/functions/get-home-data";
 import { cn } from "~/utils/cn";
 
@@ -131,22 +130,28 @@ function IndexHomeRoute() {
             Let&apos;s talk about your project
           </Heading>
 
-          <WhiteLink
-            className="flex w-full items-center justify-center"
-            isExternal
+          <ExternalLink
+            className={cn(
+              "rounded-2xl bg-white px-[2.2rem] py-[1.4rem] font-medium text-violet-glow hover:bg-black hover:text-white focus-visible:bg-black focus-visible:text-white",
+              PARAGRAPH_SIZES.lg,
+              "flex w-full items-center justify-center",
+            )}
             href="https://calendly.com/bmendoza-dev/30-minute-chat-with-bryan-mendoza"
           >
             Book a call
-          </WhiteLink>
+          </ExternalLink>
         </div>
 
         <nav aria-label="social links">
           <ul className="flex flex-wrap items-center justify-center gap-12 border-t-[0.1rem] border-t-texts/[0.15] px-8 pt-12">
             {loaderData.socialLinks.map((socialLink, idx) => (
               <li key={idx}>
-                <Link isExternal href={socialLink.to}>
+                <ExternalLink
+                  href={socialLink.to}
+                  className="px-6 py-[0.4rem] text-white hover:rounded-[2rem] hover:bg-white/10 focus-visible:rounded-[2rem] focus-visible:bg-white/10"
+                >
                   {socialLink.name}
-                </Link>
+                </ExternalLink>
               </li>
             ))}
           </ul>
