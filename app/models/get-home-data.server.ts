@@ -1,4 +1,4 @@
-import { formatDate } from "~/utils/dates.server";
+import dayjs from "dayjs";
 
 export type JobExperience = {
   companyName: string;
@@ -7,6 +7,8 @@ export type JobExperience = {
   startDate: string;
   endDate?: string;
 };
+
+const formatDate = (date: string) => dayjs(date).format("MMM YYYY");
 
 export const getHomeData = () => {
   return {
