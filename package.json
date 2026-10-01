@@ -39,7 +39,7 @@
     "@vitejs/plugin-react": "6.1.1",
     "concurrently": "10.0.5",
     "eslint": "9.39.5",
-    "eslint-config-love": "85.0.0",
+    "eslint-config-love": "157.0.0",
     "eslint-config-prettier": "10.1.8",
     "eslint-plugin-jsx-a11y": "6.10.2",
     "eslint-plugin-n": "18.4.0",
