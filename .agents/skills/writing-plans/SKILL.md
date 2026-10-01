@@ -40,9 +40,9 @@ deliverable needs them; split only where a reviewer could meaningfully
 reject one task while approving its neighbor. Each task ends with an
 independently testable deliverable.
 
-## Bite-Sized Task Granularity
+## Step Granularity
 
-**Each step is one action (2-5 minutes):**
+**Each step is one action with a checkable result:**
 - "Write the failing test" - step
 - "Run it to make sure it fails" - step
 - "Implement the minimal code to make the test pass" - step
