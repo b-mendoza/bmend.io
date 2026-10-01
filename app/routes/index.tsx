@@ -9,7 +9,6 @@ import {
   Paragraph,
   PARAGRAPH_SIZES,
 } from "~/components/typography/paragraph/paragraph.component";
-import { SectionWrapper } from "~/components/ui/section-wrapper/section-wrapper.component";
 import { getHomeData } from "~/functions/get-home-data";
 import { cn } from "~/utils/cn";
 
@@ -30,43 +29,37 @@ const SECTION_BACKGROUND =
 const SECTION_BASE =
   "mx-4 my-4 rounded-[2rem] border-[0.1rem] border-solid border-section-border/10 px-8 py-16";
 
-const Header = () => {
-  return (
-    <SectionWrapper
-      as="header"
-      className={cn(
-        "sticky top-4 flex items-center justify-between gap-6 rounded-2xl py-6",
-        SECTION_BACKGROUND,
-      )}
-    >
-      <Image
-        alt={PAGE_METADATA.Image.alt}
-        cdn="cloudinary"
-        className="rounded-full"
-        height={40}
-        layout="fixed"
-        priority
-        src="https://res.cloudinary.com/dgqif0kkr/image/upload/q_auto/bmendoza-io/shiba-inu.jpg"
-        width={40}
-      />
-
-      <Heading
-        className="mr-auto text-[2rem] font-medium"
-        size="sm"
-        variant="h2"
-      >
-        Bryan Mendoza
-      </Heading>
-    </SectionWrapper>
-  );
-};
-
 function IndexHomeRoute() {
   const loaderData = Route.useLoaderData();
 
   return (
     <div className="mx-auto max-w-[68rem] text-white">
-      <Header />
+      <header
+        className={cn(
+          SECTION_BASE,
+          "sticky top-4 flex items-center justify-between gap-6 rounded-2xl py-6",
+          SECTION_BACKGROUND,
+        )}
+      >
+        <Image
+          alt={PAGE_METADATA.Image.alt}
+          cdn="cloudinary"
+          className="rounded-full"
+          height={40}
+          layout="fixed"
+          priority
+          src="https://res.cloudinary.com/dgqif0kkr/image/upload/q_auto/bmendoza-io/shiba-inu.jpg"
+          width={40}
+        />
+
+        <Heading
+          className="mr-auto text-[2rem] font-medium"
+          size="sm"
+          variant="h2"
+        >
+          Bryan Mendoza
+        </Heading>
+      </header>
 
       <main>
         <section className={cn(SECTION_BASE, SECTION_BACKGROUND)}>
