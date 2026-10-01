@@ -30,7 +30,7 @@
   },
   "devDependencies": {
     "@cloudflare/vite-plugin": "1.60.2",
-    "@eslint/js": "9.39.5",
+    "@eslint/js": "10.0.1",
     "@tailwindcss/vite": "4.3.3",
     "@types/eslint-plugin-jsx-a11y": "6.10.1",
     "@types/node": "26.6.3",
@@ -38,7 +38,7 @@
     "@types/react-dom": "19.3.0",
     "@vitejs/plugin-react": "6.1.1",
     "concurrently": "10.0.5",
-    "eslint": "9.39.5",
+    "eslint": "10.11.0",
     "eslint-config-love": "85.0.0",
     "eslint-config-prettier": "10.1.8",
     "eslint-plugin-jsx-a11y": "6.10.2",
