@@ -28,6 +28,9 @@ const PAGE_METADATA = {
 const SECTION_BACKGROUND =
   "bg-linear-to-tr/srgb from-section-background-bottom to-section-background-top";
 
+const SECTION_BASE =
+  "mx-4 my-4 rounded-[2rem] border-[0.1rem] border-solid border-section-border/10 px-8 py-16";
+
 const Header = () => {
   return (
     <SectionWrapper
@@ -67,7 +70,7 @@ function IndexHomeRoute() {
       <Header />
 
       <main>
-        <SectionWrapper as="section" className={SECTION_BACKGROUND}>
+        <section className={cn(SECTION_BASE, SECTION_BACKGROUND)}>
           <Subtitle className="mb-12">About</Subtitle>
 
           <Heading className="mb-8 font-semibold" size="sm" variant="h1">
@@ -83,11 +86,14 @@ function IndexHomeRoute() {
           </Paragraph>
 
           <TagList tags={loaderData.tags} />
-        </SectionWrapper>
+        </section>
 
-        <SectionWrapper
-          as="section"
-          className={cn("flex flex-col gap-[3.6rem]", SECTION_BACKGROUND)}
+        <section
+          className={cn(
+            SECTION_BASE,
+            "flex flex-col gap-[3.6rem]",
+            SECTION_BACKGROUND,
+          )}
         >
           <Heading
             className={cn("font-semibold uppercase", PARAGRAPH_SIZES.md)}
@@ -100,12 +106,14 @@ function IndexHomeRoute() {
           {loaderData.jobExperience.map((jobExperience, idx) => (
             <ExperienceCard {...jobExperience} key={idx} />
           ))}
-        </SectionWrapper>
+        </section>
       </main>
 
-      <SectionWrapper
-        as="footer"
-        className="border-white/20 bg-linear-to-bl/srgb from-[hsl(243_100%_68%)] to-[hsl(243_76%_51%)] px-0"
+      <footer
+        className={cn(
+          SECTION_BASE,
+          "border-white/20 bg-linear-to-bl/srgb from-[hsl(243_100%_68%)] to-[hsl(243_76%_51%)] px-0",
+        )}
       >
         <Image
           alt={PAGE_METADATA.Image.alt}
@@ -156,7 +164,7 @@ function IndexHomeRoute() {
             ))}
           </ul>
         </nav>
-      </SectionWrapper>
+      </footer>
     </div>
   );
 }
