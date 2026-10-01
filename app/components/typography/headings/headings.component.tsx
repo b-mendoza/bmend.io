@@ -14,7 +14,7 @@ const BASE_CLASS_NAMES = {
   h3: "scroll-m-20 tracking-tight",
 } satisfies Record<Variant, string>;
 
-export const HEADING_SIZES = {
+const HEADING_SIZES = {
   h1: {
     sm: "text-[3.1rem]",
     md: "text-[3.8rem]",
@@ -32,23 +32,20 @@ export const HEADING_SIZES = {
   },
 } satisfies Record<Variant, Record<Size, string>>;
 
-type HeadingProps<T extends Variant> = React.JSX.IntrinsicElements[T] &
+type HeadingProps = React.JSX.IntrinsicElements[Variant] &
   Readonly<{
     /**
      * The variant of the heading to render.
      */
-    variant: T;
+    variant: Variant;
     /**
      * The size of the heading to render.
-     * @default "md"
      */
-    size?: Size;
+    size: Size;
   }>;
 
-export const Heading = <HeadingVariant extends Variant>(
-  props: HeadingProps<HeadingVariant>,
-) => {
-  const { children, variant, className, size = "md", ...restOfProps } = props;
+export const Heading = (props: HeadingProps) => {
+  const { children, variant, className, size, ...restOfProps } = props;
 
   return createElement(
     variant,
