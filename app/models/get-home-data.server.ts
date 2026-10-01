@@ -56,27 +56,13 @@ export const getHomeData = () => {
       },
     ],
     tags: [
-      {
-        text: "JavaScript",
-      },
-      {
-        text: "TypeScript",
-      },
-      {
-        text: "React",
-      },
-      {
-        text: "Remix",
-      },
-      {
-        text: "Next.js",
-      },
-      {
-        text: "Tailwind CSS",
-      },
-      {
-        text: "Node.js",
-      },
-    ],
+      "JavaScript",
+      "TypeScript",
+      "React",
+      "Remix",
+      "Next.js",
+      "Tailwind CSS",
+      "Node.js",
+    ].map((text) => ({ text })),
   };
 };
