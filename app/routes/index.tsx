@@ -3,7 +3,7 @@ import { Image } from "@unpic/react";
 
 import { ExperienceCard } from "~/components/experience-card/experience-card.component";
 import { ExternalLink } from "~/components/external-link/external-link.component";
-import { TagMapper } from "~/components/tag-mapper/tag-mapper.component";
+import { TagList } from "~/components/tag-list/tag-list.component";
 import { Heading } from "~/components/typography/headings/headings.component";
 import {
   Paragraph,
@@ -82,7 +82,7 @@ function IndexHomeRoute() {
             exceptional user experiences.
           </Paragraph>
 
-          <TagMapper getTagName={(tag) => tag.text} tags={loaderData.tags} />
+          <TagList tags={loaderData.tags} />
         </SectionWrapper>
 
         <SectionWrapper
