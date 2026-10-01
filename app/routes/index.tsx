@@ -1,14 +1,17 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Image } from "@unpic/react";
 
-import { ExperienceCard } from "~/components/experience-card";
-import { Link } from "~/components/link";
-import { TagMapper } from "~/components/tag-mapper";
-import { Heading } from "~/components/typography/headings";
-import { Paragraph, PARAGRAPH_SIZES } from "~/components/typography/paragraph";
-import { Subtitle } from "~/components/typography/subtitle";
-import { SectionWrapper } from "~/components/ui/section-wrapper";
-import { WhiteLink } from "~/components/white-link";
+import { ExperienceCard } from "~/components/experience-card/experience-card.component";
+import { Link } from "~/components/link/link.component";
+import { TagMapper } from "~/components/tag-mapper/tag-mapper.component";
+import { Heading } from "~/components/typography/headings/headings.component";
+import {
+  Paragraph,
+  PARAGRAPH_SIZES,
+} from "~/components/typography/paragraph/paragraph.component";
+import { Subtitle } from "~/components/typography/subtitle/subtitle.component";
+import { SectionWrapper } from "~/components/ui/section-wrapper/section-wrapper.component";
+import { WhiteLink } from "~/components/white-link/white-link.component";
 import { getHomeData } from "~/functions/get-home-data";
 import { cn } from "~/utils/cn";
 

@@ -1,4 +1,4 @@
-import { Paragraph } from "~/components/typography/paragraph";
+import { Paragraph } from "~/components/typography/paragraph/paragraph.component";
 import { cn } from "~/utils/cn";
 
 type TagProps = Pick<React.JSX.IntrinsicElements["li"], "className"> &

@@ -1,5 +1,5 @@
-import type { ParagraphProps } from "~/components/typography/paragraph";
-import { Paragraph } from "~/components/typography/paragraph";
+import type { ParagraphProps } from "~/components/typography/paragraph/paragraph.component";
+import { Paragraph } from "~/components/typography/paragraph/paragraph.component";
 import { cn } from "~/utils/cn";
 
 type SubtitleProps = ParagraphProps;

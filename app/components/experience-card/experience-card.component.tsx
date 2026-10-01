@@ -1,5 +1,8 @@
-import { Heading } from "~/components/typography/headings";
-import { Paragraph, PARAGRAPH_SIZES } from "~/components/typography/paragraph";
+import { Heading } from "~/components/typography/headings/headings.component";
+import {
+  Paragraph,
+  PARAGRAPH_SIZES,
+} from "~/components/typography/paragraph/paragraph.component";
 import type { JobExperience } from "~/models/get-home-data.server";
 import { cn } from "~/utils/cn";
 
